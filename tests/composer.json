@@ -1,0 +1,7 @@
+{
+    "require": {
+        "nlp-tools/nlp-tools": "^0.1.3"
+    },
+ "minimum-stability": "dev",
+"prefer-stable": true
+}

@@ -1,0 +1,1 @@
+[19-Apr-2022 10:08:18 UTC] PHP Warning:  unlink(../../scrap2/images/prav1650357905.jpg): No such file or directory in /home/tsavosto/ukrzmi.com/admin/article/article_delete.php on line 17

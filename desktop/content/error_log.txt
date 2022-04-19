@@ -1,0 +1,11 @@
+[17-Apr-2022 12:04:58 UTC] PHP Warning:  Undefined variable $block in /home/tsavosto/ukrzmi.com/desktop/content/content_list_data.php on line 96
+[17-Apr-2022 12:04:58 UTC] PHP Warning:  Undefined variable $block_id in /home/tsavosto/ukrzmi.com/desktop/content/content_list_data.php on line 96
+[17-Apr-2022 12:04:58 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/tsavosto/ukrzmi.com/desktop/content/content_list_data.php on line 96
+[17-Apr-2022 12:04:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function timeago() in /home/tsavosto/ukrzmi.com/desktop/content/content_list_data.php:129
+Stack trace:
+#0 {main}
+  thrown in /home/tsavosto/ukrzmi.com/desktop/content/content_list_data.php on line 129
+[17-Apr-2022 12:06:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function timeago() in /home/tsavosto/ukrzmi.com/desktop/content/content_list_data.php:129
+Stack trace:
+#0 {main}
+  thrown in /home/tsavosto/ukrzmi.com/desktop/content/content_list_data.php on line 129

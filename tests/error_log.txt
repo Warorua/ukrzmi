@@ -1,0 +1,650 @@
+[17-Feb-2022 11:58:21 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:01:00 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:05:03 UTC] PHP Notice:  Undefined index: date in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:05:04 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:05:35 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:07:42 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:08:14 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:08:47 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:10:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tsavosto/ukrzmi.com/tests/nlp2.php:19
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(19): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 19
+[17-Feb-2022 12:10:27 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:12:17 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:13:04 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:13:12 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:14:59 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:15:53 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:16:14 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:17:32 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:20:24 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:21:10 UTC] PHP Warning:  Illegal string offset 'article' in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 25
+[17-Feb-2022 12:21:10 UTC] PHP Warning:  Illegal string offset 'title' in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:21:10 UTC] PHP Warning:  Illegal string offset 'code' in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:21:10 UTC] PHP Warning:  Illegal string offset 'time' in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:21:10 UTC] PHP Warning:  Illegal string offset 'article' in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 25
+[17-Feb-2022 12:21:10 UTC] PHP Warning:  Illegal string offset 'title' in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:21:10 UTC] PHP Warning:  Illegal string offset 'code' in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:21:10 UTC] PHP Warning:  Illegal string offset 'time' in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:21:10 UTC] PHP Warning:  Illegal string offset 'article' in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 25
+[17-Feb-2022 12:21:10 UTC] PHP Warning:  Illegal string offset 'title' in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:21:10 UTC] PHP Warning:  Illegal string offset 'code' in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:21:10 UTC] PHP Warning:  Illegal string offset 'time' in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:21:10 UTC] PHP Warning:  Illegal string offset 'article' in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 25
+[17-Feb-2022 12:21:10 UTC] PHP Warning:  key() expects parameter 1 to be array, bool given in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 53
+[17-Feb-2022 12:21:10 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 71
+[17-Feb-2022 12:21:10 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, false)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:21:42 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(27): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:22:07 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:22:33 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:23:20 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:23:32 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:26:49 UTC] PHP Notice:  Undefined index: id in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 16
+[17-Feb-2022 12:26:50 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:27:51 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: title in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Notice:  Undefined index: time in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:29:25 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:30:05 UTC] PHP Notice:  Undefined index: code in /home/tsavosto/ukrzmi.com/tests/nlp2.php on line 30
+[17-Feb-2022 12:30:05 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:46:25 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:48:48 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:50:32 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:51:31 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[17-Feb-2022 12:52:16 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity(Array, Array)
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[12-Mar-2022 22:34:42 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity()
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76
+[12-Mar-2022 22:35:38 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Vector $B is the zero vector in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php:76
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/tests/nlp2.php(30): NlpTools\Similarity\CosineSimilarity->similarity()
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/tests/vendor/nlp-tools/nlp-tools/src/NlpTools/Similarity/CosineSimilarity.php on line 76

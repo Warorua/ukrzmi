@@ -1,0 +1,6 @@
+[19-Apr-2022 12:52:11 UTC] PHP Warning:  Undefined array key "block_items" in /home/tsavosto/ukrzmi.com/desktop/videos/headlines/list_data.php on line 5
+[19-Apr-2022 12:52:11 UTC] PHP Fatal error:  Uncaught TypeError: array_slice(): Argument #1 ($array) must be of type array, null given in /home/tsavosto/ukrzmi.com/desktop/videos/headlines/list_data.php:6
+Stack trace:
+#0 /home/tsavosto/ukrzmi.com/desktop/videos/headlines/list_data.php(6): array_slice()
+#1 {main}
+  thrown in /home/tsavosto/ukrzmi.com/desktop/videos/headlines/list_data.php on line 6
