@@ -1,5 +1,5 @@
 ---
 deployment:
-      tasks:
-        - export DEPLOYPATH=/home/tsavosto/ukrzmi.com
-        - /bin cp * $DEPLOYPATH #copy all from root 
+  tasks:
+    - export DEPLOYPATH=/home/tsavosto/ukrzmi.com
+    - /bin/cp -r * $DEPLOYPATH

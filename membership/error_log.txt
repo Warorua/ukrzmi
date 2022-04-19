@@ -16,3 +16,8 @@ Stack trace:
 [18-Apr-2022 23:58:31 Africa/Nairobi] PHP Warning:  Undefined array key "code" in /home/tsavosto/ukrzmi.com/membership/activate_process.php on line 14
 [18-Apr-2022 23:58:31 Africa/Nairobi] PHP Warning:  Undefined array key "user" in /home/tsavosto/ukrzmi.com/membership/activate_process.php on line 15
 [18-Apr-2022 23:58:31 Africa/Nairobi] PHP Warning:  Undefined variable $year in /home/tsavosto/ukrzmi.com/membership/activate_process.php on line 63
+[19-Apr-2022 23:28:54 Africa/Nairobi] PHP Warning:  Undefined variable $year in /home/tsavosto/ukrzmi.com/membership/reg_process.php on line 70
+[19-Apr-2022 23:29:20 Africa/Nairobi] PHP Warning:  Undefined variable $year in /home/tsavosto/ukrzmi.com/membership/reg_process.php on line 70
+[19-Apr-2022 23:36:59 Africa/Nairobi] PHP Warning:  Undefined array key "code" in /home/tsavosto/ukrzmi.com/membership/activate_process.php on line 14
+[19-Apr-2022 23:36:59 Africa/Nairobi] PHP Warning:  Undefined array key "user" in /home/tsavosto/ukrzmi.com/membership/activate_process.php on line 15
+[19-Apr-2022 23:36:59 Africa/Nairobi] PHP Warning:  Undefined variable $year in /home/tsavosto/ukrzmi.com/membership/activate_process.php on line 63

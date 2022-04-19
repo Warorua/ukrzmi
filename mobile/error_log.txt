@@ -276,3 +276,5 @@ Stack trace:
 [18-Apr-2022 10:26:24 Africa/Nairobi] PHP Warning:  Undefined variable $city in /home/tsavosto/ukrzmi.com/mobile/includes/menu.php on line 138
 [18-Apr-2022 11:37:12 Africa/Nairobi] PHP Warning:  Undefined variable $city in /home/tsavosto/ukrzmi.com/mobile/includes/menu.php on line 138
 [18-Apr-2022 11:37:14 Africa/Nairobi] PHP Warning:  Undefined variable $city in /home/tsavosto/ukrzmi.com/mobile/includes/menu.php on line 138
+[19-Apr-2022 23:23:55 Africa/Nairobi] PHP Warning:  Undefined variable $city in /home/tsavosto/ukrzmi.com/mobile/includes/menu.php on line 138
+[19-Apr-2022 23:24:05 Africa/Nairobi] PHP Warning:  Undefined variable $city in /home/tsavosto/ukrzmi.com/mobile/includes/menu.php on line 138
