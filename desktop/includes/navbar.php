@@ -18,7 +18,7 @@
         <li class="nav-item dropdown">
     <a class="nav-link navLink  dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">All cities</a>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="city.php?id=kyiv">Kyivv</a></li>
+      <li><a class="dropdown-item" href="city.php?id=kyiv">Kyiv</a></li>
       <li><a class="dropdown-item" href="city.php?id=lviv">Lviv</a></li>
       <li><a class="dropdown-item" href="city.php?id=odessa">Odessa</a></li>
       <li><a class="dropdown-item" href="city.php?id=kharkiv">Kharkiv</a></li>
