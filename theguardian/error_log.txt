@@ -1,0 +1,24 @@
+[20-Apr-2022 03:40:03 Africa/Nairobi] PHP Fatal error:  Uncaught Error: Class "simplehtmldom\HtmlWeb" not found in /home/tsavosto/ukrzmi.com/theguardian/ukraine_war.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/tsavosto/ukrzmi.com/theguardian/ukraine_war.php on line 6
+[20-Apr-2022 03:40:15 Africa/Nairobi] PHP Fatal error:  Uncaught Error: Class "simplehtmldom\HtmlWeb" not found in /home/tsavosto/ukrzmi.com/theguardian/headline.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/tsavosto/ukrzmi.com/theguardian/headline.php on line 6
+[20-Apr-2022 03:50:04 Africa/Nairobi] PHP Fatal error:  Uncaught Error: Class "simplehtmldom\HtmlWeb" not found in /home/tsavosto/ukrzmi.com/theguardian/ukraine_war.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/tsavosto/ukrzmi.com/theguardian/ukraine_war.php on line 6
+[20-Apr-2022 03:50:04 Africa/Nairobi] PHP Fatal error:  Uncaught Error: Class "simplehtmldom\HtmlWeb" not found in /home/tsavosto/ukrzmi.com/theguardian/headline.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/tsavosto/ukrzmi.com/theguardian/headline.php on line 6
+[20-Apr-2022 03:55:03 Africa/Nairobi] PHP Fatal error:  Uncaught Error: Class "simplehtmldom\HtmlWeb" not found in /home/tsavosto/ukrzmi.com/theguardian/headline.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/tsavosto/ukrzmi.com/theguardian/headline.php on line 6
+[20-Apr-2022 04:00:13 Africa/Nairobi] PHP Fatal error:  Uncaught Error: Class "simplehtmldom\HtmlWeb" not found in /home/tsavosto/ukrzmi.com/theguardian/headline.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/tsavosto/ukrzmi.com/theguardian/headline.php on line 6
