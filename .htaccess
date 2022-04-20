@@ -10,4 +10,4 @@ Header always set Content-Security-Policy: upgrade-insecure-requests
 Header set Cache-Control "max-age=2592000"
 
 </FilesMatch>
-"
+
