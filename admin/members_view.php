@@ -62,13 +62,13 @@ $stmt = $conn->prepare("SELECT * FROM users ORDER BY id ASC");
 $stmt->execute();
 $mail = $stmt->fetchAll();
 foreach($mail as $row){
-    if($row['type'] == 1){
+    if($row['status'] == 2){
         $activation = '<span class="badge badge-success">Activated</span>';
     }
     else{
         $activation = '<span class="badge badge-danger">UNACTIVATED</span>';
     }
-    if($row['status'] == 2){
+    if($row['type'] == 1){
         $status = '<span class="badge badge-warning">Admin</span>';
     }
     else{

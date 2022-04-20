@@ -142,6 +142,7 @@ else{
                 <input type="text"  value="<?php echo $email ?>" disabled  id="usernamereg-yid" autocomplete="username" placeholder="Email address"
                 aria-label="Email address" value="" maxlength="32"  aria-required="true"   data-rapid-tracking="true"  data-ylk="elm:input;elmt:yid;slk:yid;">        
                 <input type="hidden" name="email" value="<?php echo $email ?>" > 
+                <input type="hidden" name="user" value="<?php echo $_GET['user'] ?>" > 
               </div>
 
             <div role="alert" id="reg-error-yid"></div>
