@@ -10,7 +10,7 @@
 </style>
 <?php //echo $block[0]['name']; ?>
 
-<div style="background-color:<?php echo $block[0]['bg_color']; ?>; margin-left:-12px; margin-right:-10px" class="row carousel-<?php echo $block[0]['id']; ?> pe-0 ps-2">
+<div style="background-color:<?php echo $block[0]['bg_color']; ?>; margin-left:-12px; margin-right:-10px" class="row carousel-<?php echo $block[0]['id']; ?> pe-0">
 
 
 
