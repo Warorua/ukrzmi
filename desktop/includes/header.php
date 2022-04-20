@@ -129,7 +129,7 @@ margin-right: auto;
     .cardBlock {
         width: 100%;
         
-        padding-left: 12px;
+        padding-left: 0px;
     }
 
     .card {
