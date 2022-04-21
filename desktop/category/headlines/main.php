@@ -20,7 +20,7 @@
   
 </div>
 
-<div class="tab-content" id="myTabContent">
+<div style="width:97.6%" class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="grid" role="tabpanel" aria-labelledby="grid-tab">
       <?php
 include 'grid.php'
