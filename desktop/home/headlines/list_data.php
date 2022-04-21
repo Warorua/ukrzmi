@@ -57,7 +57,7 @@ foreach($list_item as $row){
     $content = strip_tags(substr($row['article'],0,240)).'...';
     
     $html .= '
-    <li id="post_'.$row['id'].'" class="list-group-item my-2 post">
+    <li id="post_'.$row['id'].'" class="list-group-item my-2 post p-0">
     <div class="row d-flex justify-content-start">
     
     <div class="w-25 mt-2">
@@ -79,7 +79,9 @@ foreach($list_item as $row){
     
     <div class="col-md-10">
     <div class="d-flex justify-content-between">
-    <a href="article_content.php?code='.$row['code'].'"> <h5 style="height:50px; overflow-y:hidden"><b>'.$row['title'].'</b></h5></a>
+     <h5 class="text-dark" style="height:50px; overflow-y:hidden;"><b>'.$row['title'].'</b></h5>
+     <a href="article_content.php?code='.$row['code'].'" class="stretched-link" ></a>
+    
              <div class="btn-group dropend shareIcon">
             <a type="button" class="" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa fa-ellipsis-v text-dark" aria-hidden="true"></i>
@@ -128,7 +130,7 @@ foreach($list_item as $row){
     
     </div>
     
-    </li>  
+    </li>    
     ';
     
     

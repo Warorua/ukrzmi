@@ -57,7 +57,7 @@ $content = strip_tags(substr($row['article'],0,240)).'...';
 
 echo '
 
-<li id="post_'.$row['id'].'" class="list-group-item my-2 post">
+<li id="post_'.$row['id'].'" class="list-group-item my-2 post p-0">
 <div class="row d-flex justify-content-start">
 
 <div class="w-25 mt-2">
@@ -79,7 +79,9 @@ echo '
 
 <div class="col-md-10">
 <div class="d-flex justify-content-between">
-<a href="article_content.php?code='.$row['code'].'"> <h5 style="height:50px; overflow-y:hidden"><b>'.$row['title'].'</b></h5></a>
+ <h5 class="text-dark" style="height:50px; overflow-y:hidden;"><b>'.$row['title'].'</b></h5>
+ <a href="article_content.php?code='.$row['code'].'" class="stretched-link" ></a>
+
          <div class="btn-group dropend shareIcon">
         <a type="button" class="" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="fa fa-ellipsis-v text-dark" aria-hidden="true"></i>
@@ -128,7 +130,7 @@ echo '
 
 </div>
 
-</li>      
+</li>       
 ';
 
 
@@ -138,7 +140,7 @@ $_SESSION['block_items'] = $block_news;
 
             <!-- End List Data Block -->
 
-<div class="d-grid gap-2 justify-content-end pe-5 me-1">
+<div class="d-grid gap-2 justify-content-end pe-5 me-1 pb-2">
  <button type="button" class="load-more btn btn-outline-dark btn-sm w-100 me-4">
  Load More
 </button>
