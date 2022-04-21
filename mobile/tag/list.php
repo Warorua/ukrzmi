@@ -1,5 +1,5 @@
  <!-- List Data Block -->
- <ul class="list-group">
+ <ul class="list-group list-group-flush">
                 <!-- Display List Item From Database-->
                 <?php 
                 $stmt = $conn->prepare($sql);

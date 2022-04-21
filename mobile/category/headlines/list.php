@@ -1,5 +1,5 @@
  <!-- List Data Block -->
- <ul class="list-group">
+ <ul class="list-group list-group-flush">
  <?php
 //Get first 3 from array
 $list_first_item = array_slice($block_news,0,3);
@@ -55,7 +55,7 @@ $content = strip_tags(substr($row['article'],0,260)).'...';
 
 echo '
 
-<li id="post_'.$row['id'].'" class="list-group-item my-2 border post">
+<li id="post_'.$row['id'].'" class="list-group-item my-2 post">
 <div class="row">
 
 <div class="col-md-3">

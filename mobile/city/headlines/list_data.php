@@ -55,7 +55,7 @@ foreach($list_item as $row){
     $content = strip_tags(substr($row['article'],0,260)).'...';
     
     $html .= '
-    <li id="post_'.$row['id'].'" class="list-group-item my-2 border post">
+    <li id="post_'.$row['id'].'" class="list-group-item my-2 post">
     <div class="row">
     
     <div class="col-md-3">
