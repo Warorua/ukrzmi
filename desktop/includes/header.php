@@ -65,7 +65,7 @@ include 'includes/session.php';
 		  }
     /* width */
     ::-webkit-scrollbar {
-        width: 5px;
+        width: 7px;
     }
 
     /* Track */
@@ -420,7 +420,7 @@ color: darkolivegreen;
         font-size: 15px;
         line-height: 18px;
         color: #000000;
-        height: 38px;
+        height: 53px;
         overflow-y: hidden;
         font-family: Roboto, Arial, sans-serif;
     }

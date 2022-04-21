@@ -39,7 +39,7 @@ include 'components/navbar.php';
             $page = isset($_GET['page']) ? $_GET['page'] - 1 : 0;
 
             // Current Display Entry Length
-            $length = (isset($_GET['length']))? $_GET['length'] : 8 ;
+            $length = (isset($_GET['length']))? $_GET['length'] : 50 ;
 
             // Tag 1 Search value
             $tag_1 = isset($_GET['tag_1']) ? $_GET['tag_1'] : '';
@@ -84,15 +84,15 @@ include 'components/navbar.php';
            $type_fin = ''; 
           }
 
-                $search_where = " WHERE NOT input='manual'
+                $search_where = " WHERE NOT category='international'
                 ".$type_fin."
                 ".$tag_1_fin."
                 ".$tag_2_fin."
-                ".$tag_3_fin."
-                 OR title='%{$search}%'
-                 OR tag_1 ='%{$tag_id}%'
-                 OR tag_2 ='%{$tag_id}%'
-                 OR tag_3 ='%{$tag_id}%'
+                ".$tag_3_fin."             
+                 AND (tag_1 =N'$tag_id'
+                 OR tag_2 =N'$tag_id'
+                 OR tag_3 =N'$tag_id')
+                 
                  ";
             
             // Total data row count in the database
@@ -180,7 +180,7 @@ echo '>'.$item_type.'</option>';
   <select class="form-control select2bs4" id="inputGroupSelect01"   onchange="
                     location.replace('auto_view.php?type=<?php echo (isset($_GET['type'])) ? $_GET['type'] : '' ?>&tag_2=<?php echo (isset($_GET['tag_2'])) ? $_GET['tag_2'] : '' ?>&tag_3=<?php echo (isset($_GET['tag_3'])) ? $_GET['tag_3'] : '' ?>&length=<?php echo (isset($_GET['length'])) ? $_GET['length'] : 8 ?>&tag_id=<?php echo (isset($_GET['tag_id'])) ? $_GET['tag_id'] : '' ?>&tag_1='+this.value)
      ">
-    <option selected disabled>Tag 1</option>
+    <option selected>Tag 1</option>
     <?php
 $stmt = $conn->prepare("SELECT DISTINCT tag_1 FROM news");
 $stmt->execute();
