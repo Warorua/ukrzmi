@@ -10,7 +10,7 @@
 </style>
 <?php //echo $block[0]['name']; ?>
 
-<div style="background-color:<?php echo $block[0]['bg_color']; ?>; margin-left:-12px; margin-right:-10px" class=" row carousel-<?php echo $block[0]['id']; ?> pe-0 ps-2">
+<div style="background-color:<?php echo $block[0]['bg_color']; ?>; margin-left:-12px; margin-right:-10px" class="row cardPanel carousel-<?php echo $block[0]['id']; ?> ps-2">
 
 
 
@@ -57,7 +57,7 @@ include 'city/panels/panel_05.php';
 
 
 </div>
-<div style="background-color:<?php echo $block[0]['bg_color']; ?>" class="row p-2">
+<div style="background-color:<?php echo $block[0]['bg_color']; ?>" class="row cardPanel p-2">
  <div class="col-md-8"></div>
   <div class="col-md-2">
  <button id="carPrev<?php echo $block[0]['id']; ?>" type="button" data-role="" class="slickk-prev-<?php echo $block[0]['id']; ?> btn btn-outline-dark btn-sm" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Previous</button>

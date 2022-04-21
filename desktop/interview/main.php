@@ -1,7 +1,7 @@
 <div class="cardBlock">
 <div class="row d-flex justify-content-between">
   <div class="col-md-9">
-<h2 style="margin-left:-8px" class="newsHead">Featured Interviews</h2>
+<h2  class="newsHead">Featured Interviews</h2>
   </div>
   <div class="col-md-2 me-4">
   <ul class="nav nav-tabs justify-content-end" id="myTab">

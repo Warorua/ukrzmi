@@ -13,7 +13,7 @@ $perc = ($x * 100)-100;
 }
     ?>
 </style>
-<section>
+<div class="cardPanel">
     <?php
 $conn = $pdo->open();
 $stmt = $conn->prepare("SELECT * FROM news WHERE category=:category AND NOT title=:title LIMIT 24");
@@ -115,7 +115,7 @@ foreach($intern_block as $row){
             
         </div>
     </div>
-</section>
+</div>
 <script>
 (function ($) {
   $(function () {

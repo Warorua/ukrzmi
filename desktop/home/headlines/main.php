@@ -1,7 +1,7 @@
 <div class="">
 <div class="row">
   <div class="d-flex col-md-9">
-<h2 style="margin-left:-8px" class="newsHead position-relative"><?php echo $block[0]['name']; ?>
+<h2  class="newsHead position-relative"><?php echo $block[0]['name']; ?>
 </h2>
 <small class="text-danger top-25 ms-2"><div class="badge bg-success">NEW</div></small>
   </div>

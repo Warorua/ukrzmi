@@ -400,7 +400,7 @@ foreach($sub_cats as $row){
 <h3 class="text-primary pageDesc text-dark">"All daily news it matters from trustful sources"</h3>
 
 <div style="font-size: 12px; margin-bottom:-15px;" class="d-flex justify-content-between w-100 pt-2 pe-3">
-<i style="margin-left:-55px" class="fa fa-heart text-danger text-start pt-1"></i>
+<i style="margin-left:-49px" class="fa fa-heart text-danger text-start pt-1"></i>
 <div class="text-start">
 <b>Free</b> to ad: Press releases - jobs -Events -Ads
 </div>

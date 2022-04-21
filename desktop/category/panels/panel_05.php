@@ -56,8 +56,8 @@ else{
 
 
       echo '
-  <div class="col-md-3">    
-  <div class="card col-sm-4 col-md-3 newsCard" style="background-color:'.$block[$block_id]['bg_color'].'">
+<div class="col-md-3">    
+      <div class="card col-sm-4 col-md-3 newsCard" style="background-color:'.$block[$block_id]['bg_color'].'">
     <div class="card-content">
 
 <a href="article_content.php?code='.$row['code'].'">
@@ -118,8 +118,8 @@ else{
 
 //for ($x = 0; $x <= 48; $x++) {}
 ?>  
-  <div class="col-md-3">    
-  <div class="card col-sm-4 col-md-3 newsCard" style="background-color:<?php echo $block[$block_id]['bg_color'] ?>">
+<div class="col-md-3">    
+      <div class="card col-sm-4 col-md-3 newsCard" style="background-color:<?php echo $block[$block_id]['bg_color'] ?>">
     <div class="card-content">
 <div class="card-body d-flex justify-content-center h-75">
           <div class="m-auto border border-dark rounded p-2 border-2 fw-bold fs-5">

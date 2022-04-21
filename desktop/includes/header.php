@@ -127,9 +127,9 @@ margin-right: auto;
   width:1400px;
 }
     .cardBlock {
-        width: 100%;
+      width: 870px!important;
         
-        padding-left: 0px;
+        padding-left: 5px;
     }
 
     .card {
@@ -226,8 +226,8 @@ justify-content: center;
         color: #252525;
         position: absolute;
         background-color: rgba(255, 255, 255, 0.7);
-        
-        height: 24px;
+        font-size: 15px;
+        height: 20px;
         top: 0;
         font-weight: normal;
         padding: 0 10px 2px 6px;
@@ -408,6 +408,11 @@ color: darkolivegreen;
     }
     .newsCard{
       width:210px!important;
+      
+    }
+    .cardPanel{
+      width: 870px;
+      padding-right: -10px;
     }
     .cardBlock button{
       margin-bottom: 20px;
@@ -524,8 +529,10 @@ color: darkolivegreen;
         font-weight: 500;
         font-size: 22px;
         line-height: 26px;
-        margin-left: 0px;
+        margin-left: -14px;
         color: #000000;
+        padding-left: 0px!important;
+        
     }
 
     .topBlockA {
@@ -648,7 +655,7 @@ color: darkolivegreen;
     }
 
     .navbarHr {
-        width: 1240px;
+        width: 1250px;
         color:rgba(0, 0, 0, 0.4);
         border: 1.5px solid;
         border-color: rgba(0, 0, 0, 0.4);
@@ -866,7 +873,7 @@ opacity: 100%;
    <style>
     section {
   background: #F4F4F4;
-  padding: 10px 0;
+  margin-left: 0px;
 }
 
 .container {

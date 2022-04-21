@@ -1,7 +1,7 @@
 <div class="cardBlock">
 <div class="row d-flex justify-content-between">
   <div class="col-md-5">
-<h2 style="margin-left:-8px" class="newsHead">Featured</h2>
+<h2  class="newsHead">Featured</h2>
   </div>
     <div class="col-md-5">
 <form method="GET" action="voices.php">

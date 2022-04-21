@@ -57,8 +57,8 @@ else{
 
 
       echo '
-  <div class="col-md-3">    
-  <div class="card col-sm-4 col-md-3 newsCard" style="background-color:'.$block[$block_id]['bg_color'].'">
+<div class="col-md-3">    
+      <div class="card col-sm-4 col-md-3 newsCard" style="background-color:'.$block[$block_id]['bg_color'].'">
     <div class="card-content">
 
 <a href="article_content.php?code='.$row['code'].'">
