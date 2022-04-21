@@ -103,8 +103,11 @@ elseif($row['parent'] == "theguardian.com"){
 elseif($row['parent'] == ""){
   $rowParent = "правда";
 }
-if (strlen($row['title']) > $maxPos)
-{
+if (strlen($row['title']) < $maxPos){
+  $rowtitle = $row['title'];
+  $filtTit = str_replace('"', '', $row['title']);
+}
+else{
     $lastPos = ($maxPos - 3) - strlen($row['title']);
       $rowtitle = substr($row['title'], 0, strrpos($row['title'], ' ', $lastPos)) . ' 
  ...';
