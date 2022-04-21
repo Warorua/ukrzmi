@@ -269,7 +269,7 @@ justify-content: center;
         position: absolute;
         background-color: rgba(255, 255, 255, 0.0);
         border: solid;
-        height: 130px;
+        height: 117.5px;
         width: 98%;
         top: 0;
         font-weight: normal;
@@ -453,7 +453,7 @@ color: darkolivegreen;
         background-image: url('https://peacehumanity.org/wp-content/uploads/2021/10/placeholder-237.png');
         background-size: 100%;
         object-fit: cover;
-        background-size: contain;
+        background-size: 100%;
         background-repeat: no-repeat;
     }
         .cardPhotoPlay {
@@ -618,7 +618,7 @@ color: darkolivegreen;
   border-bottom:solid 3.8px #0057b7 ;
  border-bottom-left-radius: 2px;
  border-bottom-right-radius: 2px;
- padding-bottom: 2px!important;
+ padding-bottom: 0.6px!important;
 }
 .searchHead{
  font-family: Arial, Helvetica, sans-serif;
@@ -631,7 +631,7 @@ color: darkolivegreen;
   font-size: 15px;
 }
     .navLink {
-        font-size: 12px;
+        font-size: 13px;
         padding-left: 8px;
         padding-right: 8px;
         padding-top: 2px;
@@ -1015,7 +1015,7 @@ opacity: 100%;
   width: 95%;
   transition: all 300ms ease-in-out;
   border-bottom: dashed 1.5px ;
-  margin-top: 5px;
+  margin-top: 3px;
   padding-bottom: 3px;
   border-bottom-color: rgba(1, 1, 1, 0.2);
   font-size: 13px;
