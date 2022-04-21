@@ -275,7 +275,13 @@ echo '>'.$item_tag_3.'</option>';
 
                 <!-- End of Search Block -->
 </div>
-
+<style>
+    td{
+        white-space: nowrap;
+        max-height:30px!important;
+        padding-bottom:-10px;
+    }
+</style>
 
 
                 <table id="scrapedData" class="table table-bordered table-striped table-sm">
@@ -337,14 +343,14 @@ foreach($scrape as $row){
     $uploader = '<div class="badge badge-primary">SCRAPE</div>';
   }
    echo '
-                    <tr>
+                    <tr style="font-size:14px">
                     <td>'.$row['id'].'</td>
                     <td>'.$row['time'].'</td>
-                     <td>'.$row['title'].'</td>
-                    <td>'.$row['deep_link'].'</td>
-                    <td>'.$row['type'].'</td>
+                     <td><div style="width:250px; overflow-y:hidden">'.$row['title'].'</div></td>
+                    <td><a href="'.$row['deep_link'].'" class="btn btn-info btn-sm" target="_blank">Deep Link</a></td>
                     <td>Text</td>
-                    <td><img src="../images/'.$row['photo'].'" width="80px" /></td>
+                    <td>'.$row['type'].'</td>
+                    <td><img src="../images/'.$row['photo'].'" height="50px" /></td>
                    <td>'.$row['category'].'</td>
                    <td>'.$row['sub_1'].'</td>
                    <td>'.$row['sub_2'].'</td>
