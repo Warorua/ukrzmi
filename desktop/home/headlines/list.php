@@ -53,14 +53,14 @@ else{
   $titleBadge = '<img src="../admin/'.$row['title_badge'].'" class="titleBadge" />';
 }
 
-$content = strip_tags(substr($row['article'],0,260)).'...';
+$content = strip_tags(substr($row['article'],0,240)).'...';
 
 echo '
 
 <li id="post_'.$row['id'].'" class="list-group-item my-2 post">
-<div class="row">
+<div class="row d-flex justify-content-start">
 
-<div class="col-md-3">
+<div class="col-md-3 mt-2">
  <div class="imgFrame">
   <a href="article_content.php?code='.$row['code'].'">
   <div class="imgTitle">
@@ -72,14 +72,14 @@ echo '
    </div> 
 </div>
 
-<div class="col-md-9">
+<div class="col-md-8">
 
 
 <div class="row">
 
 <div class="col-md-10">
 <div class="d-flex justify-content-between">
-<a href="article_content.php?code='.$row['code'].'"> <h5 class=""><b>'.$row['title'].'</b></h5></a>
+<a href="article_content.php?code='.$row['code'].'"> <h5 style="height:50px; overflow-y:hidden"><b>'.$row['title'].'</b></h5></a>
          <div class="btn-group dropend shareIcon">
         <a type="button" class="" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="fa fa-ellipsis-v text-dark" aria-hidden="true"></i>
@@ -112,12 +112,12 @@ echo '
 </div>
 
 <div class="col-md-2">
-<div style="margin-top:15px" class="">
-   <a class="btn btn-outline-primary btn-sm" href="#">Full Coverage</a>
+<div style="margin-top:0px" class="w-100">
+   <a class="btn btn-outline-primary btn-sm " href="#">Full Coverage</a>
 </div> 
 </div>
 
-<div style="margin-top:15px" class="col-md-12">
+<div style="margin-top:4px" class="col-md-12">
 <p>
   '.$content.'
   </p>
