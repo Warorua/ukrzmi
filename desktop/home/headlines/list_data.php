@@ -60,7 +60,7 @@ foreach($list_item as $row){
     <li id="post_'.$row['id'].'" class="list-group-item my-2 post">
     <div class="row d-flex justify-content-start">
     
-    <div class="col-md-3 mt-2">
+    <div class="w-25 mt-2">
      <div class="imgFrame">
       <a href="article_content.php?code='.$row['code'].'">
       <div class="imgTitle">
@@ -72,7 +72,7 @@ foreach($list_item as $row){
        </div> 
     </div>
     
-    <div class="col-md-8">
+    <div class="w-75">
     
     
     <div class="row">
@@ -128,7 +128,7 @@ foreach($list_item as $row){
     
     </div>
     
-    </li>   
+    </li>  
     ';
     
     
