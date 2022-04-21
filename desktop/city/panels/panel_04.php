@@ -7,7 +7,7 @@ $block_news_4 = array_slice($block_news,24,8);
 foreach($block_news_4 as $row){
 $rowtitle = $row['title'];  
 
-$maxPos = 92;
+$maxPos = 102;
 if($row['parent'] == "ua.korrespondent.net"){
   $rowParent = "Кореспондент";
 }

@@ -146,7 +146,7 @@ $_SESSION[$pageName] = $block_allNews;
 foreach($block_news_1 as $row){
 $rowtitle = $row['title'];  
 
-$maxPos = 92;
+$maxPos = 102;
 if($row['parent'] == "ua.korrespondent.net"){
   $rowParent = "Кореспондент";
 }

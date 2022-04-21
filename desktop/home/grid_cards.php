@@ -175,7 +175,7 @@ $block_news_orig = $combined_array;
 foreach($block_news as $row){
 $rowtitle = $row['title'];  
 
-$maxPos = 92;
+$maxPos = 102;
 if($row['parent'] == "ua.korrespondent.net"){
   $rowParent = "Кореспондент";
 }
