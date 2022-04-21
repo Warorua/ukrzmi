@@ -414,6 +414,10 @@ color: darkolivegreen;
       width: 870px;
       padding-right: -10px;
     }
+    .cardPanel button{
+      width:50%;
+      margin-right: 5px;
+    }
     .cardBlock button{
       margin-bottom: 20px;
     }
@@ -1010,19 +1014,21 @@ opacity: 100%;
   flex: 1 1 auto;
   width: 95%;
   transition: all 300ms ease-in-out;
-  border-bottom: dashed ;
+  border-bottom: dashed 1.5px ;
   margin-top: 5px;
   padding-bottom: 3px;
-  border-bottom-color: rgba(1, 1, 1, 0.3);
+  border-bottom-color: rgba(1, 1, 1, 0.2);
   font-size: 13px;
 }
 .carousel_title div{
   text-align: left;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   padding-left: 8px;
- 
+ margin-top: auto;
+ margin-bottom: auto;
+ height: 35px;
 }
 .article_content{
     font-family: 'Fira Sans', sans-serif;

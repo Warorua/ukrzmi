@@ -21,13 +21,13 @@ $stmt->execute(['category'=>'international', 'title'=>'']);
 $intern_block = $stmt->fetchAll();
     ?>
 <h2 class="newsHead">Top International Headlines</h2>
-    <div class="container">
+    <div class="me-3">
         <div class="carousel_int">
             
-            <div class="row ">  
+            <div class="d-flex justify-content-between">  
 <div class="col-md-6 carousel_int">
     <div class="">
-    <ul class="nav nav-pills">
+<ul class="nav">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">About Ukraine</a>
   </li>
@@ -46,7 +46,7 @@ foreach($intern_block as $row){
        <li>
                     <label id="internIter'.$row['id'].'" for="slide-'.$row['id'].'">
                     <div class="row">
-                            <div class="col-md-1"><img class="interImage" src="https://www.pravda.com.ua/android-chrome-192x192.png"/></div>
+                            <div class="col-md-1"><img class="interImage" src="https://bankimooncentre.org/wp-content/uploads/2020/06/guardian-logo-square.jpg"/></div>
                         <div class="col-md-11 carousel_title"><div>'.$row['title'].'</div></div>
                     
                         </div>
@@ -60,12 +60,12 @@ foreach($intern_block as $row){
             </ul> 
             
  <div style="margin-top:10px" class="row row-cols-2">
-  <div class="col-md-7"></div>
+  <div class="col-md-2"></div>
   <div class="col-md-3">
- <button id="carPrevinternational" type="button" data-role="" class="slickk-prev-international btn btn-dark btn-sm" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Previous</button>
+ <button id="carPrevinternational" type="button" data-role="" class="slickk-prev-international btn btn-outline-dark btn-sm w-50" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Previous</button>
   </div>
   <div class="col-md-2">
-<button id="carNextinternational" type="button" data-role="" class="slickk-next-international btn btn-dark btn-sm" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Next</button>
+<button id="carNextinternational" type="button" data-role="" class="slickk-next-international btn btn-outline-dark btn-sm w-100" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Next</button>
   </div>
  
   
@@ -91,7 +91,7 @@ foreach($intern_block as $row){
                             <img src="../images/'.$row['photo'].'" alt="">
                         
                             <p class="blogTitleInt clearfix">
-                            <img class="interImage_bottom" src="https://www.pravda.com.ua/android-chrome-192x192.png"/>
+                            <img class="interImage_bottom" src="https://bankimooncentre.org/wp-content/uploads/2020/06/guardian-logo-square.jpg"/>
                         '.$row['title'].'
                                                      
                         </p> </div>

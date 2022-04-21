@@ -57,7 +57,7 @@ include 'category/panels/panel_05.php';
 
   
 </div>
-<div style="background-color:<?php echo $block[7]['bg_color']; ?>" class="cardBlock row">
+<div style="background-color:<?php echo $block[7]['bg_color']; ?>" class="row cardPanel pb-2">
  <div class="col-md-9"></div>
   <div class="col-md-2">
  <button id="carPrev<?php echo $sub_cat_rule; ?>" type="button" data-role="" class="slickk-prev-<?php echo $sub_cat_rule; ?> btn btn-outline-dark btn-sm" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Previous</button>

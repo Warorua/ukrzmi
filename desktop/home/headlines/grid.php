@@ -62,12 +62,11 @@ include 'home/panels/panel_06.php';
 
 
 </div>
-<div style="background-color:<?php echo $block[0]['bg_color']; ?>" class="row cardPanel p-2">
- <div class="col-md-8"></div>
-  <div class="col-md-2">
+<div style="background-color:<?php echo $block[0]['bg_color']; ?>" class="row cardPanel pb-2">
+ <div class="col-md-9"></div>
+  <div class="col-md-3 d-flex justify-content-center">
  <button id="carPrev<?php echo $block[0]['id']; ?>" type="button" data-role="" class="slickk-prev-<?php echo $block[0]['id']; ?> btn btn-outline-dark btn-sm" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Previous</button>
-  </div>
-  <div class="col-md-2">
+  
 <button id="carNext<?php echo $block[0]['id']; ?>" type="button" data-role="" class="slickk-next-<?php echo $block[0]['id']; ?> btn btn-outline-dark btn-sm" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Next</button>
   </div>
  
