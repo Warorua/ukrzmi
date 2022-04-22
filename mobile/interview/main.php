@@ -7,11 +7,11 @@
   <ul class="nav justify-content-end" id="myTab">
 
   <li class="nav-item" role="presentation">
-    <a class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid" type="a" role="tab" aria-controls="grid" aria-selected="true"><i class="fa fa-th-large" aria-hidden="true"></i></a>
+    <a class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid" type="a" role="tab" aria-controls="grid" aria-selected="true"><i class="fa fa-th-large text-dark" aria-hidden="true"></i></a>
   </li>
 
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="list-tab" data-bs-toggle="tab" data-bs-target="#list" type="a" role="tab" aria-controls="list" aria-selected="false"><i class="fa fa-list" aria-hidden="true"></i></a>
+    <a class="nav-link" id="list-tab" data-bs-toggle="tab" data-bs-target="#list" type="a" role="tab" aria-controls="list" aria-selected="false"><i class="fa fa-list text-dark" aria-hidden="true"></i></a>
   </li>
 
 </ul>
