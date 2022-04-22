@@ -68,7 +68,7 @@ $fc_algorithm = new CosineSimilarity();
   background-color: transparent;
   outline: 0;
   font-size: 30px;
-  top: 70px;
+  top: 60px;
   color: rgba(0, 0, 0, 0.4);
   transition: 0.15s linear;
 }

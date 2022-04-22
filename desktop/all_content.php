@@ -200,7 +200,7 @@ $fc_link = 'article_content';
 
       echo '
   <div class="col-md-3 post">    
-  <div class="card col-sm-4 col-md-3 newsCard" style="background-color:'.$block[$block_id]['bg_color'].'">
+  <div class="card col-sm-4 col-md-3 newsCard">
     <div class="card-content">
 
 <a href="'.$fc_link.'.php?code='.$row['code'].'">

@@ -20,7 +20,7 @@ include 'includes/header.php';
 
 ?>
 <body>
-    <div id="hideTop">
+    <div id="">
 <?php
 include 'home/blocks.php';
 include 'content/auth.php';

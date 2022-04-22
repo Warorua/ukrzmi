@@ -459,28 +459,28 @@ color: darkolivegreen;
         .cardPhotoPlay {
         height: 105.5px!important;
         width: 100%;
-        background-image: url('images/placeholder.png') no-repeat;
+        background-image: url('https://peacehumanity.org/wp-content/uploads/2021/10/placeholder-237.png');
         background-size: 100%;
         object-fit: cover;
     }
     .cardPhoto_2 {
         height: 110px!important;
         width: 100%;
-        background-image: url('images/placeholder.png') no-repeat;
+        background-image: url('https://peacehumanity.org/wp-content/uploads/2021/10/placeholder-237.png');
         background-size: 100%;
         object-fit: cover;
     }
     .cardPhotoList {
         height: 150px!important;
         width: 100%;
-        background-image: url('images/placeholder.png') no-repeat;
+        background-image: url('https://peacehumanity.org/wp-content/uploads/2021/10/placeholder-237.png');
         background-size: 100%;
         object-fit: cover;
     }
     .cardPhotoList_2 {
         height: 120px!important;
         width: 100%;
-        background-image: url('images/placeholder.png') no-repeat;
+        background-image: url('https://peacehumanity.org/wp-content/uploads/2021/10/placeholder-237.png');
         background-size: 100%;
         object-fit: cover;
     }
@@ -1038,7 +1038,7 @@ opacity: 100%;
    font-size:14px;
     color:rgba(0,0,0,0.5);
 }
-.image-box__author{
+.image-box__author, .subscribe_photo_text{
     font-size:14px;
     color:rgba(0,0,0,0.5);
 }

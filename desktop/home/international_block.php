@@ -88,8 +88,8 @@ foreach($intern_block as $row){
                  <li class="carousel_int__slide">
                     <figure>
                         <div class="imgTitle">
-                            <img src="../images/'.$row['photo'].'" alt="">
-                        
+                            <img src="'.$row['photo_url'].'" alt="">
+                        <a href="'.$row['deep_link'].'" class="stretched-link"></a>
                             <p class="blogTitleInt clearfix">
                             <img class="interImage_bottom" src="https://bankimooncentre.org/wp-content/uploads/2020/06/guardian-logo-square.jpg"/>
                         '.$row['title'].'
