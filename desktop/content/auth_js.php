@@ -74,7 +74,7 @@ $window.on('scroll', function() {
   $(document).ready(function(){
 $("div[class='read-also-slider__item'],img[width='370'],img[data-width='200'],div[class='social-btn-bottom'],div[class='read-also-slider__info'],a[class='article__tag'],div[class='publication-bottom'],a[class='publication__tag'],a[class='publication__gn'],img[src='/images/gnews.svg'],a[class='anchor'],img[src='<?php echo $data['photo_url'] ?>'], div[class='bnr-block__bnr'], div[class='owl-photo'], div[class='owl-photo__item'], span[class='owl-photo__title'], div[class='owl-carousel']").remove();
 $("div[class='owl-photo']").empty();
-$('span').not('[class]').remove();
+//$('span').not('[class]').remove();
 });
   </script>
  <script>
