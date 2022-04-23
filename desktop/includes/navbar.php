@@ -256,7 +256,10 @@ elseif($nav_link == 'all_content.php' && isset($_GET['A0034'])){
 }
 else{
   $topCat = 'NEWS UKRAINE';
-  $pageNm = $_GET['cat'];
+  if(isset( $_GET['cat'])){
+    $pageNm = $_GET['cat'];
+  }
+  
 }
 
 
