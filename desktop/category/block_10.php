@@ -59,11 +59,10 @@ include 'category/panels/panel_05.php';
 </div>
 <div style="background-color:<?php echo $block[9]['bg_color']; ?>" class="row cardPanel pb-2">
  <div class="col-md-9"></div>
-  <div class="col-md-2">
+  <div class="col-md-3 d-flex justify-content-center">
  <button id="carPrev<?php echo $sub_cat_rule; ?>" type="button" data-role="" class="slickk-prev-<?php echo $sub_cat_rule; ?> btn btn-outline-dark btn-sm" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Previous</button>
-  </div>
-  <div class="col-md-1">
-<button id="carNext<?php echo $sub_cat_rule; ?>" type="button" data-role="" class="slickk-next-<?php echo $sub_cat_rule; ?> btn btn-outline-dark btn-sm" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Next</button>
+   
+<button id="carNext<?php echo $block[$block_id]['id']; ?>" type="button" data-role="" class="slickk-next-<?php echo $sub_cat_rule; ?> btn btn-outline-dark btn-sm" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Next</button>
   </div>
  
   
@@ -113,10 +112,10 @@ $('.carousel-<?php echo $sub_cat_rule; ?>').on('afterChange', function(event, sl
   }
   if (CarNo==<?php echo $slide_control; ?>) {
     //alert('this is page 0')
-    document.getElementById('carNext<?php echo $sub_cat_rule; ?>').style.display = 'none';
+    document.getElementById('carNext<?php echo $block[$block_id]['id']; ?>').style.display = 'none';
   }
-  else if(CarNo!=<?php echo $slide_control; ?>){
-    document.getElementById('carNext<?php echo $sub_cat_rule; ?>').style.display = '';
+else if(CarNo!=<?php echo $slide_control; ?>){
+    document.getElementById('carNext<?php echo $block[$block_id]['id']; ?>').style.display = '';
   }
 
 

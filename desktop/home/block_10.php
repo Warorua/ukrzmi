@@ -64,9 +64,9 @@ include 'home/panels/panel_06.php';
 <div style="background-color:<?php echo $block[9]['bg_color']; ?>" class="row cardPanel pb-2">
  <div class="col-md-9"></div>
   <div class="col-md-3 d-flex justify-content-center">
- <button id="carPrev<?php echo $block[9]['name']; ?>" type="button" data-role="" class="slickk-prev-<?php echo $block[9]['name']; ?> btn btn-outline-dark btn-sm" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Previous</button>
+ <button id="carPrev<?php echo $block[9]['id']; ?>" type="button" data-role="" class="slickk-prev-<?php echo $block[9]['name']; ?> btn btn-outline-dark btn-sm" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Previous</button>
   
-<button id="carNext<?php echo $block[9]['name']; ?>" type="button" data-role="" class="slickk-next-<?php echo $block[9]['name']; ?> btn btn-outline-dark btn-sm" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Next</button>
+<button id="carNext<?php echo $block[9]['id']; ?>" type="button" data-role="" class="slickk-next-<?php echo $block[9]['name']; ?> btn btn-outline-dark btn-sm" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Next</button>
   </div>
  
   
@@ -99,7 +99,7 @@ include 'home/panels/panel_06.php';
 };
 
 $('.carousel-<?php echo $block[9]['name']; ?>').on('init',function(event, slick){
-  document.getElementById('carPrev<?php echo $block[9]['name']; ?>').style.display = 'none';
+  document.getElementById('carPrev<?php echo $block[9]['id']; ?>').style.display = 'none';
 });
 
 // On before slide change
@@ -109,17 +109,17 @@ $('.carousel-<?php echo $block[9]['name']; ?>').on('afterChange', function(event
   //alert('['+ CarNo+']');
   if (CarNo==0) {
     //alert('this is page 0')
-    document.getElementById('carPrev<?php echo $block[9]['name']; ?>').style.display = 'none';
+    document.getElementById('carPrev<?php echo $block[9]['id']; ?>').style.display = 'none';
   }
   else if(CarNo!=0){
-    document.getElementById('carPrev<?php echo $block[9]['name']; ?>').style.display = '';
+    document.getElementById('carPrev<?php echo $block[9]['id']; ?>').style.display = '';
   }
   if (CarNo==<?php echo $slide_control; ?>) {
     //alert('this is page 0')
-    document.getElementById('carNext<?php echo $block[9]['name']; ?>').style.display = 'none';
+    document.getElementById('carNext<?php echo $block[9]['id']; ?>').style.display = 'none';
   }
-  else if(CarNo!=<?php echo $slide_control; ?>){
-    document.getElementById('carNext<?php echo $block[9]['name']; ?>').style.display = '';
+else if(CarNo!=<?php echo $slide_control; ?>){
+    document.getElementById('carNext<?php echo $block[9]['id']; ?>').style.display = '';
   }
 
 

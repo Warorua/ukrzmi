@@ -3,6 +3,7 @@
   <div class="col-md-9">
 <h2 style="margin-left:-8px" class="newsHead">Last Main Headlines</h2>
   </div>
+
   <div class="col-md-2 me-4">
   <ul class="nav justify-content-end" id="myTab">
 
@@ -21,7 +22,7 @@
 </div>
 
 <div style="width:97.6%" class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="grid" role="tabpanel" aria-labelledby="grid-tab">
+  <div class="tab-pane fade show active mb-3 w-100" id="grid" role="tabpanel" aria-labelledby="grid-tab">
       <?php
 include 'grid.php'
       ?>

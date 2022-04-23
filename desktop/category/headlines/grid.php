@@ -106,7 +106,7 @@ $('.carousel-<?php echo $block[0]['id']; ?>').on('afterChange', function(event, 
     //alert('this is page 0')
     document.getElementById('carNext<?php echo $block[0]['id']; ?>').style.display = 'none';
   }
-  else if(CarNo!=<?php echo $slide_control; ?>){
+else if(CarNo!=<?php echo $slide_control; ?>){
     document.getElementById('carNext<?php echo $block[0]['id']; ?>').style.display = '';
   }
 

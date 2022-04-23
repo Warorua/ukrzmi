@@ -4,7 +4,7 @@ $page = 'video';
 ?>
 <body class="">
 <?php
-include 'home/blocks.php';
+include 'videos/blocks.php';
 include 'includes/topbar.php';
 include 'includes/navbar.php';
 ?>

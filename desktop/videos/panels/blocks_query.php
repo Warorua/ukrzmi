@@ -36,6 +36,8 @@ ORDER BY id DESC LIMIT 39");
  $stmt->execute(['cat_not'=>'international', 'type'=>"video", 'pin'=>0]);
   $block_news_orig = $stmt->fetchAll();
 
+  $blockHide = sizeof($block_news_orig);
+
  ////////////////////////////////////////////////////////////////////////////////
  $stmt = $conn->prepare("SELECT * FROM news 
  WHERE NOT category=:cat_not

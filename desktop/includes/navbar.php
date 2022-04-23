@@ -246,8 +246,17 @@ elseif($nav_link == 'search.php'){
 elseif($nav_link == 'city.php'){
   $topCat = 'NEWS <tx class="text-uppercase">'.$city.'</tx>';
 }
+elseif($nav_link == 'all_content.php' && isset($_GET['cat'])){
+  $topCat = $_GET['cat'];
+  $pageNm = $_GET['cat'];
+}
+elseif($nav_link == 'all_content.php' && isset($_GET['A0034'])){
+  $topCat = $_GET['cat_id'];
+  $pageNm = $_GET['cat_id'];
+}
 else{
   $topCat = 'NEWS UKRAINE';
+  $pageNm = $_GET['cat'];
 }
 
 
@@ -291,6 +300,14 @@ if($nav_link == 'home.php'){
   $topClassHome = 'text-primary border-bottom-4 border-primary';
   $topClass = 'text-dark';
 }
+elseif($nav_link == 'category.php' && isset($_GET['cat_id']) && !isset($_GET['subcat'])){
+  $topClassHome = 'text-primary border-bottom-4 border-primary';
+  $topClass = 'text-dark';
+}
+elseif($nav_link == 'all_content.php' && !isset($_GET['subcat'])){
+  $topClassHome = 'text-primary border-bottom-4 border-primary';
+  $topClass = 'text-dark';
+}
 else{
   $topClass = 'text-dark';
   $topClassHome = 'text-dark';
@@ -306,23 +323,49 @@ else{
     $subNavCont = "";
 }
 
-if($nav_link == 'interview.php' || $nav_link == 'voices.php'|| $nav_link == 'video.php'){
-    if(!isset($_GET['cat'])){
+if($nav_link == 'category.php'){
+  $homeNavCont = "category.php?cat_id=".$_GET['cat_id'];
+}
+elseif(isset($_GET['cat_id'])){
+  $homeNavCont = "category.php?cat_id=".$_GET['cat_id'];
+}
+elseif(isset($_GET['subcat'])){
+  $homeNavCont = "category.php?cat_id=".$_GET['cat_id'];
+}
+else{
+  $homeNavCont = "home.php";
+}
+if(isset($_GET['page'])){
+ $myPg = $_GET['page'];
+}
+else{
+  $myPg = "";
+}
+if($nav_link == 'interview.php' || $nav_link == 'voices.php'|| $nav_link == 'video.php' || $nav_link == 'all_content.php' && $myPg != 'home' || $myPg != ''){
+    if(!isset($_GET['cat_id'])){
         $subNavCont = "";
     }
     else{
-        $subNavCont = "?cat=".$_GET['cat'];
-        $subTit = ucfirst($_GET['cat']);
+        $subNavCont = "?cat_id=".$_GET['cat_id'];
+        $topCat = ucfirst($_GET['cat_id']);
+      //  $subTit = ucfirst($_GET['cat']);
     }
     if(isset($_GET['city'])){
     $subNavCont = "?city=".$_GET['city'];
-    $subTit = ucfirst($_GET['city']);
+    $topCat = ucfirst($_GET['city']);
+    //$subTit = ucfirst($_GET['city']);
     }
+    if(isset($_GET['subcat'])){
+      $subNavCont = "?cat_id=".$_GET['cat_id'];
+      $topCat = ucfirst($_GET['cat_id']);
+      $subTit = ucfirst($_GET['subcat']);
+      }
     
 }
 if($nav_link == 'city.php'){
     $subNavCont = "?city=".$_GET['id'];
-    $subTit = ucfirst($_GET['id']);
+    $topCat = ucfirst($_GET['id']);
+   // $subTit = ucfirst($_GET['id']);
 }
 
 
@@ -355,9 +398,19 @@ else{
 $stmt->execute();
 $sub_cats = $stmt->fetchAll();
 foreach($sub_cats as $row){
+  if(isset($_GET['subcat'])){
+    if($_GET['subcat'] == $row['subcat']){
+    $topClassSubcat = 'text-primary border-bottom-4 border-primary';
+  }else{
+    $topClassSubcat = 'text-dark';
+  }
+  }else{
+    $topClassSubcat = 'text-dark';
+  }
+
   echo '
   <li class="nav-item">
-  <a class="nav-link navLink " href="all_content.php?subcat='.$row['subcat'].'">'.$row['subcat'].'</a>
+  <a class="nav-link navLink '.$topClassSubcat.'" href="all_content.php?subcat='.$row['subcat'].'&cat_id='.$_GET['cat_id'].'">'.$row['subcat'].'</a>
 </li>
   ';
 }   
@@ -366,7 +419,7 @@ foreach($sub_cats as $row){
 //echo "<script>alert('".$subNavCont."')</script>";
   ?>
   <li class="nav-item">
-    <a class="nav-link navLink  <?php echo $topClassHome ?>" href="home.php">Headlines</a>
+    <a class="nav-link navLink  <?php echo $topClassHome ?>" href="<?php echo $homeNavCont ?>">Headlines</a>
   </li>
   <li class="nav-item">
     <a class="nav-link navLink  <?php echo $topClassInterview ?>" href="interview.php<?php echo $subNavCont ?>">Interviews</a>

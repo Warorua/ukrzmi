@@ -533,7 +533,7 @@ color: darkolivegreen;
         font-weight: 500;
         font-size: 22px;
         line-height: 26px;
-        margin-left: -14px;
+        margin-left: -12px;
         color: #000000;
         padding-left: 0px!important;
         

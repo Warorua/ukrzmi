@@ -127,16 +127,50 @@ $fc_link = 'article_content';
 
 //for ($x = 0; $x <= 48; $x++) {}
 ?>  
-<div class="col-md-3">    
+<div class="col-md-3 lastCard<?php echo $block[$block_id]['id']; ?>"> 
       <div class="card col-sm-4 col-md-3 newsCard" style="background-color:<?php echo $block[$block_id]['bg_color'] ?>">
     <div class="card-content">
 <div class="card-body d-flex justify-content-center h-75">
           <div class="m-auto border border-dark rounded p-2 border-2 fw-bold fs-5">
-              <tx class="text-dark text-center">Get all the contents</tx>
+              <tx class="text-dark text-center">Read all headlines</tx>
           </div>
-          <a class="stretched-link" href="all_content.php?page=<?php echo $pageName ?>&block_id=<?php echo $block_id ?>"></a>
+          <a class="stretched-link" href="all_content.php?page=<?php echo $pageName ?>&block_id=<?php echo $block_id ?>&cat_id=<?php echo $block[$block_id]['name'] ?>"></a>
     </div>
   </div>
   </div> 
  </div>
 </div>
+<script>
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+
+    );
+}
+
+
+const box = document.querySelector('.lastCard<?php echo $block[$block_id]['id']; ?>');
+
+setInterval(function(){ 
+  const messageText = isInViewport(box) ?
+        'viewed' :
+        'notViewed';
+        
+      if(messageText == 'viewed'){
+       // alert(messageText);
+        document.getElementById('carNext<?php echo $block[$block_id]['id']; ?>').style.display = 'none';
+      } 
+      else if(messageText == 'notViewed'){
+        document.getElementById('carNext<?php echo $block[$block_id]['id']; ?>').style.display = '';
+      } 
+
+   
+//alert(messageText);
+
+}, 10);
+
+</script>

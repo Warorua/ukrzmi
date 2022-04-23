@@ -1,6 +1,8 @@
 {
     "require": {
-        "simplehtmldom/simplehtmldom": "^2.0@RC"
+        "simplehtmldom/simplehtmldom": "^2.0@RC",
+        "amnuts/opcache-gui": "^2.0",
+        "mobiledetect/mobiledetectlib": "^2.8"
     },
  "minimum-stability": "dev",
 "prefer-stable": true

@@ -3,12 +3,7 @@
   <?php
 if(1 == 1){
 
-    if($block_id == 0){
-        include 'category/panels/headline_query.php';
-    }
-    else{
-        include 'category/panels/blocks_query.php';
-    }
+
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
   if(!isset($block[$block_id]['bg_color'])){
       $block[$block_id]['bg_color'] = "#fff";
@@ -36,15 +31,17 @@ if(1 == 1){
     else{
       $sql_01 = '';
     }
+    ////////////////////////////QUERY TO BE USED IN THIS PAGE
 $stmt = $conn->prepare("SELECT * FROM news 
 WHERE parent=:parent
 AND type=:type
 AND pin=:pin
 AND category=N'".$_GET['cat_id']."'
 ".$sql_01."
-ORDER BY id DESC LIMIT 50");
+ORDER BY id DESC");
 $stmt->execute(['type'=>"", 'pin'=>0, 'parent'=>$row_2['parent']]);
 $eval = $stmt->fetchAll();
+
 $myarr = array();
 
 foreach($eval as $row){
@@ -87,15 +84,15 @@ array_push($myarr, $val_arr);
 
 }
 
+
+$dsll = sizeof($full_arr);
 $final_arr = array_merge($myarr, $full_arr);
+
 $full_arr = $final_arr;
 array_push($blocked_arr, $myarr);
-//echo $row['parent'].'<br/>';
-//for ($x = 0; $x <= $value; $x++) {} 
-
-
-
   }
+
+
 
 $combined_array = array();
 $size_001 = sizeof($blocked_arr);
@@ -219,8 +216,15 @@ $block_news_orig = $combined_array;
     $hide_control_button = '';
   }
 
+
   $block_news_1 = array_slice($block_news,0,8);
 
+//////////////////////////QUERY FOR GENERATING SESSION
+
+$pageName = 'category'.$block[$block_id]['id'];
+$_SESSION[$pageName] = $block_news;
+
+/////////////////////////////////////////////////
 foreach($block_news_1 as $row){
 $rowtitle = $row['title'];  
 

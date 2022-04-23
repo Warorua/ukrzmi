@@ -1,9 +1,15 @@
 <?php
 $conn = $pdo->open();
+
 ///////////////////////////////////////////normal blocks
 $stmt = $conn->prepare("SELECT * FROM blocks WHERE NOT position=:position AND NOT mode=:mode AND page=:page");
 $stmt->execute(['position'=>404, 'mode'=>'thematic', 'page'=>'']);
 $block = $stmt->fetchAll();
+for($x=0; $x<=10; $x++){
+    unset($block[$x]['bg_color']);
+    $block[$x]['bg_color'] = '#FFF';
+    $block[$x]['position'] = $x;
+}
 usort($block,'posiDescSort');
 ///////////////////////////////////////////thematic blocks
 if(isset($page)){
