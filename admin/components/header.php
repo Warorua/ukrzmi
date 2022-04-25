@@ -76,7 +76,13 @@ else{
 .dataTable > thead > tr > th[class*="sort"]:after {
     content: "" !important;
 }
-
-
+td{
+        white-space: nowrap;
+        max-height:30px!important;
+        padding-bottom:-10px;
+    }
+.w-100{
+  width: 100%;
+}
 
 </style>

@@ -1,9 +1,17 @@
 
   <div class="card card-primary card-outline">
-          <div class="card-header">
+                        <div class="card-header">
+       <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="<?php echo $nav_link ?>" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                    <i class="fas fa-expand"></i>
+                  </button>
+       </div> 
             <h3 class="card-title">
               <i class="fas fa-edit"></i>
-              Article Content Entry Editor<small class="text-danger"> <i class="fa fa-asterisk" aria-hidden="true"></i> (Required)</small>
+              Article Content Entry Editor
             </h3>
           </div>
           <div class="card-body">        
@@ -27,7 +35,15 @@
  <div class="row">
         <div class="col-md-12">
           <div class="card card-outline card-info">
-            <div class="card-header">
+                          <div class="card-header">
+       <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="<?php echo $nav_link ?>" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                    <i class="fas fa-expand"></i>
+                  </button>
+       </div> 
               <h3 class="card-title">
                 Summernote
               </h3>
@@ -49,7 +65,15 @@
       <div class="row">
         <div class="col-md-12">
           <div class="card card-outline card-info">
-            <div class="card-header">
+                          <div class="card-header">
+       <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="<?php echo $nav_link ?>" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                    <i class="fas fa-expand"></i>
+                  </button>
+       </div> 
               <h3 class="card-title">
                 CodeMirror
               </h3>
@@ -82,7 +106,15 @@
  <div class="row">
         <div class="col-md-12">
           <div class="card card-outline card-info">
-            <div class="card-header">
+                          <div class="card-header">
+       <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="<?php echo $nav_link ?>" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                    <i class="fas fa-expand"></i>
+                  </button>
+       </div> 
               <h3 class="card-title">
                Raw Text Editor
               </h3>

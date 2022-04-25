@@ -66,7 +66,15 @@ include 'components/navbar.php';
 <input type="hidden" name="id" value="<?php echo $block['id'] ?>"/>
           <!-- general form elements -->
           <div class="card card-primary">
-              <div class="card-header">
+                            <div class="card-header">
+       <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="<?php echo $nav_link ?>" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                    <i class="fas fa-expand"></i>
+                  </button>
+       </div> 
                 <h3 class="card-title">Meta Information</h3>
               </div>
               <!-- /.card-header -->
@@ -184,7 +192,15 @@ foreach($cat as $row){
 
 <!-- Color Frame Picker -->
   <div class="card card-primary card-outline">
-          <div class="card-header">
+                        <div class="card-header">
+       <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="<?php echo $nav_link ?>" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                    <i class="fas fa-expand"></i>
+                  </button>
+       </div> 
             <h3 class="card-title">
               <i class="fa fa-object-group"></i>
               Block Background Color

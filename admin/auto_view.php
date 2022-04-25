@@ -96,7 +96,7 @@ include 'components/navbar.php';
                  ";
             
             // Total data row count in the database
-            $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM `news` {$search_where}");
+            $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM `news`");
             $stmt->execute();
             $dt_c = $stmt->fetch();
             $data_count = $dt_c['numrows'];
@@ -121,16 +121,25 @@ include 'components/navbar.php';
     <section class="content">
       <div class="container-fluid">
       <div class="card">
-              <div class="card-header">
+                            <div class="card-header">
+       <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="<?php echo $nav_link ?>" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                    <i class="fas fa-expand"></i>
+                  </button>
+       </div>    
                 <h3 class="card-title">Data scraped from scraping scripts.</h3>
+
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive">
               <div class='row d-flex justify-content-between'>
                 <!-- Display Entries Length Select/Dropdown Block-->
-                <div class="col-md-3">
+                <div class="col-md-2">
                  <div class="input-group input-group-sm mb-3">
-                    <select id="length" class="form-control select2bs4" onchange="
+                    <select id="length" class="form-control select2bs4 w-100" onchange="
                     location.replace('auto_view.php?tag_1=<?php echo (isset($_GET['tag_1'])) ? $_GET['tag_1'] : '' ?>&tag_2=<?php echo (isset($_GET['tag_2'])) ? $_GET['tag_2'] : '' ?>&tag_3=<?php echo (isset($_GET['tag_3'])) ? $_GET['tag_3'] : '' ?>&type=<?php echo (isset($_GET['type'])) ? $_GET['type'] : '' ?>&tag_id=<?php echo (isset($_GET['tag_id'])) ? $_GET['tag_id'] : '' ?>&length='+this.value)
                     ">
                     <option selected>Process Entries</option>
@@ -138,12 +147,12 @@ include 'components/navbar.php';
                             <option <?php echo (isset($_GET['length']) && $_GET['length'] == 1000) ? 'selected' : '' ?>>1000</option>
                             <option <?php echo (isset($_GET['length']) && $_GET['length'] == 2000) ? 'selected' : '' ?>>2000</option>
                             <option <?php echo (isset($_GET['length']) && $_GET['length'] == 3000) ? 'selected' : '' ?>>3000</option>
-                            <option <?php echo (isset($_GET['length']) && $_GET['length'] == 'All') ? 'selected' : '' ?>>All</option>
+                            <option <?php echo (isset($_GET['length']) && $_GET['length'] == $data_count) ? 'selected' : '' ?> value="<?php echo $data_count ?>">All</option>
                     </select>
                 </div>    
                 </div>
 
-    <div class="col-md-3">
+    <div class="col-md-2">
                 <div class="input-group input-group-sm mb-3"> 
   <select class="form-control select2bs4" id="inputGroupSelect04"  onchange="
                     location.replace('auto_view.php?tag_1=<?php echo (isset($_GET['tag_1'])) ? $_GET['tag_1'] : '' ?>&tag_2=<?php echo (isset($_GET['tag_2'])) ? $_GET['tag_2'] : '' ?>&tag_3=<?php echo (isset($_GET['tag_3'])) ? $_GET['tag_3'] : '' ?>&length=<?php echo (isset($_GET['length'])) ? $_GET['length'] : 8 ?>&tag_id=<?php echo (isset($_GET['tag_id'])) ? $_GET['tag_id'] : '' ?>&type='+this.value)
@@ -175,7 +184,7 @@ echo '>'.$item_type.'</option>';
    </div>
  
 
-   <div class="col-md-6">
+   <div class="col-md-2">
                 <div class="input-group input-group-sm mb-3">
   <select class="form-control select2bs4" id="inputGroupSelect01"   onchange="
                     location.replace('auto_view.php?type=<?php echo (isset($_GET['type'])) ? $_GET['type'] : '' ?>&tag_2=<?php echo (isset($_GET['tag_2'])) ? $_GET['tag_2'] : '' ?>&tag_3=<?php echo (isset($_GET['tag_3'])) ? $_GET['tag_3'] : '' ?>&length=<?php echo (isset($_GET['length'])) ? $_GET['length'] : 8 ?>&tag_id=<?php echo (isset($_GET['tag_id'])) ? $_GET['tag_id'] : '' ?>&tag_1='+this.value)
@@ -205,7 +214,7 @@ echo '>'.$item_tag_1.'</option>';
   </select>
 </div>
      </div>
-                <div class="col-md-6">
+                <div class="col-md-2">
                 <div class="input-group input-group-sm mb-3">
   <select class="form-control select2bs4" id="inputGroupSelect03"  onchange="
                     location.replace('auto_view.php?type=<?php echo (isset($_GET['type'])) ? $_GET['type'] : '' ?>&tag_1=<?php echo (isset($_GET['tag_1'])) ? $_GET['tag_1'] : '' ?>&tag_3=<?php echo (isset($_GET['tag_3'])) ? $_GET['tag_3'] : '' ?>&length=<?php echo (isset($_GET['length'])) ? $_GET['length'] : 8 ?>&tag_id=<?php echo (isset($_GET['tag_id'])) ? $_GET['tag_id'] : '' ?>&tag_2='+this.value)
@@ -235,7 +244,7 @@ echo '>'.$item_tag_2.'</option>';
   </select>
 </div>
     </div>
-    <div class="col-md-5">
+    <div class="col-md-2">
           <div class="input-group input-group-sm mb-3">
   <select class="form-control select2bs4" id="inputGroupSelect02" onchange="
                     location.replace('auto_view.php?type=<?php echo (isset($_GET['type'])) ? $_GET['type'] : '' ?>&tag_1=<?php echo (isset($_GET['tag_1'])) ? $_GET['tag_1'] : '' ?>&tag_2=<?php echo (isset($_GET['tag_2'])) ? $_GET['tag_2'] : '' ?>&length=<?php echo (isset($_GET['length'])) ? $_GET['length'] : 8 ?>&tag_id=<?php echo (isset($_GET['tag_id'])) ? $_GET['tag_id'] : '' ?>&tag_3='+this.value)
@@ -275,13 +284,7 @@ echo '>'.$item_tag_3.'</option>';
 
                 <!-- End of Search Block -->
 </div>
-<style>
-    td{
-        white-space: nowrap;
-        max-height:30px!important;
-        padding-bottom:-10px;
-    }
-</style>
+
 
 
                 <table id="scrapedData" class="table table-bordered table-striped table-sm">
@@ -350,7 +353,7 @@ foreach($scrape as $row){
                     <td><a href="'.$row['deep_link'].'" class="btn btn-info btn-sm" target="_blank">Deep Link</a></td>
                     <td>Text</td>
                     <td>'.$row['type'].'</td>
-                    <td><img src="../images/'.$row['photo'].'" height="50px" /></td>
+                    <td><img src="'.$row['photo_url'].'" height="50px" /></td>
                    <td>'.$row['category'].'</td>
                    <td>'.$row['sub_1'].'</td>
                    <td>'.$row['sub_2'].'</td>
@@ -378,7 +381,7 @@ foreach($scrape as $row){
     Admin action
   </button>
   <div class="dropdown-menu">
-    <a class="dropdown-item" href="pending_news.php?id='.$row['id'].'">Edit article</a>
+    <a class="dropdown-item" href="pending_news.php?id='.$row['id'].'&cnt=scrap">Edit article</a>
     <a class="dropdown-item" href="article/article_action.php?action=2&id='.$row['id'].'">Unhide</a>
     <a class="dropdown-item" href="article/article_action.php?action=1&id='.$row['id'].'">Hide partially</a>
     <a class="dropdown-item" href="article/article_action.php?action=0&id='.$row['id'].'">Hide fully</a>

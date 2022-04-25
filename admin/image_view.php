@@ -53,7 +53,15 @@ include 'components/navbar.php';
 <div class="row">
 <div class="col-12">
             <div class="card card-primary">
-              <div class="card-header">
+                            <div class="card-header">
+       <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="<?php echo $nav_link ?>" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                    <i class="fas fa-expand"></i>
+                  </button>
+       </div> 
                 <h4 class="card-title">Article images library</h4>
               </div>
               <div class="card-body">

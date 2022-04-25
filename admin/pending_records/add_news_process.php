@@ -1,9 +1,14 @@
 <?php
 include '../includes/conn.php';
 session_start();
+if(isset($_POST['prpg'])){
+    $prpg = 'auto_view.php';
+}else{
+    $prpg = '';
+}
 if(!isset($_FILES['image']['name'])){
     $_SESSION['error'] = 'An error occured while process your request!';
-    header('location: ../manual_view.php');
+    header('location: ../'.$prpg);
 }
 else{
 $conn = $pdo->open();
@@ -189,7 +194,7 @@ for ($x = 0; $x <= 40; $x++){
 
 
 $_SESSION['success'] = 'New article successfully processed!';
-header('location: ../manual_view.php');
+header('location: ../'.$prpg);
 
 
 

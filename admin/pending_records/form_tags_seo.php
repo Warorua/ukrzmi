@@ -1,9 +1,17 @@
 
 <div class="card card-primary card-outline">
-          <div class="card-header">
+                        <div class="card-header">
+       <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="<?php echo $nav_link ?>" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                    <i class="fas fa-expand"></i>
+                  </button>
+       </div> 
             <h3 class="card-title">
               <i class="fa fa-tags"></i>
-              Tags & SEO<small class="text-danger"> <i class="fa fa-asterisk" aria-hidden="true"></i> (Required)</small>
+              Tags & SEO
             </h3>
           </div>
           <div class="card-body">        

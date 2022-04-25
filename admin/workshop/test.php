@@ -38,7 +38,15 @@ include 'components/navbar.php';
     <section class="content">
       <div class="container-fluid">
       <div class="card">
-              <div class="card-header">
+                            <div class="card-header">
+       <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="<?php echo $nav_link ?>" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                    <i class="fas fa-expand"></i>
+                  </button>
+       </div> 
                 <h3 class="card-title">Pinned articles stats.</h3>
               </div>
               <!-- /.card-header -->
@@ -47,7 +55,15 @@ include 'components/navbar.php';
               <div style="display: none;" class="col-md-3">
             <div class="sticky-top mb-3">
               <div class="card">
-                <div class="card-header">
+                              <div class="card-header">
+       <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="<?php echo $nav_link ?>" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                    <i class="fas fa-expand"></i>
+                  </button>
+       </div> 
                   <h4 class="card-title">Draggable Events</h4>
                 </div>
                 <div class="card-body">
@@ -70,7 +86,15 @@ include 'components/navbar.php';
               </div>
               <!-- /.card -->
               <div class="card">
-                <div class="card-header">
+                              <div class="card-header">
+       <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="<?php echo $nav_link ?>" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                    <i class="fas fa-expand"></i>
+                  </button>
+       </div> 
                   <h3 class="card-title">Create Event</h3>
                 </div>
                 <div class="card-body">

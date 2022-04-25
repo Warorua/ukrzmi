@@ -38,7 +38,15 @@ include 'components/navbar.php';
     <section class="content">
       <div class="container-fluid">
       <div class="card">
-<div class="card-header">
+              <div class="card-header">
+       <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="<?php echo $nav_link ?>" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                    <i class="fas fa-expand"></i>
+                  </button>
+       </div> 
     <a class="btn btn-app btn-warning" data-toggle="modal" data-target="#logoImage">
       <i class="fa fa-plus"></i> Add New
      </a>
@@ -139,7 +147,15 @@ echo '>'.$item_type.'</option>';
         <div class="row">
           <div class="col-md-12">
             <div class="card card-default">
-              <div class="card-header">
+                            <div class="card-header">
+       <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="<?php echo $nav_link ?>" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                    <i class="fas fa-expand"></i>
+                  </button>
+       </div> 
                 <h3 class="card-title">Upload logo</h3>
               </div>
               <div class="card-body">

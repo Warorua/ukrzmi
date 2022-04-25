@@ -24,8 +24,37 @@ else{
   <?php
 include 'components/topbar.php';
 include 'components/navbar.php';
-?>
 
+
+if($data['photo_url'] == ''){
+  $myPhoto = '../images/'.$data['photo'];
+}
+else{
+  $myPhoto = $data['photo_url'];
+}
+if(isset($_GET['cnt'])){
+  $myTitle = 'Editting scrapped data';
+  $myBtn = 'Update article';
+  $prPg = '<input type="hidden" name="prpg" value="scrap">';
+  $myPrc = '<input type="hidden" name="actionP" value="0">';
+}else{
+  $myTitle = 'Editting manually Input Data';
+  $myBtn = 'Process article';
+  $prPg = '';
+  $myPrc = '
+  <div class="form-group">
+    <div class="custom-control custom-radio  custom-control-inline">
+                          <input class="custom-control-input" type="radio" id="customRadio" name="actionP" value="1">
+                          <label class="custom-control-label" for="customRadio">Save article</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input class="custom-control-input" type="radio" id="customRadio2" name="actionP" value="0">
+                          <label class="custom-control-label" for="customRadio2">Post article</label>
+   </div>
+ </div>
+  ';
+}
+?>
    <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -33,12 +62,12 @@ include 'components/navbar.php';
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Manually Input Data</h1>
+            <h1 class="m-0"><?php echo $myTitle ?></h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Manually Input</li>
+              <li class="breadcrumb-item active">Edit data</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -55,6 +84,7 @@ include 'components/navbar.php';
 <form action="pending_records/add_news_process.php" name="articleForm" id="articleForm" class="dropzone"  method="post" enctype="multipart/form-data">
  <input type="hidden" name="id" value="<?php echo $data['id'] ?>"/>
 <!-- article_data -->
+<?php echo $prPg ?>
  <div  id="logoUpload">
 <?php include 'pending_records/form_article_data.php' ?>
 <!-- /article_data -->
@@ -104,21 +134,15 @@ include 'components/navbar.php';
         <div class="card-body">
         <div class="row">
 <div class="col-md-6">
-<div class="form-group">
-    <div class="custom-control custom-radio  custom-control-inline">
-                          <input class="custom-control-input" type="radio" id="customRadio" name="actionP" value="1">
-                          <label class="custom-control-label" for="customRadio">Save article</label>
-                        </div>
-                        <div class="custom-control custom-radio custom-control-inline">
-                          <input class="custom-control-input" type="radio" id="customRadio2" name="actionP" value="0">
-                          <label class="custom-control-label" for="customRadio2">Post article</label>
-                        </div>
- </div>
+
+
+<?php echo $myPrc ?>
+
 </div>
 <div class="col-md-6">
           <button type="submit" name="post" class="btn btn-primary">
               <i class="fas fa-upload"></i>
-              <span>Process article</span>
+              <span><?php echo $myBtn ?></span>
               </button>  
 </div>
         </div>

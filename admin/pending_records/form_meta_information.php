@@ -1,6 +1,14 @@
 
 <div class="card card-primary card-outline">
-          <div class="card-header">
+                        <div class="card-header">
+       <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="<?php echo $nav_link ?>" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                    <i class="fas fa-expand"></i>
+                  </button>
+       </div> 
             <h3 class="card-title">
               <i class="fa fa-sitemap"></i>
               Article Meta Information
@@ -11,9 +19,17 @@
             <div class="tab-content" id="custom-content-above-tabContent">
 <div class="form-group">
                   <label>Meta Title</label>
+                  <?php 
+                    if($data['meta_title'] != ''){
+                      $metaTit = $data['meta_title'];
+                      }
+                      else{
+                        $metaTit = $data['title'];
 
+                      } 
+                       ?>
                   <div class="input-group">
-                    <input type="text" name="meta_title" class="form-control" value="<?php echo $data['meta_title'] ?>" placeholder="Meta Title">
+                    <input type="text" name="meta_title" class="form-control" value="<?php echo  $metaTit ?>" placeholder="Meta Title">
 
                     <div class="input-group-append">
                       <span class="input-group-text"><i class="fa fa-random"></i></span>
@@ -23,9 +39,11 @@
  </div>
  <div class="form-group">
                   <label>Meta Description</label>
-
+                  <?php 
+                  $metaDes = strip_tags(substr($data['article'], 100))
+                   ?>
                   <div class="input-group">
-                    <input type="text" name="meta_desc" class="form-control" value="<?php echo $data['meta_desc'] ?>" placeholder="Meta Description">
+                    <input type="text" name="meta_desc" class="form-control" value="<?php echo $metaDes ?>" placeholder="Meta Description">
 
                     <div class="input-group-append">
                       <span class="input-group-text"><i class="fa fa-random"></i></span>

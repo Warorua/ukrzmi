@@ -60,9 +60,18 @@
 <script>
   $(function () {
     $("#scrapedData").DataTable({
-      //"responsive": true,
+     // "responsive": true,
       "lengthChange": true,
       "autoWidth": false,
+      "stateSave": true,
+      "lengthMenu": [ 50, 100, 200, 300, 400 ],
+      "scrollCollapse": true,
+      "search": {
+    "smart": false,
+    "select": 'single',
+    "info": false,
+    "keys": true
+  },
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#scrapedData_wrapper .col-md-6:eq(0)');
 
@@ -73,7 +82,16 @@
       "ordering": true,
       "info": true,
       "autoWidth": false,
-     // "responsive": true,
+      "stateSave": true,
+      "lengthMenu": [ 50, 100, 200, 300, 400 ],
+      "scrollCollapse": true,
+      "search": {
+    "smart": false,
+    "select": 'single',
+    "info": false
+  },
+     //"responsive": true,
+     "keys": true,
     });
   });
 </script>

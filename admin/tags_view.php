@@ -72,7 +72,15 @@ $tag3_size = sizeof($tag_3_count);
     <section class="content">
       <div class="container-fluid">
       <div class="card">
-              <div class="card-header">
+                            <div class="card-header">
+       <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="<?php echo $nav_link ?>" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                    <i class="fas fa-expand"></i>
+                  </button>
+       </div> 
                 <h3 class="card-title">System Article tags data</h3>
               </div>
               <!-- /.card-header -->
