@@ -20,7 +20,7 @@ ORDER BY id;");
  $stmt->execute(['cat_not'=>'international', 'type'=>"", 'pin'=>0]);
  $block_allNews = $stmt->fetchAll();
 
-$pageName = 'home';
+$pageName = 'home'.'_'.$block[$block_id]['id'];
 $_SESSION[$pageName] = $block_allNews;
 ?>
 

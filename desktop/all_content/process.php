@@ -14,7 +14,11 @@ else if(!isset($_GET['page']) && !isset($_GET['block_id'])){
 else{
 $regex = '/^category/';
 $categTest = preg_match($regex, $_GET['page']);
-    if($_GET['page'] == 'home' || $categTest == TRUE || $_GET['page'] == 'video' || $_GET['page'] == 'city'){
+
+$regex2 = '/^home_/';
+$categTest2 = preg_match($regex2, $_GET['page']);
+
+    if($categTest2 == TRUE || $categTest == TRUE || $_GET['page'] == 'video' || $_GET['page'] == 'city'){
         $page = $_GET['page'];
     }
     else{
