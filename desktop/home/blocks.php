@@ -13,6 +13,7 @@ $thematic_block = $stmt->fetchAll();
 usort($thematic_block,'posiDescSort');   
 }
 
+
 ////////////////////////////////////////////////////////////////////////////////
 function posiDescSort($item1,$item2)
 {

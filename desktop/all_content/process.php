@@ -35,6 +35,7 @@ if(!isset($block[$block_id]['name'])){
     $title = $block[$block_id]['name'];
 }
 
+
 $titleHead = '<h2 class="newsHead">'.$title.' all content</h2>';
 }
 if(isset($_GET['A0034'])){

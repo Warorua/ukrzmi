@@ -10,6 +10,7 @@ if(1 == 1){
    $block_news_1 = array_slice($block_news_orig,40,40);
  }
 
+ 
 $block_news_list = $block_news;
 $allcount = sizeof($block_news)-1;
 foreach($block_news_1 as $row){
