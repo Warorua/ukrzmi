@@ -53,12 +53,6 @@ include 'home/panels/panel_06.php';
  </div> 
 
 
-
-
-
-
-
-
   
 </div>
 <div style="background-color:<?php echo $block[1]['bg_color']; ?>" class="row cardPanel pb-2">
