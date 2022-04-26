@@ -1,19 +1,3 @@
-
-<div class="col-md-3">    
-  <div class="card col-sm-4 col-md-3 newsCard">
-    <div class="card-content">
-<div class="imgFrame">
-      <div class="imgTitle">
-        <div class="cardFrame d-flex align-items-center justify-content-center" style="border-color: grey;">
-      <tx class="text-secondary text-center">Previous seen headlines</tx>
-      </div>   
-    </div>
- </div>   
- <a href="#" class="stretched-link"> </a>        
-  </div>
-  </div>    
-</div>
-
 <?php
 if(1 == 1){
  if(isset($_GET['subcat'])){

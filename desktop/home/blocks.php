@@ -20,11 +20,6 @@ function posiDescSort($item1,$item2)
     return ($item1['position'] > $item2['position']) ? 1 : -1;
 }
 
-function idDescSort($item1,$item2)
-{
-    if ($item1['id'] == $item2['id']) return 0;
-    return ($item1['id'] > $item2['id']) ? -1 : 1;
-}
 
 
 //print_r($block);
