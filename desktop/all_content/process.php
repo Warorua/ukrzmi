@@ -27,7 +27,13 @@ $categTest2 = preg_match($regex2, $_GET['page']);
 
 $block_id = $_GET['block_id'];
 ///////////////////////////////////////////////////////////////////////////
-$block_news_orig = $_SESSION[$page]; 
+if(!isset($_SESSION[$page])){
+    header('location: home.php');
+}
+else{
+$block_news_orig = $_SESSION[$page];
+}
+ 
 
 if(!isset($block[$block_id]['name'])){
     $title = 'Headlines';

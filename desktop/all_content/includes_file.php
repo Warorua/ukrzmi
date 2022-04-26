@@ -3,6 +3,8 @@ include 'home/blocks.php';
 include 'includes/topbar.php';
 include 'includes/navbar.php';
 
+usort($block_news_orig,'idDescSort');
+
 $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM pinned WHERE block_id=:block_id AND page=:page");
 $stmt->execute(['block_id'=>$block[$block_id]['id'], 'page'=>$page]);
 $block_auth = $stmt->fetch();
