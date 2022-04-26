@@ -62,9 +62,8 @@ include 'home/panels/panel_06.php';
   
 <button id="carNext<?php echo $block[1]['id']; ?>" type="button" data-role="" class="slickk-next-<?php echo $block[1]['name']; ?> btn btn-outline-dark btn-sm" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Next</button>
   </div>
- 
   
-  
+
 </div>
 <script>
     
