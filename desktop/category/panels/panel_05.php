@@ -7,7 +7,7 @@ $block_news_5 = array_slice($block_news,32,7);
 foreach($block_news_5 as $row){
 $rowtitle = $row['title'];  
 
-$maxPos = 102;
+$maxPos = 500;
 if($row['parent'] == "ua.korrespondent.net"){
   $rowParent = "Кореспондент";
 }
@@ -125,7 +125,14 @@ else{
           <div class="m-auto border border-dark rounded p-2 border-2 fw-bold fs-5">
               <tx class="text-dark text-center">Read all headlines</tx>
           </div>
-          <a class="stretched-link" href="all_content.php?page=<?php echo $pageName ?>&block_id=<?php echo $block_id ?>&cat_id=<?php echo $_GET['cat_id'] ?>"></a>
+          <?php
+if(isset($sub_cat_rule)){
+  $cat_type_two = 'cat_type_two='.$sub_cat_rule;
+}else{
+  $cat_type_two = 'cat_type='.$_GET['cat_id'];
+}
+          ?>
+          <a class="stretched-link" href="all_content.php?page=<?php echo $pageName ?>&block_id=<?php echo $block_id ?>&cat_id=<?php echo $_GET['cat_id'] ?>&<?php echo $cat_type_two ?>"></a>
     </div>
   </div>
   </div> 

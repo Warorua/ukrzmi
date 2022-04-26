@@ -232,10 +232,11 @@ $nav = $_SERVER['PHP_SELF'];
 $nav_link = basename($nav);
 
 if(isset($data['category'])){
-  $topCat = $data['category'];
+  $topCat = strtoupper($data['category']);
+  
 }
 elseif(isset($_GET['cat_id'])){
-  $topCat = $_GET['cat_id'];
+  $topCat = strtoupper($_GET['cat_id']);
 }
 elseif($nav_link == 'tag.php'){
   $topCat = 'TAGS';
@@ -247,11 +248,11 @@ elseif($nav_link == 'city.php'){
   $topCat = 'NEWS <tx class="text-uppercase">'.$city.'</tx>';
 }
 elseif($nav_link == 'all_content.php' && isset($_GET['cat'])){
-  $topCat = $_GET['cat'];
+  $topCat = strtoupper($_GET['cat']);
   $pageNm = $_GET['cat'];
 }
 elseif($nav_link == 'all_content.php' && isset($_GET['A0034'])){
-  $topCat = $_GET['cat_id'];
+  $topCat = strtoupper($_GET['cat_id']);
   $pageNm = $_GET['cat_id'];
 }
 else{
@@ -386,7 +387,7 @@ else{
 }
 ?>
 
-<h3 style="<?php echo $titSytle  ?>" class="text-primary pageCat pb-0"><?php echo $topCat ?><?php echo $titCont ?>
+<h3 style="<?php echo $titSytle  ?>" class="text-primary pageCat pb-0"><?php echo strtoupper($topCat) ?><?php echo $titCont ?>
 </h3>
 
 <div <?php echo $topHide ?> class="navbarBottom b-4">

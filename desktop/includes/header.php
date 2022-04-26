@@ -407,6 +407,7 @@ color: darkolivegreen;
       width:215px!important;
       
     }
+    
     .cardPanel{
       width: 870px;
       padding-right: 0px!important;
@@ -426,6 +427,7 @@ color: darkolivegreen;
       margin-bottom: 20px;
     }
     .cardHead {
+      display: -webkit-box;
        width: 186px;
         margin: 0px auto;
         margin-left:0px;
@@ -435,7 +437,11 @@ color: darkolivegreen;
         color: #000000;
         height: 53px;
         overflow-y: hidden;
+        overflow: hidden;
+        text-overflow: -o-ellipsis-lastline;
         font-family: Roboto, Arial, sans-serif;
+        -webkit-line-clamp: 3; 
+        -webkit-box-orient: vertical;
     }
     .shareIcon{
       float:right;

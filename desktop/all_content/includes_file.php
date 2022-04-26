@@ -2,8 +2,13 @@
 include 'home/blocks.php';
 include 'includes/topbar.php';
 include 'includes/navbar.php';
+if(isset($categTest2)){
+  if($categTest2 == TRUE){
+  usort($block_news_orig,'idDescSort');
+}
+}
 
-usort($block_news_orig,'idDescSort');
+
 
 $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM pinned WHERE block_id=:block_id AND page=:page");
 $stmt->execute(['block_id'=>$block[$block_id]['id'], 'page'=>$page]);
@@ -71,5 +76,22 @@ if(isset($_GET['subcat']) || isset($_GET['A0034'])){
 }
 else{
   $topSt = "";
+}
+//////////////////////////////////////////
+if(isset($_GET['cat_type'])){ 
+  if($_GET['cat_type'] == ''){
+    $prevCont = 'home.php';
+  }else{
+    $prevCont = 'category.php?cat_id='.$_GET['cat_type'];
+  }
+}
+elseif(isset($_GET['cat_type_two'])){
+  $prevCont = 'all_content.php?cat_id='.$_GET['cat_id'].'&subcat='.$_GET['cat_type_two'];
+}
+elseif(isset($_GET['cat_type_three'])){
+  $prevCont = 'city.php?id='.$_GET['cat_type_three'];
+}
+elseif(isset($_GET['cat_type_four'])){
+  $prevCont = $_GET['cat_type_four'];
 }
 ?>

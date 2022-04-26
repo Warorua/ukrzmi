@@ -81,7 +81,7 @@ $block_news_orig = $block_news;
 foreach($block_news as $row){
 $rowtitle = $row['title'];  
 
-$maxPos = 102;
+$maxPos = 500;
 if($row['parent'] == "ua.korrespondent.net"){
   $rowParent = "Кореспондент";
 }
@@ -189,7 +189,7 @@ else{
 </div>
 <div style="background-color:<?php echo $block[0]['bg_color']; ?>" class="row cardPanel pb-2">
  <div class="col-md-9"></div>
-  <div class="col-md-3 d-flex justify-content-center">
+  <div class="col-md-3 d-flex justify-content-between">
  <button id="carPrev<?php echo $block[0]['id']; ?>" type="button" data-role="" class="slickk-prev-<?php echo $block[0]['id']; ?> btn btn-outline-dark btn-sm" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Previous</button>
   
 <button id="carNext<?php echo $block[0]['id']; ?>" type="button" data-role="" class="slickk-next-<?php echo $block[0]['id']; ?> btn btn-outline-dark btn-sm" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Next</button>

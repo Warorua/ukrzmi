@@ -59,7 +59,7 @@ include 'category/panels/panel_05.php';
 </div>
 <div style="background-color:<?php echo $block[5]['bg_color']; ?>" class="row cardPanel pb-2">
  <div class="col-md-9"></div>
-  <div class="col-md-3 d-flex justify-content-center">
+  <div class="col-md-3 d-flex justify-content-between">
  <button id="carPrev<?php echo $sub_cat_rule; ?>" type="button" data-role="" class="slickk-prev-<?php echo $sub_cat_rule; ?> btn btn-outline-dark btn-sm" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Previous</button>
    
 <button id="carNext<?php echo $block[$block_id]['id']; ?>" type="button" data-role="" class="slickk-next-<?php echo $sub_cat_rule; ?> btn btn-outline-dark btn-sm" <?php if(isset($hide_control_button)){echo $hide_control_button;} ?>>Next</button>

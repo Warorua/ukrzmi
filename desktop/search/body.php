@@ -253,7 +253,7 @@ echo '>'.$item_tag_3.'</option>';
                     
                     $rowtitle = $row['title'];  
 
-                    $maxPos = 102;
+                    $maxPos = 500;
                     if($row['parent'] == "ua.korrespondent.net"){
                       $rowParent = "Кореспондент";
                     }

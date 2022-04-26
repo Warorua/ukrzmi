@@ -15,19 +15,21 @@ else{
 $regex = '/^category/';
 $categTest = preg_match($regex, $_GET['page']);
 
-$regex2 = '/^home_/';
+$regex2 = '/^home/';
 $categTest2 = preg_match($regex2, $_GET['page']);
 
     if($categTest2 == TRUE || $categTest == TRUE || $_GET['page'] == 'video' || $_GET['page'] == 'city'){
         $page = $_GET['page'];
     }
     else{
+       // echo '<script> location.replace("home.php"); </script>';
         header('location: home.php');
     }
 
 $block_id = $_GET['block_id'];
 ///////////////////////////////////////////////////////////////////////////
 if(!isset($_SESSION[$page])){
+  //  echo '<script> location.replace("home.php"); </script>';
     header('location: home.php');
 }
 else{

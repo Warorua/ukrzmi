@@ -1,5 +1,6 @@
 <?php
 include 'includes/header.php';
+session_unset();
 $page = 'home';
 ?>
 <body class="">
