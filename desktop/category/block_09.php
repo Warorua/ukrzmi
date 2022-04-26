@@ -112,10 +112,10 @@ $('.carousel-<?php echo $sub_cat_rule; ?>').on('afterChange', function(event, sl
   }
   if (CarNo==<?php echo $slide_control; ?>) {
     //alert('this is page 0')
-    document.getElementById('carNext<?php echo $block[$block_id]['id']; ?>').style.display = 'none';
+    document.getElementById('carNext<?php echo $block[$block_id]['id']; ?>').style.visibility = 'hidden';
   }
 else if(CarNo!=<?php echo $slide_control; ?>){
-    document.getElementById('carNext<?php echo $block[$block_id]['id']; ?>').style.display = '';
+    document.getElementById('carNext<?php echo $block[$block_id]['id']; ?>').style.visibility = '';
   }
 
 

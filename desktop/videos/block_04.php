@@ -95,7 +95,7 @@ include 'videos/panels/panel_05.php';
 };
 
 $('.carousel-<?php echo $block[3]['name']; ?>').on('init',function(event, slick){
-  document.getElementById('carPrev<?php echo $block[3]['id']; ?>').style.display = 'none';
+  document.getElementById('carPrev<?php echo $block[3]['id']; ?>').style.visibility = 'hidden';
 });
 
 // On before slide change
@@ -105,17 +105,17 @@ $('.carousel-<?php echo $block[3]['name']; ?>').on('afterChange', function(event
   //alert('['+ CarNo+']');
   if (CarNo==0) {
     //alert('this is page 0')
-    document.getElementById('carPrev<?php echo $block[3]['id']; ?>').style.display = 'none';
+    document.getElementById('carPrev<?php echo $block[3]['id']; ?>').style.visibility = 'hidden';
   }
   else if(CarNo!=0){
-    document.getElementById('carPrev<?php echo $block[3]['id']; ?>').style.display = '';
+    document.getElementById('carPrev<?php echo $block[3]['id']; ?>').style.visibility = '';
   }
   if (CarNo==<?php echo $slide_control; ?>) {
     //alert('this is page 0')
-    document.getElementById('carNext<?php echo $block[3]['id']; ?>').style.display = 'none';
+    document.getElementById('carNext<?php echo $block[3]['id']; ?>').style.visibility = 'hidden';
   }
 else if(CarNo!=<?php echo $slide_control; ?>){
-    document.getElementById('carNext<?php echo $block[3]['id']; ?>').style.display = '';
+    document.getElementById('carNext<?php echo $block[3]['id']; ?>').style.visibility = '';
   }
 
 

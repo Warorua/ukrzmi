@@ -126,11 +126,7 @@ margin-right: auto;
 .topContent{
   width:1400px;
 }
-    .cardBlock {
-      width: 870px!important;
-        
-        padding-left: 5px;
-    }
+
 
     .card {
         margin: 5px 5px;
@@ -181,8 +177,9 @@ overflow-x: hidden;
 justify-content: center;
 }
   .cardColumn .col-md-3 {
-      margin-left: 0px;
-     width:215px;
+    margin-left: 0px;
+     width:217px;
+     
   }
   .cardColumn .card-content {
      position: relative;
@@ -407,16 +404,23 @@ color: darkolivegreen;
       margin-right: 1px;
     }
     .newsCard{
-      width:210px!important;
+      width:215px!important;
       
     }
     .cardPanel{
       width: 870px;
-      padding-right: -10px;
+      padding-right: 0px!important;
+      padding-left: 0px!important;
+      margin-right: -25px!important;
     }
     .cardPanel button{
       width:50%;
-      margin-right: 5px;
+      margin-right: -5px;
+    }
+    .cardBlock {
+      width: 870px!important;
+      padding-right: 0px!important;
+      padding-left: 0px!important;
     }
     .cardBlock button{
       margin-bottom: 20px;

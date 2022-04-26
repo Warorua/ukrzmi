@@ -225,7 +225,7 @@ else{
 };
 
 $('.carousel-<?php echo $block[0]['id']; ?>').on('init',function(event, slick){
-  document.getElementById('carPrev<?php echo $block[0]['id']; ?>').style.display = 'none';
+  document.getElementById('carPrev<?php echo $block[0]['id']; ?>').style.visibility = 'hidden';
 });
 
 // On before slide change
@@ -235,17 +235,17 @@ $('.carousel-<?php echo $block[0]['id']; ?>').on('afterChange', function(event, 
   //alert('['+ CarNo+']');
   if (CarNo==0) {
     //alert('this is page 0')
-    document.getElementById('carPrev<?php echo $block[0]['id']; ?>').style.display = 'none';
+    document.getElementById('carPrev<?php echo $block[0]['id']; ?>').style.visibility = 'hidden';
   }
   else if(CarNo!=0){
-    document.getElementById('carPrev<?php echo $block[0]['id']; ?>').style.display = '';
+    document.getElementById('carPrev<?php echo $block[0]['id']; ?>').style.visibility = '';
   }
   if (CarNo==8) {
     //alert('this is page 0')
-    document.getElementById('carNext<?php echo $block[0]['id']; ?>').style.display = 'none';
+    document.getElementById('carNext<?php echo $block[0]['id']; ?>').style.visibility = 'hidden';
   }
   else if(CarNo!=8){
-    document.getElementById('carNext<?php echo $block[0]['id']; ?>').style.display = '';
+    document.getElementById('carNext<?php echo $block[0]['id']; ?>').style.visibility = '';
   }
 
 

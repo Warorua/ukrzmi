@@ -135,7 +135,7 @@ $my_link = basename($mynav);
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Top Body</label>
-                   <textarea id="summernote" class="form-control" name="top_body" style="width:100%; height:150px"  required></textarea>
+                   <textarea id="editor1" class="form-control" name="top_body" style="width:100%; height:150px"  required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Bottom Body</label>

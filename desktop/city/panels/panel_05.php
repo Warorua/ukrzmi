@@ -162,10 +162,10 @@ setInterval(function(){
         
       if(messageText == 'viewed'){
        // alert(messageText);
-        document.getElementById('carNext<?php echo $block[$block_id]['id']; ?>').style.display = 'none';
+        document.getElementById('carNext<?php echo $block[$block_id]['id']; ?>').style.visibility = 'hidden';
       } 
       else if(messageText == 'notViewed'){
-        document.getElementById('carNext<?php echo $block[$block_id]['id']; ?>').style.display = '';
+        document.getElementById('carNext<?php echo $block[$block_id]['id']; ?>').style.visibility = '';
       } 
 
    

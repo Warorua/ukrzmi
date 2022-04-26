@@ -45,12 +45,12 @@
                   </button>
        </div> 
               <h3 class="card-title">
-                Summernote
+                WYSIWYG Editor
               </h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-              <textarea id="summernote" name="content" value="<?php echo $data['article'] ?>">
+              <textarea id="editor1" name="content" value="<?php echo $data['article'] ?>">
               <?php echo $data['article'] ?>
               </textarea>
             </div>
