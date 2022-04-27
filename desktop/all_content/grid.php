@@ -1,5 +1,5 @@
 <div class="row">
-<div class="col-md-3 <?php if(!isset($_GET['page'])){echo 'visually-hidden';} ?>">    
+<div class="col-md-3 <?php if(!isset($_GET['page']) || isset($_GET['A0034'])){echo 'visually-hidden';} ?>">    
   <div class="card col-sm-4 col-md-3 newsCard">
     <div class="card-content">
 <div class="imgFrame">

@@ -3,8 +3,8 @@
   <div class="">
 <h2 style="margin-left:-8px" class="newsHead position-relative"><?php echo $titleHead; ?></h2>
   </div>
-  <div class="">
-      <a href="all_content.php?page=<?php echo $page ?>&A0034=LoPHH8986&block_id=<?php echo $block_id ?>&cat_id=<?php echo $_GET['cat_id'] ?>" class="btn btn-outline-dark btn-sm">All headlines</a>
+  <div class="<?php if(isset($_GET['A0034'])){echo 'visually-hidden';} ?>">
+      <a href="all_content.php?page=<?php echo $page ?>&A0034=LoPHH8986&block_id=<?php echo $block_id ?>&cat_id=<?php echo $_GET['cat_id'] ?>&cat_type=<?php echo $_GET['cat_type'] ?>" class="btn btn-outline-dark btn-sm">All headlines</a>
  </div>
   <div class="">
   <ul class="nav justify-content-end" id="myTab">

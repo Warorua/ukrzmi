@@ -300,8 +300,14 @@ else{
   $topClassVoice = 'text-dark';
 }
 /////////////home
+/*
 if($nav_link == 'home.php'){
   $topClassHome = 'text-primary border-bottom-4 border-primary';
+  $topClass = 'text-dark';
+}
+*/
+if($nav_link == 'home.php'){
+  $topClassHome = 'text-dark';
   $topClass = 'text-dark';
 }
 elseif($nav_link == 'category.php' && isset($_GET['cat_id']) && !isset($_GET['subcat'])){
@@ -339,6 +345,24 @@ elseif(isset($_GET['subcat'])){
 else{
   $homeNavCont = "home.php";
 }
+/////////////////////////////////////////////////////
+if(isset($_GET['cat_type'])){ 
+  if($_GET['cat_type'] == ''){
+    $homeNavCont = 'home.php';
+  }else{
+    $homeNavCont = 'category.php?cat_id='.$_GET['cat_type'];
+  }
+}
+elseif(isset($_GET['cat_type_two'])){
+  $homeNavCont = 'all_content.php?cat_id='.$_GET['cat_id'].'&subcat='.$_GET['cat_type_two'];
+}
+elseif(isset($_GET['cat_type_three'])){
+  $homeNavCont = 'city.php?id='.$_GET['cat_type_three'];
+}
+elseif(isset($_GET['cat_type_four'])){
+  $homeNavCont = $_GET['cat_type_four'];
+}
+/////////////////////////////////////////////////////
 if(isset($_GET['page'])){
  $myPg = $_GET['page'];
 }
@@ -371,7 +395,13 @@ if($nav_link == 'city.php'){
     $topCat = ucfirst($_GET['id']);
    // $subTit = ucfirst($_GET['id']);
 }
-
+if(isset($_GET['cat_type'])){ 
+  if($_GET['cat_type'] == ''){
+    $subNavCont = 'home.php';
+  }else{
+    $subNavCont = '?cat_id='.$_GET['cat_type'];
+  }
+}
 
 
 
