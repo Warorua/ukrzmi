@@ -11,7 +11,7 @@ use \NlpTools\Tokenizers\WhitespaceTokenizer;
     $seconds = $seconds % 60;
     $minutes = $minutes % 60;
 
-    $format = '%02u Minutes %02u Seconds';
+    $format = '%02u Minutes';
     $time = sprintf($format, $minutes, $seconds, $milliseconds);
     return rtrim($time, '0');
 }
@@ -88,8 +88,13 @@ include 'content/img_row.php';
 $contentFull = strip_tags(closetags($article));
 $setA = $tok->tokenize($contentFull);
 $contentTime = number_format(sizeof($setA)/200, 1)*60000;
+if(formatMilliseconds($contentTime) < 1){
+  $arcTime = '1 Minute';
+}else{
+  $arcTime = formatMilliseconds($contentTime);
+}
     ?>
-    <i  style="margin-right:10px" class="fa fa-clock-o" aria-hidden="true"></i>  <?php echo formatMilliseconds($contentTime) ?>
+    <i  style="margin-right:10px" class="fa fa-clock-o" aria-hidden="true"></i>  <?php echo $arcTime ?>
     </a>
   </li>
 </ul>

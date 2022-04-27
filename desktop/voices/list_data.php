@@ -15,6 +15,12 @@ foreach($list_item as $row){
     $rowtitle = $row['title'];  
     
     $maxPos = 92;
+if($row['sub_1'] != ''){
+  $catHolder = $row['sub_1'];
+ }else{
+   $catHolder = 'Генеральний';
+ }
+ 
     if($row['parent'] == "ua.korrespondent.net"){
       $rowParent = "Кореспондент";
     }

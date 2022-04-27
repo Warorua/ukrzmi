@@ -168,7 +168,7 @@ else{
        <div class="cardDesc">
             <div style="height:65px" class="card-title blockTitle">'.$titleBadge.''.$rowtitle.'</div>
             <div class="d-flex align-items-end">
-            <span class="cardRow text-primary">'.$row['category'].'</span>
+            <span class="cardRow text-primary">'.$catHolder.'</span>
             </div>
         <a href="#"></a>  
       </div>

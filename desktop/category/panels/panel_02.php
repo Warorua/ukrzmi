@@ -8,6 +8,11 @@ foreach($block_news_2 as $row){
 $rowtitle = $row['title'];  
 
 $maxPos = 500;
+if($row['sub_1'] != ''){
+  $catHolder = $row['sub_1'];
+ }else{
+   $catHolder = 'Генеральний';
+ }
 if($row['parent'] == "ua.korrespondent.net"){
   $rowParent = "Кореспондент";
 }
@@ -74,8 +79,8 @@ else{
         <div class="cardCat">
          <div class="btn-group dropend shareIcon">
         <a type="button" class="" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-        </a>
+            <i class="fa fa-ellipsis-v text-dark" aria-hidden="true"></i>
+            </a>
         <ul class="dropdown-menu">
          <li><h6 class="dropdown-header">Share</h6></li>
           <li><a class="dropdown-item" href="https://www.facebook.com/sharer.php?u=https://www.ukrzmi.com/desktop/article_content.php?code='.$row['code'].'" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>

@@ -176,6 +176,11 @@ foreach($block_news as $row){
 $rowtitle = $row['title'];  
 
 $maxPos = 500;
+if($row['sub_1'] != ''){
+  $catHolder = $row['sub_1'];
+ }else{
+   $catHolder = 'Генеральний';
+ }
 if($row['parent'] == "ua.korrespondent.net"){
   $rowParent = "Кореспондент";
 }
@@ -244,8 +249,8 @@ else{
         <div class="cardCat">
          <div class="btn-group dropend shareIcon">
         <a type="button" class="" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-        </a>
+            <i class="fa fa-ellipsis-v text-dark" aria-hidden="true"></i>
+            </a>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
          <li>
          <a class="dropdown-item trigger right-caret">Share</a>

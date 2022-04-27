@@ -5,8 +5,8 @@
 <?php echo $my_title ?>
 <span style="float: right;" class="justify-content-end"> 
 <a type="button" class="" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-        </a>
+            <i class="fa fa-ellipsis-v text-dark" aria-hidden="true"></i>
+            </a>
         <ul class="dropdown-menu">
          <li><h6 class="dropdown-header">Share</h6></li>
           <li><a class="dropdown-item" href="https://www.facebook.com/sharer.php?u=https://www.ukrzmi.com/desktop/article_content.php?code=<?php echo $data['code'] ?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>

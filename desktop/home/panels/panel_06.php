@@ -8,6 +8,11 @@ foreach($block_news_6 as $row){
 $rowtitle = $row['title'];  
 
 $maxPos = 500;
+if($row['sub_1'] != ''){
+  $catHolder = $row['sub_1'];
+ }else{
+   $catHolder = 'Генеральний';
+ }
 if($row['parent'] == "ua.korrespondent.net"){
   $rowParent = "Кореспондент";
 }
@@ -105,7 +110,7 @@ else{
       <p class="cardEllip"></p>
     </div>
 <a href="category.php?cat_id='.$row['category'].'" target="_blank">    
-<p class="cardCategory text-muted">'.$row['category'].'</p>
+<p class="cardCategory text-muted">'.$catHolder.'</p>
 </a>
          </div>
       </div>

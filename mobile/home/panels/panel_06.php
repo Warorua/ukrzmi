@@ -8,6 +8,12 @@ foreach($block_news_6 as $row){
 $rowtitle = $row['title'];  
 
 $maxPos = 92;
+if($row['sub_1'] != ''){
+  $catHolder = $row['sub_1'];
+ }else{
+   $catHolder = 'Генеральний';
+ }
+ 
 if($row['parent'] == "ua.korrespondent.net"){
   $rowParent = "Кореспондент";
 }
@@ -68,7 +74,7 @@ else{
        <div class="cardDesc">
             <div style="height:65px" class="card-title blockTitle">'.$titleBadge.''.$rowtitle.'</div>
             <div class="d-flex align-items-end">
-            <span class="cardRow text-primary">'.$row['category'].'</span>
+            <span class="cardRow text-primary">'.$catHolder.'</span>
             </div>
         <a href="#"></a>  
       </div>
