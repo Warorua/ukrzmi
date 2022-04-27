@@ -130,7 +130,7 @@ $maxPos = 500;
 if($row['sub_1'] != ''){
   $catHolder = $row['sub_1'];
  }else{
-   $catHolder = 'Генеральний';
+   $catHolder = 'General';
  }
 if($row['parent'] == "ua.korrespondent.net"){
   $rowParent = "Кореспондент";

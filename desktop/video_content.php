@@ -249,10 +249,10 @@ include 'videos/headlines/grid_video.php';
         </a>  
                 <ul class="dropdown-menu">
          <li><h6 class="dropdown-header">Share</h6></li>
-          <li><a class="dropdown-item" href="https://www.facebook.com/sharer.php?u=https://www.ukrzmi.com/desktop/video_content.php?code=<?php echo $data['code'] ?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
-          <li><a class="dropdown-item" href="https://twitter.com/share?url=https://www.ukrzmi.com/desktop/video_content.php?code=<?php echo $data['code'] ?>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
-          <li><a class="dropdown-item" href="whatsapp://send?text=https://www.ukrzmi.com/desktop/video_content.php?code=<?php echo $data['code'] ?>" data-action="share/whatsapp/share"><i class="fa fa-whatsapp" aria-hidden="true"></i> Whatsapp</a></li>
-          <li><a class="dropdown-item" href="https://pinterest.com/pin/create/button/?url=https://www.ukrzmi.com/desktop/video_content.php?code=<?php echo $data['code'] ?>&media=https://www.ukrzmi.com/images/<?php echo $data['photo'] ?>&description=<?php echo $data['title'] ?>" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
+          <li><a class="dropdown-item" href="https://www.facebook.com/sharer.php?u=https://www.ukrzmi.com/desktop/video_content.php?code=<?php echo $data['code'] ?>" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+          <li><a class="dropdown-item" href="https://twitter.com/share?url=https://www.ukrzmi.com/desktop/video_content.php?code=<?php echo $data['code'] ?>" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+          <li><a class="dropdown-item" href="whatsapp://send?text=https://www.ukrzmi.com/desktop/video_content.php?code=<?php echo $data['code'] ?>" data-action="share/whatsapp/share"><i class="fab fa-whatsapp" aria-hidden="true"></i> Whatsapp</a></li>
+          <li><a class="dropdown-item" href="https://pinterest.com/pin/create/button/?url=https://www.ukrzmi.com/desktop/video_content.php?code=<?php echo $data['code'] ?>&media=https://www.ukrzmi.com/images/<?php echo $data['photo'] ?>&description=<?php echo $data['title'] ?>" target="_blank"><i class="fab fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
            </ul>
         
            </div>
