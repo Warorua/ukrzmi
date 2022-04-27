@@ -106,7 +106,7 @@ $authorFil = str_replace('—', "", $row['author']);
 </div>
 
 <div class="col-md-1">
-<div style="margin-top:15px" class="">
+<div style="margin-top:15px" class="dropstart">
 <a type="button" class="" data-bs-toggle="dropdown" aria-expanded="false">
 <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 </a>

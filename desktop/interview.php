@@ -4,7 +4,7 @@ include 'includes/header.php';
 ?>
 <body class="">
 <?php
-include 'home/blocks.php';
+include 'category/blocks.php';
 include 'includes/topbar.php';
 include 'includes/navbar.php';
 ?>

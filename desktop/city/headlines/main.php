@@ -7,7 +7,7 @@
   <ul class="nav justify-content-end" id="myTab">
 
   <li class="nav-item" role="presentation">
-    <a class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid" type="button" role="tab" aria-controls="grid" aria-selected="true"><i class="fa fa-th-large text-dark" aria-hidden="true"></i></a>
+    <a class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid" type="button" role="tab" aria-controls="grid" aria-selected="true"><i class="fa fa-th text-dark" aria-hidden="true"></i></a>
   </li>
 
   <li class="nav-item" role="presentation">

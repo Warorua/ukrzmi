@@ -79,7 +79,7 @@ if($row['sub_1'] != ''){
     
           echo '
           <li class="list-group-item my-2 post">
-          <div class="row">
+          <div class="d-flex justify-content-between">
 
           <div class="col-md-9">
           <div class="row">
