@@ -1,55 +1,110 @@
-                    <td>URL</td>
-                    <td>Social media platform</td>
-                    <td>Social media channel name</td>
-                    <td>Social media channel link</td>
-                    <td>Social media #members</td>
-                    <td>Videos platform</td>
-                    <td>Videos channel name</td>
-                    <td>Videos channel link</td>
-                    <td>Videos #members</td>
-                    <td>Podcasts</td> 
-                    <td>Link for T&C</td>
-                    <td>Placement</td>
-                    <td>Admin comments</td>
-                    <td>1 to 3</td>
-                    <td>Level #characters</td>
-                    <td>Level %</td>
-                    <td>URL quality level</td>
-                    <td>Alerts</td>
-                    <td>Category(Theirs)</td>
-                    <td>Category(Ours)</td>
-                    <td>Admin</td>
-                    <td>URL history</td>
-                    <td>Total</td>
-                    <td>Average per week</td>
-                    <td>Average per workday</td>
-                    <td>Average per weekend</td>
-                    <td>Monday</td>
-                    <td>Tuesday</td>
-                    <td>Wednesday</td>
-                    <td>Thursday</td>
-                    <td>Friday</td>
-                    <td>Saturday</td>
-                    <td>Sunday</td>
-                    <td>Today</td>
-                    <td>Average weekly visitors</td>
-                    <td>Average weekly item clicks</td>
-                    <td>Average weekly clicks</td>
-                    <td>Average weekly clicks</td>
-                    <td>Average article time</td>
-                    <td>Average weekly revenue</td>
-                    <td>Total views(Millions)</td>
-                    <td>Total views(000)</td>
-                    <td>Clicks from homepage</td>
-                    <td>Clicks from category page</td>
-                    <td>Clicks from subcategory page</td>
-                    <td>After content page </td>
-                    <td>Source & URL relevance</td>
-                    <td>Total content view duration</td>
-                    <td>Av view duration per article</td>
-                    <td>Paid AD impressions on page</td>
-                    <td>Total income generated</td>
-                    <td>Evaluations</td>
-                    <td>Comments</td>
-                    <td>Broken links</td>
-                    <td>Admin</td>
+                            <div id="section-8zGp05p0-"
+                                class="fullSection none noBorder radius0 none c-section c-wrapper section-8zGp05p0-">
+                                <div class="inner">
+                                    <div id="row-X--Lu94biW"
+                                        class="row-align-center none noBorder radius0 none c-row c-wrapper row-X--Lu94biW">
+                                        <div class="inner">
+                                            <div id="col-phQb1K9V-" class="c-column c-wrapper col-phQb1K9V-">
+                                                <div class="inner none noBorder radius0 none bg bgCover vertical">
+                                                    <div id="heading-qNECJ1mBp" class="c-heading c-wrapper">
+                                                        <div
+                                                            class="heading-qNECJ1mBp text-output cheading-qNECJ1mBp none noBorder radius0 none">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+                                                    <div id="image-xV6KkETcs" class="c-image c-wrapper image-xV6KkETcs">
+                                                        <div id="image-xV6KkETcs"
+                                                            class="image-container cimage-xV6KkETcs"
+                                                            style="cursor:default;" data-v-79816059>
+                                                            <div data-v-79816059>
+                                                                <div><img alt=""
+                                                                        data-src="https://assets.cdn.msgsndr.com/Q09kKhXrcE8j8j2QYB7Y/media/62316c091b14110ffde6f06a.png"
+                                                                        height="auto" width="200" loading="lazy"
+                                                                        class="lazyload img-none img-border-none img-shadow-none img-effects-none"
+                                                                        style="display:;"></img></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="heading-QBiekLIcQ" class="c-heading c-wrapper">
+                                                        <div
+                                                            class="heading-QBiekLIcQ text-output cheading-QBiekLIcQ none noBorder radius0 none">
+                                                            <div>
+                                                                <h1><strong>Adam Posner</strong></h1>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="heading-wltO9xnD-" class="c-heading c-wrapper">
+                                                        <div
+                                                            class="heading-wltO9xnD- text-output cheading-wltO9xnD- none noBorder radius0 none">
+                                                            <div>
+                                                                <h4>Adam (CEO and founder) is an independent customer
+                                                                    loyalty specialist. He has been a data-driven
+                                                                    marketer for over 29 years and is a Certified
+                                                                    Loyalty Marketing Professional -CLMPTM. </h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="col-jgnbobm0Qr" class="c-column c-wrapper col-jgnbobm0Qr">
+                                                <div class="inner none noBorder radius0 none bg bgCover vertical">
+                                                    <div id="heading-QQRo1txu5" class="c-heading c-wrapper">
+                                                        <div
+                                                            class="heading-QQRo1txu5 text-output cheading-QQRo1txu5 none noBorder radius0 none">
+                                                            <div>
+                                                                <p>03 May 2022 | 8am</p>
+                                                                <p><br></p>
+                                                                <p><strong>Masterclass Outline:</strong></p>
+                                                                <ul>
+                                                                    <li>What is loyalty? A definition of loyalty* unique
+                                                                        to your business</li>
+                                                                </ul>
+                                                                <p><br></p>
+                                                                <ul>
+                                                                    <li>Why is customer loyalty important? The four
+                                                                        revenues of loyalty revealed</li>
+                                                                </ul>
+                                                                <p><br></p>
+                                                                <ul>
+                                                                    <li>Do you really know your customers? The four
+                                                                        loyalty archetypes and what strategies and
+                                                                        actions to take for each</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="button-tRnUwRnRa"
+                                                        class="c-button c-wrapper button-tRnUwRnRa">
+                                                        <div data-v-43516d0a><button id="button-tRnUwRnRa"
+                                                                class="cbutton-tRnUwRnRa none button-shadow2 custom btn-vp btn-hp noBorder radius10 none"
+                                                                data-v-43516d0a>
+                                                                <div class="main-heading-group" data-v-43516d0a>
+                                                                    <div class="button-icon-start" data-v-43516d0a>
+                                                                    </div>
+                                                                    <div class="main-heading-button" data-v-43516d0a>
+                                                                        Attend this Masterclass</div>
+                                                                    <div class="button-icon-end" data-v-43516d0a></div>
+                                                                </div>
+                                                                <div class="btn-loader-position" style="display:none;"
+                                                                    data-v-43516d0a>
+                                                                    <div class="v-spinner" style="display:none;"
+                                                                        data-v-43516d0a>
+                                                                        <div class="v-moon v-moon1"
+                                                                            style="height:30px;width:30px;border-radius:100%;">
+                                                                            <div class="v-moon v-moon2"
+                                                                                style="height:4.285714285714286px;width:4.285714285714286px;border-radius:100%;top:12.857142857142858px;background-color:rgb(255, 255, 255);">
+                                                                            </div>
+                                                                            <div class="v-moon v-moon3"
+                                                                                style="height:30px;width:30px;border-radius:100%;border:4.285714285714286px solid rgb(255, 255, 255);">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </button> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
