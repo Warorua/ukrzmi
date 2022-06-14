@@ -14,9 +14,9 @@ set_time_limit(500); //
 Class Database{
 	
 
-	private $server = "mysql:host=localhost;dbname=tsavosto_news";
-	private $username = "tsavosto_news";
-	private $password = "f4U7ClL{lhjw";
+	private $server = "mysql:host=localhost;dbname=ukrzmico_ukrzmi";
+	private $username = "ukrzmico_ukrzmi";
+	private $password = "gsKf2PoGecBc";
 	private $options  = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,PDO::MYSQL_ATTR_INIT_COMMAND => "SET CHARACTER SET UTF8",);
 	protected $conn;
  	
