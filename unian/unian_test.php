@@ -28,7 +28,7 @@ $title = $response->find('.main-unit div.main-unit__info h3 a.main-unit__title',
 $output .= $title."<br/>";
 //Image
 $img = $response->find('.content-column div.main-unit a img');
-$pic_1 = $img[1]->src;
+$pic_1 = $img[0]->src;
 $output .= $pic_1.'<br/>';
 //$output .= sizeof($img).' - size of image array <br/>';
 //Link HREF
