@@ -43,4 +43,5 @@ $pdo = new Database();
 Username:ukrzmico_ukrzmi
 Database:ukrzmico_ukrzmi
 Password:vs]gmsqr1M]7
+*/
 ?>
