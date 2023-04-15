@@ -2,6 +2,7 @@
 header('Content-Type: text/html; charset=utf-8');
 require_once '../vendor/mobiledetect/mobiledetectlib/Mobile_Detect.php';
 
+
 $detect = new Mobile_Detect;
 if ( $detect->isMobile() ) {
 	//echo 'You are on MOBILE';
@@ -11,12 +12,19 @@ else{
 	//echo '<script>alert("WELCOME DESKTOP")</script>';
 }
 set_time_limit(500); // 
+
+
+define('DBNAME',$_SERVER['DBNAME']);
+define('HOST',$_SERVER['HOSTNAME']);
+define('USERNAME',$_SERVER['USERNAME']);
+define('PASSWORD',$_SERVER['USER_PASSWORD']);
+
+
 Class Database{
 	
-
-	private $server = "mysql:host=45.84.206.55;dbname=ukrzmico_good";
-	private $username = "ukrzmico_miamivice";
-	private $password = "vs]gmsqr1M]7";
+	private $server = 'mysql:host='.HOST.';dbname='.DBNAME;
+	private $username = USERNAME;
+	private $password = PASSWORD;
 	private $options  = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,PDO::MYSQL_ATTR_INIT_COMMAND => "SET CHARACTER SET UTF8",);
 	protected $conn;
  	
