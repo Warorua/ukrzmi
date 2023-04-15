@@ -4,6 +4,24 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 Header always set Content-Security-Policy: upgrade-insecure-requests
 
 
+# Deny access to .htaccess
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+# Disable directory browsing 
+Options -Indexes
+
+# Hide files of type .png, .zip, .jpg, .gif and .doc from listing
+IndexIgnore *.png *.zip *.jpg *.gif *.doc
+
+# Deny access to filenames starting with dot(.)
+<FilesMatch "^\.">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
 # Speed Up 
 <FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
 
