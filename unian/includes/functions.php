@@ -31,7 +31,7 @@ function counter($h_link)
 
 function code_gen()
 {
-    $set = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+-_';
+    $set = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_';
     $code = substr(str_shuffle($set), 0, 18);
 
     return $code;
