@@ -159,7 +159,7 @@ if (counter($h_link) < 1) {
         'video_url' => $video_f,
         'type' => $news_type,
         'parent' => "unian.ua",
-        'source' => "Unian.ua",
+        'source' => "Unian.ua/voices",
         'deep_link' => $f_href,
         'title' => $title,
         'published' => $published,
