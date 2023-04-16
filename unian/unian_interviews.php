@@ -144,7 +144,7 @@ if (counter($h_link) < 1) {
     $db_item = [
         'sub_1' => $sub_1,
         'sub_2' => $sub_2,
-        'source_error' => $ar_error,
+        'source_error' => "",
         'video_url' => $video_f,
         'type' => $news_type,
         'parent' => "unian.ua",
