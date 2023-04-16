@@ -66,7 +66,8 @@ foreach($article as $ar){
 //$ar_full = join($article);
 $ar_full = $ar_1;
 $ar_size = strlen($ar_full);
-$output .= article_filter($ar_full);
+$filtered_article = article_filter($ar_full);
+$output .= $filtered_article;
 $output .= article_size($ar_size);
 
 
@@ -134,7 +135,7 @@ if (counter($h_link) < 1) {
         'title' => $title,
         'published' => $published,
         'author' => $p_author,
-        'article' => $ar_full,
+        'article' => $filtered_article,
         'tag_1' => $tag1,
         'tag_2' => $tag2,
         'tag_3' => $tag3,
