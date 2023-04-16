@@ -78,22 +78,17 @@ $output .= $p_author." - <b>Author</b> <br/><br/>";
 $output .= '<h3>Article content</h3>';
 $article =  $content->find('div.px-40 div.single-video__article');
 $ar_1 = '';
+
 foreach($article as $ar){
-    include 'body_scrap2.php';
+    $ar_1 .= body_scrap($ar);
 }
 //$ar_full = join($article);
 $ar_full = $ar_1;
 $ar_size = strlen($ar_full);
-$output .= "<b>Size of this article is ".$ar_size."</b><br/>";
-if($ar_size < 700){
-    $output .= '<b style="color:red">Not fetched. Characters < 700</b>';
-}
-elseif($ar_size > 1000){
-    $output .= '<b style="color:red">Not fetched. Characters > 1000</b>';
-}
-else{
-    $output .= '<b style="color:green">Fetched. Characters are greater than 700 & less than 1000</b></b>';
-}
+$output .= article_filter($ar_full);
+$output .= article_size($ar_size);
+
+
 //Image Fetch
 $output .= '<h3>Image</h3>';
 //$img_2 =  $content->find('div.publication figure.publication__main-image img');
@@ -137,47 +132,44 @@ $output .= '<b>News category</b> - '.$p_cat;
 
 //Image URL Validation (Validates 1st Image fetched on homepage and last image fetched on the article page since 1 of the photos will bhe invalid)
 
-    $image = $img_f;
-   $output .=("$img_f is a valid URL");
-
+$image = validate_img($pic_1, $img_f);
 $output .= '<img src="'.$image.'"/>';
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////    INSERT DATA INTO THE DATABASE ///////////////////////////////////////////////
-//generate code
-$set='123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-$code=substr(str_shuffle($set), 0, 12);
 
 
 //Insertion process
-$time = date("D, d M Y H:i:s");
-$conn = $pdo->open();
-$stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM news WHERE deep_link=:deep_link");
-$stmt->execute(['deep_link'=>$h_link]);
 
-$ct = $stmt->fetch();
-if($ct['numrows'] < 1){
-  // Download image, rename it and put it into folder
-$url = $image;
-$gen = time();
-$filee = basename($url);
-$ext = pathinfo($filee, PATHINFO_EXTENSION);
-$img = $gen.".".$ext;
-$path = '../images/'.$img; 
-file_put_contents($path, file_get_contents($url));
-$filename = $img; 
-$parent = "unian.ua"; 
-//insert into database
-  $stmt = $conn->prepare("INSERT INTO news (sub_1, sub_2, source_error, video_url, type, parent, source, deep_link, title, published, author, article, tag_1, tag_2, tag_3, photo, photo_url, p_grapher, category, time, code) VALUES (:sub_1, :sub_2, :source_error, :video_url, :type, :parent, :source, :deep_link, :title, :published, :author, :article, :tag_1, :tag_2, :tag_3, :photo, :photo_url, :p_grapher, :category, :time, :code)");
-  $stmt->execute(['sub_1'=>$sub_1, 'sub_2'=>$sub_2, 'source_error'=>$ar_error, 'video_url'=>$video_f, 'type'=>$news_type, 'parent'=>$parent, 'source'=>"unian.ua/multimedia/video/sport", 'deep_link'=>$f_href, 'title'=>$title, 'published'=>$published, 'author'=>$p_author, 'article'=>$ar_full, 'tag_1'=>$tag1, 'tag_2'=>$tag2, 'tag_3'=>$tag3, 'photo'=>$filename, 'photo_url'=>$image, 'p_grapher'=>"None", 'category'=>"Спорт", 'time'=>$time, 'code'=>$code]);
- $output .= '<h1>New Postage Successfully Added</h1>';
-}
-else{
- $stmt = $conn->prepare("SELECT * FROM news WHERE deep_link=:deep_link");
-    $stmt->execute(['deep_link'=>$h_link]);
-    
-    $ct_p = $stmt->fetch();
-    
-    $output .= '<h1>Article already posted. <a class="btn btn-warning" href="../article_data.php?id='.$ct_p['code'].'" target="_blank" >Preview</a></h1>';
-}
+if (counter($h_link) < 1) {
+    // Download image, rename it and put it into folder
+    //insert into database
+    $db_item = [
+        'sub_1' => $sub_1,
+        'sub_2' => $sub_2,
+        'source_error' => $ar_error,
+        'video_url' => $video_f,
+        'type' => $news_type,
+        'parent' => "unian.ua",
+        'source' => "Unian.ua",
+        'deep_link' => $f_href,
+        'title' => $title,
+        'published' => $published,
+        'author' => $p_author,
+        'article' => $ar_full,
+        'tag_1' => $tag1,
+        'tag_2' => $tag2,
+        'tag_3' => $tag3,
+        'photo' => download_image($image),
+        'photo_url' => $image,
+        'p_grapher' => "None",
+        'category' => $p_cat,
+        'time' => date("D, d M Y H:i:s"),
+        'code' => code_gen()
+    ];
 
+    $output .= db_insertion($db_item);
+} else {
+   
+    $output .= db_insertion_err($h_link);
+}
 echo $output;
