@@ -1,42 +1,42 @@
 <?php
-	use PHPMailer\PHPMailer\PHPMailer;
-	use PHPMailer\PHPMailer\Exception;
 
-	include 'includes/session.php';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-	if(isset($_POST['signup'])){
+include 'includes/session.php';
 
-		$email = $_POST['email'];
-	
+if (isset($_POST['signup'])) {
+
+	$email = $_POST['email'];
+
 
 	$conn = $pdo->open();
 
-			$conn = $pdo->open();
+	$conn = $pdo->open();
 
-			$stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM users WHERE email=:email");
-			$stmt->execute(['email'=>$email]);
-			$row = $stmt->fetch();
-			if($row['numrows'] > 0){
-				$_SESSION['error'] = 'Email already taken';
-				header('location: register.php');
-			}
-			else{
-				$now = date('Y-m-d');
-				//$password = password_hash($password, PASSWORD_DEFAULT);
+	$stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM users WHERE email=:email");
+	$stmt->execute(['email' => $email]);
+	$row = $stmt->fetch();
+	if ($row['numrows'] > 0) {
+		$_SESSION['error'] = 'Email already taken';
+		header('location: register.php');
+	} else {
+		$now = date('Y-m-d');
+		//$password = password_hash($password, PASSWORD_DEFAULT);
 
-				//generate code
-				$set='123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-				$code=substr(str_shuffle($set), 0, 12);
+		//generate code
+		$set = '123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		$code = substr(str_shuffle($set), 0, 12);
 
-				try{
-					$stmt = $conn->prepare("INSERT INTO users (email, activate_code, created_on) VALUES (:email, :code, :now)");
-					$stmt->execute(['email'=>$email, 'code'=>$code, 'now'=>$now]);
-					$userid = $conn->lastInsertId();
+		try {
+			$stmt = $conn->prepare("INSERT INTO users (email, activate_code, created_on) VALUES (:email, :code, :now)");
+			$stmt->execute(['email' => $email, 'code' => $code, 'now' => $now]);
+			$userid = $conn->lastInsertId();
 
-					
-				$stmt2 = $conn->prepare("SELECT * FROM mail WHERE name=:name");
-				$stmt2->execute(['name'=>'registration']);
-				$mail_config = $stmt2->fetch();
+
+			$stmt2 = $conn->prepare("SELECT * FROM mail WHERE name=:name");
+			$stmt2->execute(['name' => 'registration']);
+			$mail_config = $stmt2->fetch();
 
                     $message = "
                     <div style='background-color:#fff; width:100%; display:flex; align-items:center; font-family: Tahoma, sans-serif;'>
@@ -82,67 +82,57 @@
                                         </div>
                     </div>
                                         ";
-					//Load phpmailer
-		    		require 'vendor/autoload.php';
+			//Load phpmailer
+			require 'vendor/autoload.php';
 
-		    		$mail = new PHPMailer(true);                             
-				    try {
-				         //Server settings
-					
-						 $mail->isSMTP();                                     
-						 $mail->Host = gethostbyname($mail_config['host']);                  
-						 $mail->SMTPAuth = true;                               
-						 $mail->Username = $mail_config['mail'];     
-						 $mail->Password = $mail_config['mail_password'];                    
-						 $mail->SMTPOptions = array(
-							 'ssl' => array(
-							 'verify_peer' => false,
-							 'verify_peer_name' => false,
-							 'allow_self_signed' => true
-							 )
-						 );                         
-						 $mail->SMTPSecure = 'tls';                           
-						 $mail->Port = $mail_config['port'];                                   
- 
-						 $mail->setFrom($mail_config['set_from']);
-						 
-						 //Recipients
-						 $mail->addAddress($email);              
-						 $mail->addReplyTo('waroruaalex@tsavo.store');
-						
-						 //Content
-						 $mail->isHTML(true);                                  
-						 $mail->Subject = $mail_config['subject'];
-						 $mail->Body    = $message;
- 
-						 $mail->send();
+			$mail = new PHPMailer(true);
+			try {
+				//Server settings
 
-				        unset($_SESSION['email']);
+				$mail->isSMTP();
+				$mail->Host = gethostbyname($mail_config['host']);
+				$mail->SMTPAuth = true;
+				$mail->Username = $mail_config['mail'];
+				$mail->Password = $mail_config['mail_password'];
+				$mail->SMTPOptions = array(
+					'ssl' => array(
+						'verify_peer' => false,
+						'verify_peer_name' => false,
+						'allow_self_signed' => true
+					)
+				);
+				$mail->SMTPSecure = 'tls';
+				$mail->Port = $mail_config['port'];
 
-				        {$_SESSION['success'] = 'Account created. Check your email to activate.';
-				        header('location: register.php');}
+				$mail->setFrom($mail_config['set_from']);
 
-				    } 
-									
-				    catch (Exception $e) {
-				        $_SESSION['error'] = 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo;
-				        header('location: register.php');
-				    }
+				//Recipients
+				$mail->addAddress($email);
+				$mail->addReplyTo('waroruaalex@tsavo.store');
 
-				}
-				catch(PDOException $e){
-					$_SESSION['error'] = $e->getMessage();
+				//Content
+				$mail->isHTML(true);
+				$mail->Subject = $mail_config['subject'];
+				$mail->Body    = $message;
+
+				$mail->send();
+
+				unset($_SESSION['email']); {
+					$_SESSION['success'] = 'Account created. Check your email to activate.';
 					header('location: register.php');
 				}
-
-				$pdo->close();
-
+			} catch (Exception $e) {
+				$_SESSION['error'] = 'Message could not be sent. Mailer Error: ' . $mail->ErrorInfo;
+				header('location: register.php');
 			}
+		} catch (PDOException $e) {
+			$_SESSION['error'] = $e->getMessage();
+			header('location: register.php');
+		}
 
-		
-
+		$pdo->close();
 	}
-	else{
-		$_SESSION['error'] = 'Complete filling the signup form first';
-		header('location: register.php');
-	}
+} else {
+	$_SESSION['error'] = 'Complete filling the signup form first';
+	header('location: register.php');
+}
