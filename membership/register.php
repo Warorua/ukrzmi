@@ -73,7 +73,7 @@ include 'includes/session.php';
             <div class="mbr-login-hd txt-align-center">
 <div class="row">
 <div class="col-md-3"></div>
-             <div class="col-md-1"><div class="topLogo">Z</div></div>
+             <div class="col-md-1"><div class="topLogo">U</div></div>
              <div class="col-md-1"></div>
           <div class="col-md-2">
 <p class="text-dark topLogoText">Ukrzmi</p>
