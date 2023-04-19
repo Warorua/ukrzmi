@@ -241,14 +241,14 @@ function removeEmptyHtmlElements($html)
 {
     // Load HTML code into a new DOMDocument object
     $doc = new DOMDocument();
-     // Disable warnings for invalid HTML code
-     libxml_use_internal_errors(true);
+    // Disable warnings for invalid HTML code
+    libxml_use_internal_errors(true);
 
-     // Load the HTML code into the DOMDocument object
-     $doc->loadHTML($html);
- 
-     // Restore error handling
-     libxml_use_internal_errors(false);
+    // Load the HTML code into the DOMDocument object
+    $doc->loadHTML($html);
+
+    // Restore error handling
+    libxml_use_internal_errors(false);
 
     // Get all HTML elements
     $elements = $doc->getElementsByTagName('*');
@@ -362,7 +362,8 @@ function filter_html_by_class($html, $class)
     return $dom->saveHTML();
 }
 
-function removeLinksInListItems($html) {
+function removeLinksInListItems($html)
+{
     // Load HTML code into a new DOMDocument object
     $doc = new DOMDocument();
     // Disable warnings for invalid HTML code
@@ -375,22 +376,22 @@ function removeLinksInListItems($html) {
     libxml_use_internal_errors(false);
     // Get all <li> elements
     $listItems = $doc->getElementsByTagName('li');
-  
+
     // Loop through each <li> element
     foreach ($listItems as $listItem) {
-      // Get all <a> elements within the <li>
-      $links = $listItem->getElementsByTagName('a');
-  
-      // Loop through each <a> element and remove it
-      foreach ($links as $link) {
-        $link->parentNode->removeChild($link);
-      }
+        // Get all <a> elements within the <li>
+        $links = $listItem->getElementsByTagName('a');
+
+        // Loop through each <a> element and remove it
+        foreach ($links as $link) {
+            $link->parentNode->removeChild($link);
+        }
     }
-  
+
     // Return the updated HTML code
     return $doc->saveHTML();
-  }
-  
+}
+
 
 function removeElementsByClass($html, $class)
 {

@@ -1,4 +1,4 @@
-<meta charset="utf-8">
+
 <?php
 include_once('inc/simple_html_dom.php');
 include 'includes/session.php';
@@ -10,15 +10,15 @@ $httpClient = new \simplehtmldom\HtmlWeb();
 //setlocale(LC_ALL, "uk_UA.KOI8-U");
 //header("Content-Type: text/html; charset=BIG-5");
 //header("Content-Type: text/html; charset=utf-8");
-$url="https://www.pravda.com.ua/";
-$agent= 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36';
+$url = "https://www.pravda.com.ua/";
+$agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36';
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($ch, CURLOPT_VERBOSE, true);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_USERAGENT, $agent);
-curl_setopt($ch, CURLOPT_URL,$url);
+curl_setopt($ch, CURLOPT_URL, $url);
 $resp = curl_exec($ch);
 $response = str_get_html($resp);
 //echo $result
@@ -30,21 +30,21 @@ $output = '';
 $output = '';
 //Title
 $title = $response->find('.article div.article_body div.article_content_main div.article_content_main_wrapper div.article_header h3 a', 0)->plaintext . PHP_EOL . PHP_EOL;
-$output .= $title."<br/>";
+$output .= $title . "<br/>";
 //Image
 $img = $response->find('.article div.article_body div.article_content_main div.article_media_wrapper picture img');
 $pic_1 = $img[0]->src;
-$output .= $pic_1.'<br/>';
+$output .= $pic_1 . '<br/>';
 //$output .= sizeof($img).' - size of image array <br/>';
 //Link HREF
 $href =  $response->find('.article div.article_body div.article_content_main div.article_content_main_wrapper div.article_header h3 a[href]');
 $f_href = $href[0]->href;
-$output .= $f_href.'<br/>';
+$output .= $f_href . '<br/>';
 
 //////////////////////   DETAILS OF ARTICLE    /////////////////////////////
 
 $output .= '<h2 style="text-align:center">Article details</h2>';
-$h_link = 'https://www.pravda.com.ua'.$f_href;
+$h_link = 'https://www.pravda.com.ua' . $f_href;
 //$output .= $h_link .' ----||||||<br/>';
 ////////////////////////////////////////////////////////////////////////////////////////
 
@@ -78,9 +78,9 @@ $datt = json_decode($rtt, TRUE);
 //Date
 $date =  $content->find('.main_content div.container_news article.post header.post_header div.post_time');
 $published = "";
-foreach($date as $row){
-$published .= $row->plaintext;
-$output .= $published."<br/>";
+foreach ($date as $row) {
+    $published .= $row->plaintext;
+    $output .= $published . "<br/>";
 }
 
 
@@ -88,158 +88,144 @@ $output .= $published."<br/>";
 $author = $content->find('.main_content div.container_news article.post div.block_post div.post__source');
 
 //$p_author = "Unknown author";
-if(sizeof($author) == 0){
+if (sizeof($author) == 0) {
     $p_author = mb_convert_encoding("Українська правда", "cp1251");
-}
-
-elseif($author[0]->plaintext == ""){
+} elseif ($author[0]->plaintext == "") {
     $p_author = mb_convert_encoding("Українська правда", "cp1251");
+} else {
+    $p_auth = $author[0]->plaintext;
+    $p_author = $p_auth;
 }
-else{
-   $p_auth = $author[0]->plaintext;
-   $p_author = $p_auth;
-}
-$output .= $p_author." - <b>Author</b> <br/><br/>";
+$output .= $p_author . " - <b>Author</b> <br/><br/>";
 //Video Fetch
 $output .= '<h3>Video</h3>';
 $video_2 =  $content->find('div.block_post div.post_content div.post_content_wrapper div.post_text iframe');
-if(sizeof($video_2) == 0){
+if (sizeof($video_2) == 0) {
     $news_type = "";
     $video_f = "";
-    $output .= $video_f."<br/>";
-}
-else{
-$news_type = "";
-$video_f = $video_2[0]->src;
-$output .= $video_f."<br/>";
-$output .= '<iframe allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen="true" frameborder="0" height="314" scrolling="no" src="'.$video_f.'" style="border:none;overflow:hidden" width="560"></iframe>';
-
+    $output .= $video_f . "<br/>";
+} else {
+    $news_type = "";
+    $video_f = $video_2[0]->src;
+    $output .= $video_f . "<br/>";
+    $output .= '<iframe allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen="true" frameborder="0" height="314" scrolling="no" src="' . $video_f . '" style="border:none;overflow:hidden" width="560"></iframe>';
 }
 //Article Content Fetch
 $output .= '<h3>Article content</h3>';
 $article =  $content->find('.main_content div.container_news article.post div.block_post div.post_text');
 $ar_1 = '';
-foreach($article as $ar){
-   include 'body_scrap2.php';
- 
+foreach ($article as $ar) {
+    include 'body_scrap2.php';
 }
 //$output .= sizeof($article)." size of article<br/>";
 //$ar_full = join($article);
 $ar_full = $ar_1;
 $ar_size = strlen($ar_full);
-$output .= "<b>Size of this article is ".$ar_size."</b><br/>";
-if($ar_size < 700){
+$output .= "<b>Size of this article is " . $ar_size . "</b><br/>";
+if ($ar_size < 700) {
     $output .= '<b style="color:red">Not fetched. Characters < 700</b>';
-}
-elseif($ar_size > 1000){
+} elseif ($ar_size > 1000) {
     $output .= '<b style="color:red">Not fetched. Characters > 1000</b>';
-}
-else{
+} else {
     $output .= '<b style="color:green">Fetched. Characters are greater than 700 & less than 1000</b></b>';
 }
 
 //Image Fetch
 $output .= '<h3>Image</h3>';
 $img_2 =  $content->find('.main_content div.container_news article.post div.block_post div.post_photo_news img.post_photo_news_img');
-foreach($img_2 as $row2){
+foreach ($img_2 as $row2) {
     $img_f = $row2->src;
-$output .= $img_f."<br/>";
-$output .= '<img src="'.$img_f.'"/>';
+    $output .= $img_f . "<br/>";
+    $output .= '<img src="' . $img_f . '"/>';
 }
 
 //Tags Fetch
 $output .= '<h3>Tags</h3>';
 $tag =  $content->find('.main_content div.container_news article.post div.block_post div.post_tags span.post_tags_item');
-if(isset($tag[0])){
+if (isset($tag[0])) {
     $tag1 = $tag[0]->plaintext;
-}
-else{
+} else {
     $tag1 = "";
 }
-if(isset($tag[1])){
+if (isset($tag[1])) {
     $tag2 = $tag[1]->plaintext;
-}
-else{
+} else {
     $tag2 = "";
 }
-if(isset($tag[2])){
+if (isset($tag[2])) {
     $tag3 = $tag[2]->plaintext;
-}
-else{
+} else {
     $tag3 = "";
 }
 $output .= '<ol>';
-foreach($tag as $tg){
-    $output .= '<li>'.$tg->plaintext."</li><br/>";
+foreach ($tag as $tg) {
+    $output .= '<li>' . $tg->plaintext . "</li><br/>";
 }
 $output .= '</ol>';
 //Name of photographer fetch
 $output .= '<h2>Photographer</h2>';
 $p_graph =  $content->find('.main_content div.container_news article.post div.block_post div.post_photo_about div.post_photo_author');
-if(sizeof($p_graph) != 0){
-  $f_graph = $p_graph[0]->plaintext;
-$trm = mb_convert_encoding("ФОТО", "cp1251");
-$photographer = strtok($f_graph, $trm);
- 
+if (sizeof($p_graph) != 0) {
+    $f_graph = $p_graph[0]->plaintext;
+    $trm = mb_convert_encoding("ФОТО", "cp1251");
+    $photographer = strtok($f_graph, $trm);
+} else {
+    $photographer = "None";
 }
-else{
-    $photographer = "None"; 
-}
-$output .= $photographer.'<br/>';
+$output .= $photographer . '<br/>';
 
 
 //Category fetch
 //$cat =  $content->find('.top-bredcr div.breadcrumbs ol li a span');
 //$p_cat = utf8_decode("Політика");
 $p_cat = mb_convert_encoding("Політика", "cp1251");
-$output .= '<b>News category</b> - '.$p_cat;
+$output .= '<b>News category</b> - ' . $p_cat;
 
 //Image URL
 $image = $img_f;
 
-$output .= '<img src="'.$image.'"/>';
+$output .= '<img src="' . $image . '"/>';
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////    INSERT DATA INTO THE DATABASE ///////////////////////////////////////////////
 //generate code
-$set='123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-$code='prav_'.substr(str_shuffle($set), 0, 12);
+$set = '123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+$code = 'prav_' . substr(str_shuffle($set), 0, 12);
 
 
 //Insertion process
 $time = date("D, d M Y H:i:s");
 $conn = $pdo->open();
 $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM news WHERE deep_link=:deep_link");
-$stmt->execute(['deep_link'=>$h_link]);
+$stmt->execute(['deep_link' => $h_link]);
 
 $ct = $stmt->fetch();
 
-if($ct['numrows'] < 1){
-  // Download image, rename it and put it into folder
-$url = $image;
-$sub_1 = "";
-$sub_2 = "";
-$ar_error = "";
-$gen = 'prav'.time();
-$filee = basename($url);
-$ext = pathinfo($filee, PATHINFO_EXTENSION);
-$img = $gen.".".$ext;
-$path = '../images/'.$img; 
-file_put_contents($path, file_get_contents($url));
-$filename = $img;  
-$parent = "pravda.com.ua";
-//insert into database
-  $stmt = $conn->prepare("INSERT INTO news (sub_1, sub_2, source_error, video_url, type, parent, source, deep_link, title, published, author, article, tag_1, tag_2, tag_3, photo, photo_url, p_grapher, category, time, code) VALUES (:sub_1, :sub_2, :source_error, :video_url, :type, :parent, :source, :deep_link, :title, :published, :author, :article, :tag_1, :tag_2, :tag_3, :photo, :photo_url, :p_grapher, :category, :time, :code)");
-  $stmt->execute(['sub_1'=>$sub_1, 'sub_2'=>$sub_2, 'source_error'=>$ar_error, 'video_url'=>$video_f, 'type'=>$news_type, 'parent'=>$parent, 'source'=>"pravda.com.ua", 'deep_link'=>$h_link, 'title'=>$title, 'published'=>$published, 'author'=>$p_author, 'article'=>$ar_full, 'tag_1'=>$tag1, 'tag_2'=>$tag2, 'tag_3'=>$tag3, 'photo'=>$filename, 'photo_url'=>$image, 'p_grapher'=>$photographer, 'category'=>$p_cat, 'time'=>$time, 'code'=>$code]);
- $output .= '<h1>New Postage Successfully Added</h1>';
-}
-else{
- $stmt = $conn->prepare("SELECT * FROM news WHERE deep_link=:deep_link");
-    $stmt->execute(['deep_link'=>$h_link]);
-    
+if ($ct['numrows'] < 1) {
+    // Download image, rename it and put it into folder
+    $url = $image;
+    $sub_1 = "";
+    $sub_2 = "";
+    $ar_error = "";
+    $gen = 'prav' . time();
+    $filee = basename($url);
+    $ext = pathinfo($filee, PATHINFO_EXTENSION);
+    $img = $gen . "." . $ext;
+    $path = '../images/' . $img;
+    file_put_contents($path, file_get_contents($url));
+    $filename = $img;
+    $parent = "pravda.com.ua";
+    //insert into database
+    $stmt = $conn->prepare("INSERT INTO news (sub_1, sub_2, source_error, video_url, type, parent, source, deep_link, title, published, author, article, tag_1, tag_2, tag_3, photo, photo_url, p_grapher, category, time, code) VALUES (:sub_1, :sub_2, :source_error, :video_url, :type, :parent, :source, :deep_link, :title, :published, :author, :article, :tag_1, :tag_2, :tag_3, :photo, :photo_url, :p_grapher, :category, :time, :code)");
+    $stmt->execute(['sub_1' => $sub_1, 'sub_2' => $sub_2, 'source_error' => $ar_error, 'video_url' => $video_f, 'type' => $news_type, 'parent' => $parent, 'source' => "pravda.com.ua", 'deep_link' => $h_link, 'title' => $title, 'published' => $published, 'author' => $p_author, 'article' => $ar_full, 'tag_1' => $tag1, 'tag_2' => $tag2, 'tag_3' => $tag3, 'photo' => $filename, 'photo_url' => $image, 'p_grapher' => $photographer, 'category' => $p_cat, 'time' => $time, 'code' => $code]);
+    $output .= '<h1>New Postage Successfully Added</h1>';
+} else {
+    $stmt = $conn->prepare("SELECT * FROM news WHERE deep_link=:deep_link");
+    $stmt->execute(['deep_link' => $h_link]);
+
     $ct_p = $stmt->fetch();
-    
-    $output .= '<h1>Article already posted. <a class="btn btn-warning" href="../article_data.php?id='.$ct_p['code'].'" target="_blank" >Preview</a></h1>';
+
+    $output .= '<h1>Article already posted. <a class="btn btn-warning" href="../article_data.php?id=' . $ct_p['code'] . '" target="_blank" >Preview</a></h1>';
 }
 
-echo $output;
+echo '<?xml encoding="UTF-8">' . $output;
