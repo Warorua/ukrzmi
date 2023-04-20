@@ -260,17 +260,7 @@ $ct = $stmt->fetch();
 
 if($ct['numrows'] < 1){
   // Download image, rename it and put it into folder
-$url = $image;
-$sub_1 = "";
-$sub_2 = "";
-$ar_error = "";
-$gen = 'prav'.time();
-$filee = basename($url);
-$ext = pathinfo($filee, PATHINFO_EXTENSION);
-$img = $gen.".".$ext;
-$path = '../images/'.$img; 
-file_put_contents($path, file_get_contents($url));
-$filename = $img;  
+  $filename = download_image($image);
 $parent = "life.pravda.com.ua";
 //insert into database
   $stmt = $conn->prepare("INSERT INTO news (sub_1, sub_2, source_error, video_url, type, parent, source, deep_link, title, published, author, article, tag_1, tag_2, tag_3, photo, photo_url, p_grapher, category, time, code) VALUES (:sub_1, :sub_2, :source_error, :video_url, :type, :parent, :source, :deep_link, :title, :published, :author, :article, :tag_1, :tag_2, :tag_3, :photo, :photo_url, :p_grapher, :category, :time, :code)");

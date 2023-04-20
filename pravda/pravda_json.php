@@ -31,4 +31,5 @@ $json = $resp->find('title');
 $jsonn = $json[0]->plaintext;
 $output .= $jsonn."<br/>";
 echo $output;
+
 ?>
