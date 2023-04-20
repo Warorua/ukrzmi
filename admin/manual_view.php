@@ -82,7 +82,7 @@ include 'components/header.php';
   }
 
   $search_where = " WHERE NOT category='international'
-                AND NOT input = ''
+                AND input = 'manual'
                 " . $type_fin . "
                 " . $tag_1_fin . "
                 " . $tag_2_fin . "
