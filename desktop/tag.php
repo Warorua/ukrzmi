@@ -3,6 +3,9 @@ include 'includes/header.php';
 
 ?>
 <body class="">
+    
+    <?php include_once("analyticstracking.php") ?>
+    
 <?php
 include 'home/blocks.php';
 include 'includes/topbar.php';
@@ -52,5 +55,7 @@ include 'includes/script.php';
     document.getElementsById('myBody').classList.remove('bg-dark');
     
 	});
+	
+
 </script>
 </body>

@@ -256,7 +256,7 @@ elseif($nav_link == 'all_content.php' && isset($_GET['A0034'])){
   $pageNm = $_GET['cat_id'];
 }
 else{
-  $topCat = 'NEWS UKRAINE';
+  $topCat = 'НОВИНИ УКРАЇНИ';
   if(isset( $_GET['cat'])){
     $pageNm = $_GET['cat'];
   }
@@ -424,7 +424,7 @@ else{
 <ul class="nav">
 
   <li class="nav-item">
-    <a class="nav-link navLink  text-secondary" href="#">My Channel</a>
+    <a class="nav-link navLink  text-secondary" href="#">Мій канал</a>
   </li>
     <?php
     if(isset($_GET['cat_id'])){
@@ -453,16 +453,16 @@ foreach($sub_cats as $row){
 //echo "<script>alert('".$subNavCont."')</script>";
   ?>
   <li class="nav-item">
-    <a class="nav-link navLink  <?php echo $topClassHome ?>" href="<?php echo $homeNavCont ?>">Headlines</a>
+    <a class="nav-link navLink  <?php echo $topClassHome ?>" href="<?php echo $homeNavCont ?>">Заголовки</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link navLink  <?php echo $topClassInterview ?>" href="interview.php<?php echo $subNavCont ?>">Interviews</a>
+    <a class="nav-link navLink  <?php echo $topClassInterview ?>" href="interview.php<?php echo $subNavCont ?>">Інтерв'ю</a>
   </li>
   <li class="nav-item ">
-    <a class="nav-link navLink  <?php echo $topClassVoice ?>"  href="voices.php<?php echo $subNavCont ?>">Voices</a>
+    <a class="nav-link navLink  <?php echo $topClassVoice ?>"  href="voices.php<?php echo $subNavCont ?>">Голоси</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link navLink  <?php echo $topClassVideo ?>" href="video.php<?php echo $subNavCont ?>">Videos</a>
+    <a class="nav-link navLink  <?php echo $topClassVideo ?>" href="video.php<?php echo $subNavCont ?>">Відео</a>
   </li>
   
 </ul>
@@ -476,20 +476,18 @@ foreach($sub_cats as $row){
 
  
 <ul class="nav nav-fill justify-content-end feedbackRow">
-  <li class="nav-item">
-    <a class="nav-link navLink text-dark" href="#">Feedback Here</a>
+  <li class="nav-item"> <Font size="2">
+   &nbsp <a href="mailto:admin@ukrzmi.com" style="color: #000000">Надсилає нам ваш відгук</a></Font>
   </li>
-  <li class="nav-item">
-    <a class="nav-link navLink text-dark" href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-  </li>
+ 
 </ul>
 
-<h3 class="text-primary pageDesc text-dark">"All daily news it matters from trustful sources"</h3>
+<h3 class="text-primary pageDesc text-dark">"Усі важливі щоденні новини з надійних джерел"</h3>
 
 <div style="font-size: 12px; margin-bottom:-15px;" class="d-flex justify-content-between w-100 pt-2 pe-3">
 <i style="margin-left:-49px" class="fa fa-heart text-danger text-start pt-1"></i>
 <div class="text-start">
-<b>Free</b> to ad: Press releases - jobs -Events -Ads
+Рекламуйте безкоштовно: вакансії - події - банери &nbsp &nbsp
 </div>
 </div>
         </div>

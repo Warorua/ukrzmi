@@ -3,7 +3,14 @@ include 'includes/header.php';
 session_unset();
 $page = 'home';
 ?>
+
+
+
 <body class="">
+
+
+<?php include_once("analyticstracking.php") ?>
+
 <?php
 include 'home/blocks.php';
 include 'includes/topbar.php';

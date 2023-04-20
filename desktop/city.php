@@ -8,6 +8,9 @@ else{
 }
 ?>
 <body class="">
+    
+    <?php include_once("analyticstracking.php") ?>
+    
 <?php
 include 'category/blocks.php';
 include 'includes/topbar.php';

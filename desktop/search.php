@@ -95,6 +95,9 @@ usort($fc_array,'fullDescSort');
 
 ?>
 <body class="">
+    
+    <?php include_once("analyticstracking.php") ?>
+    
 <?php
 include 'home/blocks.php';
 include 'includes/topbar.php';

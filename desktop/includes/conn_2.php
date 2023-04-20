@@ -1,18 +1,10 @@
 <?php
 set_time_limit(500); // 
-
-define('DBNAME',$_SERVER['DBNAME']);
-define('HOST',$_SERVER['HOSTNAME']);
-define('USERNAME',$_SERVER['USERNAME']);
-define('PASSWORD',$_SERVER['USER_PASSWORD']);
-
-
-
 Class Database{
  
-	private $server = 'mysql:host='.HOST.';dbname='.DBNAME;
-	private $username = USERNAME;
-	private $password = PASSWORD;
+	private $server = "mysql:host=localhost;dbname=ukrzmico_test";
+	private $username = "ukrzmico_miamivice";
+	private $password = "F@DOtS(0b8QM";
 	private $options  = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,);
 	protected $conn;
  	

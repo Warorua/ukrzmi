@@ -152,6 +152,9 @@ $fc_algorithm = new CosineSimilarity();
 }
 </style>
 <body>
+    
+    <?php include_once("analyticstracking.php") ?>
+    
     <div id="hideTop">
 <?php
 include 'home/blocks.php';
