@@ -94,7 +94,7 @@ foreach($intern_block as $row){
                             <img src="'.$row['photo_url'].'" alt="">
                         <a href="'.$row['deep_link'].'" class="stretched-link"></a>
                             <p class="blogTitleInt clearfix">
-                            <img class="interImage_bottom" src="https://bankimooncentre.org/wp-content/uploads/2020/06/guardian-logo-square.jpg"/>
+                            <img class="interImage_bottom" src="https://kahoot.com/files/2020/03/guardian-logo-square.jpg"/>
                         '.$row['title'].'
                                                      
                         </p> </div>
