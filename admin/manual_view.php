@@ -81,8 +81,8 @@ include 'components/header.php';
     $type_fin = '';
   }
 
-  $search_where = " WHERE NOT category='international'
-               
+  $search_where = " WHERE category <> 'international'
+                  AND input = 'manual'
                 " . $type_fin . "
                 " . $tag_1_fin . "
                 " . $tag_2_fin . "
