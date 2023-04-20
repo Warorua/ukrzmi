@@ -49,7 +49,7 @@ foreach($intern_block as $row){
        <li>
                     <label id="internIter'.$row['id'].'" for="slide-'.$row['id'].'">
                     <div class="row">
-                            <div class="col-md-1"><img class="interImage" src="https://bankimooncentre.org/wp-content/uploads/2020/06/guardian-logo-square.jpg"/></div>
+                            <div class="col-md-1"><img class="interImage" src="https://kahoot.com/files/2020/03/guardian-logo-square.jpg"/></div>
                         <div class="col-md-11 carousel_title"><div>'.$row['title'].'</div></div>
                     
                         </div>
