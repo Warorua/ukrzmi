@@ -81,7 +81,7 @@ include 'components/header.php';
     $type_fin = '';
   }
 
-  $search_where = " WHERE category <> 'international' AND input <> ''
+  $search_where = " WHERE input <> ''
                 " . $type_fin . "
                 " . $tag_1_fin . "
                 " . $tag_2_fin . "
