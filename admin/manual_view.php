@@ -81,7 +81,7 @@ include 'components/header.php';
     $type_fin = '';
   }
 
-  $search_where = " WHERE input <> ''
+  $search_where = " WHERE input = 'manual'
                 " . $type_fin . "
                 " . $tag_1_fin . "
                 " . $tag_2_fin . "
