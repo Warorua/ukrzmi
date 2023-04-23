@@ -53,4 +53,3 @@ if(isset($_GET['A0034'])){
 else{
     $btnHd = "";
 }
-?>
