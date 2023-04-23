@@ -81,17 +81,19 @@ include 'components/header.php';
     $type_fin = '';
   }
 
+  $search_where = " WHERE input = 'manual' ";
+/*
   $search_where = " WHERE input = 'manual'
-                " . $type_fin . "
-                " . $tag_1_fin . "
-                " . $tag_2_fin . "
-                " . $tag_3_fin . "             
-                 AND (tag_1 =N'$tag_id'
-                 OR tag_2 =N'$tag_id'
-                 OR tag_3 =N'$tag_id')
-                 
-                 ";
-
+                 " . $type_fin . "
+                 " . $tag_1_fin . "
+                 " . $tag_2_fin . "
+                 " . $tag_3_fin . "             
+                  AND (tag_1 =N'$tag_id'
+                  OR tag_2 =N'$tag_id'
+                  OR tag_3 =N'$tag_id')
+                  
+                  ";
+*/
   // Total data row count in the database
   $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM `news`");
   $stmt->execute();
