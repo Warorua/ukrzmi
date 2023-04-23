@@ -46,6 +46,9 @@
 
 	$pdo->close();
 
-	header('location: login.php');
-
-?>
+	if(isset($_SESSION['admin'])){
+		header('location: ../admin/home.php');
+	}else{
+		header('location: login.php');
+	}
+	
