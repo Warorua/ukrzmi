@@ -22,7 +22,7 @@ elseif($nav_link == 'city.php'){
   $topCat = 'NEWS <tx class="text-uppercase">'.$city.'</tx>';
 }
 else{
-  $topCat = 'NEWS UKRAINE';
+  $topCat = 'NEWS UA';
 }
 
 
@@ -124,7 +124,7 @@ foreach($sub_cats as $row){
 <div class="d-flex justify-content-between">
 <h3 class="text-primary pageCat"><?php echo $topCat ?></h3>
 <div <?php echo $topHide ?> class="">
-<div class="text-primary pageDesc">"Inspiring trust"</div>
+<div class="text-primary pageDesc">"Daily Press from Ukraine"</div>
 </div>
 </div>
 

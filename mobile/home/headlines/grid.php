@@ -165,6 +165,6 @@ $artno = $value+1;
 <script>
 		$('#mixedSlider').multislider({
 			duration: 750,
-			interval: 3000
+			interval: 5000
 		});
 </script>

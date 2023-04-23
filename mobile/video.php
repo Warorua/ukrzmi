@@ -3,6 +3,9 @@ include 'includes/header.php';
 $page = 'video';
 ?>
 <body class="">
+    
+    <?php include_once("analyticstracking.php") ?>
+    
 <?php
 include 'home/blocks.php';
 include 'includes/topbar.php';
