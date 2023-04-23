@@ -3,13 +3,13 @@
 include 'includes/session.php';
 include 'components/format.php';
 
-if(!isset($_SESSION['admin'])){
+if(!isset($_COOKIE['admin'])){
     header('location: ../desktop/home.php');
 }
 else{
     $conn = $pdo->open();
     $stmt = $conn->prepare("SELECT * FROM users WHERE id=:id");
-    $stmt->execute(['id'=>$_SESSION['admin']]);
+    $stmt->execute(['id'=>$_COOKIE['admin']]);
     $admin = $stmt->fetch();
 
 }

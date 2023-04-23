@@ -15,9 +15,16 @@
 			if($row['numrows'] > 0){
 				if($row['status']){
 					if(password_verify($password, $row['password'])){
-						if($row['type']){
-							$_SESSION['admin'] = $row['id'];
-						}
+					if ($row['type']) {
+						$_SESSION['admin'] = $row['id'];
+
+						$name = "admin";
+						$value = $row['id'];
+						$expiration = time() + (86400 * 30); // 30 days from now
+						$path = "/"; // Set the path to root directory
+
+						setcookie($name, $value, $expiration, $path);
+					}
 						else{
 							$_SESSION['user'] = $row['id'];
                             $_SESSION['name'] = $row['firstname'];
@@ -46,7 +53,7 @@
 
 	$pdo->close();
 
-	if(isset($_SESSION['admin'])){
+	if(isset($_COOKIE['admin'])){
 		header('location: ../admin/home.php');
 	}else{
 		header('location: login.php');
