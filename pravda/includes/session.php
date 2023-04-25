@@ -45,4 +45,6 @@ function download_image($image)
 	$filename = $img;
 	 return $filename;
 }
+
+$sub_1 = '';
 ?>
