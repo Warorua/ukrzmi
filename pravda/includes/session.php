@@ -48,4 +48,5 @@ function download_image($image)
 
 $sub_1 = '';
 $sub_2 = '';
+$ar_error = '';
 ?>
