@@ -187,4 +187,3 @@ header('location: ../manual_view.php');
 
 
 }
-?>

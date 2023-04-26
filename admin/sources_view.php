@@ -96,7 +96,9 @@ include 'components/header.php';
                       } elseif ($row['parent'] == "theguardian.com") {
                         $rowParent = "The guardian";
                       } elseif ($row['parent'] == "") {
-                        $rowParent = '<div class="badge badge-danger">UNKNOWN</div>';
+                        $rowParent = '<div class="badge badge-warning">CUSTOM</div>';
+                      }else{
+                        $rowParent = $row['parent'];
                       }
                       echo '
                     <tr>
