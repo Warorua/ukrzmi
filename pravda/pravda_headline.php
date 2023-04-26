@@ -207,7 +207,7 @@ if ($ct['numrows'] < 1) {
     $parent = "pravda.com.ua";
     //insert into database
     $stmt = $conn->prepare("INSERT INTO news (sub_1, sub_2, source_error, video_url, type, parent, source, deep_link, title, published, author, article, tag_1, tag_2, tag_3, photo, photo_url, p_grapher, category, time, code) VALUES (:sub_1, :sub_2, :source_error, :video_url, :type, :parent, :source, :deep_link, :title, :published, :author, :article, :tag_1, :tag_2, :tag_3, :photo, :photo_url, :p_grapher, :category, :time, :code)");
-    $stmt->execute(['sub_1' => $sub_1, 'sub_2' => $sub_2, 'source_error' => $ar_error, 'video_url' => $video_f, 'type' => $news_type, 'parent' => $parent, 'source' => "pravda.com.ua", 'deep_link' => $h_link, 'title' => $title, 'published' => $published, 'author' => $p_author, 'article' => $ar_full, 'tag_1' => $tag1, 'tag_2' => $tag2, 'tag_3' => $tag3, 'photo' => $filename, 'photo_url' => $image, 'p_grapher' => $photographer, 'category' => $p_cat, 'time' => $time, 'code' => $code]);
+    $stmt->execute(['sub_1' => $sub_1, 'sub_2' => $sub_2, 'source_error' => $ar_error, 'video_url' => $video_f, 'type' => $news_type, 'parent' => $parent, 'source' => "pravda.com.ua/home", 'deep_link' => $h_link, 'title' => $title, 'published' => $published, 'author' => $p_author, 'article' => $ar_full, 'tag_1' => $tag1, 'tag_2' => $tag2, 'tag_3' => $tag3, 'photo' => $filename, 'photo_url' => $image, 'p_grapher' => $photographer, 'category' => $p_cat, 'time' => $time, 'code' => $code]);
     $output .= '<h1>New Postage Successfully Added</h1>';
 } else {
     $stmt = $conn->prepare("SELECT * FROM news WHERE deep_link=:deep_link");

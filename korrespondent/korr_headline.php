@@ -114,7 +114,7 @@ if (data_insertion_verifier($h_link) < 1) {
         'sub_2' => "",
         'source_error' => "",
         'parent' => "ua.korrespondent.net",
-        'source' => "ua.korrespondent.net",
+        'source' => "ua.korrespondent.net/home",
         'deep_link' => $f_href,
         'title' => $title,
         'published' => $published,
