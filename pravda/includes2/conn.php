@@ -33,5 +33,33 @@ private $options  = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_
 }
 
 $pdo = new Database();
+
+
+function generate_code()
+{
+	$set = '123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	$code = substr(str_shuffle($set), 0, 12);
+	return $code;
+}
+
+function download_image($image)
+{
+	$url = $image;
+	$sub_1 = "";
+	$sub_2 = "";
+	$ar_error = "";
+	$gen = 'prav' . time() . generate_code();
+	$filee = basename($url);
+	$ext = pathinfo($filee, PATHINFO_EXTENSION);
+	$img = $gen . "." . $ext;
+	$path = '../images/' . $img;
+	file_put_contents($path, file_get_contents($url));
+	$filename = $img;
+	 return $filename;
+}
+
+$sub_1 = '';
+$sub_2 = '';
+$ar_error = '';
  
 ?>
