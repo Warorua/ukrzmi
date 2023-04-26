@@ -1,5 +1,6 @@
 <?php
 	include 'includes/conn.php';
+	include 'includes/functions.php';
 	//session_start();
 	
 date_default_timezone_set("Europe/Kiev");

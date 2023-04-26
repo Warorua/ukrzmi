@@ -369,7 +369,7 @@
               '<a class="dropdown-item" href="article/article_action.php?action=2&id=' + data + '">Unhide</a>' +
               '<a class="dropdown-item" href="article/article_action.php?action=1&id=' + data + '">Hide partially</a>' +
               '<a class="dropdown-item" href="article/article_action.php?action=0&id=' + data + '">Hide fully</a>' +
-              '<a class="dropdown-item" type="button" onclick="'+toggleBootstrapModal('My Modal Title', '<p>My modal body content goes here.</p>', '<button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; data-dismiss=&quot;modal&quot;>Close</button>')+'"">Delete article</a>' +
+              '<a class="dropdown-item" type="button" href="article/article_delete.php?id=' + data + '">Delete Article</a>' +
               '</div>';
           }
         },
