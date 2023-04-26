@@ -1,4 +1,3 @@
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
@@ -60,59 +59,59 @@
 <!-- CK Editor -->
 <script src="../bower/ckeditor/ckeditor.js"></script>
 <script>
-  $(function () {
+  $(function() {
     //CK Editor
     var mathElements = [
-        'math',
-        'maction',
-        'maligngroup',
-        'malignmark',
-        'menclose',
-        'merror',
-        'mfenced',
-        'mfrac',
-        'mglyph',
-        'mi',
-        'mlabeledtr',
-        'mlongdiv',
-        'mmultiscripts',
-        'mn',
-        'mo',
-        'mover',
-        'mpadded',
-        'mphantom',
-        'mroot',
-        'mrow',
-        'ms',
-        'mscarries',
-        'mscarry',
-        'msgroup',
-        'msline',
-        'mspace',
-        'msqrt',
-        'msrow',
-        'mstack',
-        'mstyle',
-        'msub',
-        'msup',
-        'msubsup',
-        'mtable',
-        'mtd',
-        'mtext',
-        'mtr',
-        'munder',
-        'munderover',
-        'semantics',
-        'annotation',
-        'annotation-xml'
-      ];
+      'math',
+      'maction',
+      'maligngroup',
+      'malignmark',
+      'menclose',
+      'merror',
+      'mfenced',
+      'mfrac',
+      'mglyph',
+      'mi',
+      'mlabeledtr',
+      'mlongdiv',
+      'mmultiscripts',
+      'mn',
+      'mo',
+      'mover',
+      'mpadded',
+      'mphantom',
+      'mroot',
+      'mrow',
+      'ms',
+      'mscarries',
+      'mscarry',
+      'msgroup',
+      'msline',
+      'mspace',
+      'msqrt',
+      'msrow',
+      'mstack',
+      'mstyle',
+      'msub',
+      'msup',
+      'msubsup',
+      'mtable',
+      'mtd',
+      'mtext',
+      'mtr',
+      'munder',
+      'munderover',
+      'semantics',
+      'annotation',
+      'annotation-xml'
+    ];
 
-      CKEDITOR.plugins.addExternal('ckeditor_wiris', 'https://ckeditor.com/docs/ckeditor4/4.18.0/examples/assets/plugins/ckeditor_wiris/', 'plugin.js');
+    CKEDITOR.plugins.addExternal('ckeditor_wiris', 'https://ckeditor.com/docs/ckeditor4/4.18.0/examples/assets/plugins/ckeditor_wiris/', 'plugin.js');
 
     CKEDITOR.replace('editor1', {
       extraPlugins: 'colordialog,tableresize,embed,autoembed,image2,colorbutton,colordialog,ckeditor_wiris',
       height: 470,
-      
+
       // Load the default contents.css file plus customizations for this sample.
       contentsCss: [
         'http://cdn.ckeditor.com/4.18.0/full-all/contents.css',
@@ -130,21 +129,192 @@
   });
 </script>
 <script>
-  $(function () {
+  $(function() {
     $("#scrapedData").DataTable({
-     // "responsive": true,
+      // "responsive": true,
+      //"processing": true,
+      //"deferRender": true,
       "lengthChange": true,
       "autoWidth": false,
-      "stateSave": true,
-      "lengthMenu": [ 50, 100, 200, 300, 400 ],
+      //"stateSave": true,
+      "lengthMenu": [50, 100, 200, 300, 400],
       "scrollCollapse": true,
       "search": {
-    "smart": false,
-    "select": 'single',
-    "info": false,
-    "keys": true
-  },
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        "smart": false,
+        "select": 'single',
+        "info": false,
+        "keys": true
+      },
+      scroller: {
+        loadingIndicator: true
+      },
+      "ajax": {
+        "url": "./data_fetch.php?query=<?php echo urlencode($search_where) ?>",
+        dataSrc: '',
+        //"data": "data"
+      },
+      
+      //*
+      "columns": [
+
+        {
+          data: 'id'
+        },
+        {
+          data: 'time'
+        },
+        {
+          data: 'title',
+          render: function(data, type, row) {
+            return '<div style="width:250px; overflow-y:hidden">' + data + '</div>'; 
+          }
+        },
+        {
+          data: 'deep_link',
+          render: function(data, type, row) {
+            return '<a href="' + data + '" class="btn btn-info btn-sm" target="_blank">Deep Link</a>'; 
+          }
+        },
+        {
+          data: null,
+          defaultContent: '', 
+          render: function(data, type, row) {
+            return ''; 
+          }
+        },
+        {
+          data: 'type'
+        },
+        {
+          data: 'photo_url',
+          render: function(data, type, row) {
+            return '<img src="' + data + '" height="50px" />'; 
+          }
+        },
+        {
+          data: 'category'
+        },
+        {
+          data: 'sub_1'
+        },
+        {
+          data: 'sub_2'
+        },
+        {
+          data: null,
+          defaultContent: '', 
+          render: function(data, type, row) {
+            return ''; 
+          }
+        },
+        {
+          data: null,
+          defaultContent: '', 
+          render: function(data, type, row) {
+            return ''; 
+          }
+        },
+        {
+          data: 'tag_1'
+        },
+        {
+          data: 'tag_2'
+        },
+        {
+          data: 'tag_3'
+        },
+        {
+          data: null,
+          defaultContent: '', 
+          render: function(data, type, row) {
+            return ''; 
+          }
+        },
+        {
+          data: null,
+          defaultContent: '', 
+          render: function(data, type, row) {
+            return ''; 
+          }
+        },
+        {
+          data: null,
+          defaultContent: '', 
+          render: function(data, type, row) {
+            return ''; 
+          }
+        },
+        {
+          data: null,
+          defaultContent: '', 
+          render: function(data, type, row) {
+            return ''; 
+          }
+        },
+        {
+          data: id, 
+          render: function(data, type, row) {
+            return '<a class="btn btn-info btn-sm" href="article_stats.php?id=' + data + '">STATS</a>'; 
+          }
+        },
+        {
+          data: null,
+          defaultContent: '', 
+          render: function(data, type, row) {
+            return ''; 
+          }
+        },
+        {
+          data: 'author'
+        },
+        {
+          data: null,
+          defaultContent: '', 
+          render: function(data, type, row) {
+            return ''; 
+          }
+        },
+        {
+          data: null,
+          defaultContent: '', 
+          render: function(data, type, row) {
+            return ''; 
+          }
+        },
+        {
+          data: 'source'
+        },
+        {
+          data: 'input',
+          render: function(data, type, row) {
+            return data === 'manual' ? '<div class="badge badge-danger">ADMINISTRATION</div>' : '<div class="badge badge-primary">SCRAPE</div>'; // Return 'ADMIN' if 'input' is 'manual', otherwise return 'USER'
+          }
+        },
+        {
+          data: 'hide_status',
+          render: function(data, type, row) {
+            if (data === '2') {
+              return '<div class="badge badge-success">NOT HIDDEN</div>';
+            }
+            if (data === '1') {
+              return '<div class="badge badge-warning">HIDDEN PARTIALLY</div>';
+            }
+            if (data === '0') {
+              return '<div class="badge badge-danger">FULLY HIDDEN</div>';
+            }
+          }
+        },
+        {
+          data: null,
+          defaultContent: '', 
+          render: function(data, type, row) {
+            return ''; 
+          }
+        },
+
+      ],
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+      //*/
     }).buttons().container().appendTo('#scrapedData_wrapper .col-md-6:eq(0)');
 
     $('#example2').DataTable({
@@ -155,15 +325,15 @@
       "info": true,
       "autoWidth": false,
       "stateSave": true,
-      "lengthMenu": [ 50, 100, 200, 300, 400 ],
+      "lengthMenu": [50, 100, 200, 300, 400],
       "scrollCollapse": true,
       "search": {
-    "smart": false,
-    "select": 'single',
-    "info": false
-  },
-     //"responsive": true,
-     "keys": true,
+        "smart": false,
+        "select": 'single',
+        "info": false
+      },
+      //"responsive": true,
+      "keys": true,
     });
   });
 </script>
@@ -183,15 +353,15 @@
 <!-- dropzonejs -->
 <script src="../bower/plugins/dropzone/min/dropzone.min.js"></script>
 <script>
-  $(function () {
+  $(function() {
     //Initialize Select2 Elements
     $('.select2').select2({
       tags: true,
       tokenSeparators: [',', ' ']
     })
 
- //Initialize Select3 Elements
- $('.select3').select2()
+    //Initialize Select3 Elements
+    $('.select3').select2()
 
     //Initialize Select2 Elements
     $('.select2bs4').select2({
@@ -199,22 +369,34 @@
     })
 
     //Datemask dd/mm/yyyy
-    $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+    $('#datemask').inputmask('dd/mm/yyyy', {
+      'placeholder': 'dd/mm/yyyy'
+    })
     //Datemask2 mm/dd/yyyy
-    $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+    $('#datemask2').inputmask('mm/dd/yyyy', {
+      'placeholder': 'mm/dd/yyyy'
+    })
     //Money Euro
     $('[data-mask]').inputmask()
 
     //Date picker
     $('#reservationdate').datetimepicker({
-        format: 'L'
+      format: 'L'
     });
 
     //Date and time picker
-    $('#reservationdatetime').datetimepicker({ icons: { time: 'far fa-clock' } });
+    $('#reservationdatetime').datetimepicker({
+      icons: {
+        time: 'far fa-clock'
+      }
+    });
 
-      //Date and time picker
-  $('#reservationdatetimeT').datetimepicker({ icons: { time: 'far fa-clock' } });
+    //Date and time picker
+    $('#reservationdatetimeT').datetimepicker({
+      icons: {
+        time: 'far fa-clock'
+      }
+    });
 
     //Date range picker
     $('#reservation').daterangepicker()
@@ -227,20 +409,19 @@
       }
     })
     //Date range as a button
-    $('#daterange-btn').daterangepicker(
-      {
-        ranges   : {
-          'Today'       : [moment(), moment()],
-          'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-          'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
+    $('#daterange-btn').daterangepicker({
+        ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
           'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-          'This Month'  : [moment().startOf('month'), moment().endOf('month')],
-          'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
         },
         startDate: moment().subtract(29, 'days'),
-        endDate  : moment()
+        endDate: moment()
       },
-      function (start, end) {
+      function(start, end) {
         $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
       }
     )
@@ -262,13 +443,13 @@
       $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
     })
 
-    $("input[data-bootstrap-switch]").each(function(){
+    $("input[data-bootstrap-switch]").each(function() {
       $(this).bootstrapSwitch('state', $(this).prop('checked'));
     })
 
   })
   // BS-Stepper Init
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', function() {
     window.stepper = new Stepper(document.querySelector('.bs-stepper'))
   })
 
@@ -282,7 +463,7 @@
   previewNode.parentNode.removeChild(previewNode)
 
   var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
-   url: "/file/post", // Set the url
+    url: "/file/post", // Set the url
     thumbnailWidth: 80,
     thumbnailHeight: 80,
     parallelUploads: 20,
@@ -292,29 +473,31 @@
     previewsContainer: "#previews", // Define the container to display the previews
     clickable: ".fileinput-button", // Define the element that should be used as click trigger to select files.
     paramName: "image", // The name that will be used to transfer the file
-    maxfilesexceeded: function(){
+    maxfilesexceeded: function() {
       const Toast = Swal.mixin({
-  toast: true,
-  position: 'top-end',
-  showConfirmButton: false,
-  timer: 3000,
-  timerProgressBar: true,
-  didOpen: (toast) => {
-    toast.addEventListener('mouseenter', Swal.stopTimer)
-    toast.addEventListener('mouseleave', Swal.resumeTimer)
-  }
-})
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
 
-Toast.fire({
-  icon: 'error',
-  title: 'Maximum files allowed is 1.'
-})
+      Toast.fire({
+        icon: 'error',
+        title: 'Maximum files allowed is 1.'
+      })
     },
   })
 
   myDropzone.on("addedfile", function(file) {
     // Hookup the start button
-    file.previewElement.querySelector(".start").onclick = function() { myDropzone.enqueueFile(file) }
+    file.previewElement.querySelector(".start").onclick = function() {
+      myDropzone.enqueueFile(file)
+    }
   })
 
   // Update the total progress bar
@@ -351,8 +534,9 @@ Toast.fire({
 <script src="../bower/plugins/codemirror/codemirror.js"></script>
 <script src="../bower/plugins/codemirror/mode/css/css.js"></script>
 <script src="../bower/plugins/codemirror/mode/xml/xml.js"></script>
-<script src="../bower/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script><script>
-  $(function () {
+<script src="../bower/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script>
+  $(function() {
     // Summernote
     $('#summernote').summernote()
     $('#summernote2').summernote()

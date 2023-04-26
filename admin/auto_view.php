@@ -317,6 +317,7 @@ include 'components/header.php';
                 </thead>
                 <tbody>
                   <?php
+                  /*
                   $conn = $pdo->open();
                   $stmt = $conn->prepare("SELECT * FROM news " . $search_where . " ORDER BY id DESC LIMIT {$length}");
                   $stmt->execute();
@@ -335,7 +336,7 @@ include 'components/header.php';
                     } else {
                       $uploader = '<div class="badge badge-primary">SCRAPE</div>';
                     }
-                    echo '
+                    $data1 = '
                     <tr style="font-size:14px">
                     <td>' . $row['id'] . '</td>
                     <td>' . $row['time'] . '</td>
@@ -364,57 +365,58 @@ include 'components/header.php';
                     <td>' . $row['source'] . '</td>
                     <td>' . $uploader . '</td>
                     <td>' . $status . '</td>
-                   
-                    <td>
-<div class="dropdown">
-  <button type="button" class="btn btn-warning btn-sm dropdown-toggle" data-toggle="dropdown">
-    Admin action
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="pending_news.php?id=' . $row['id'] . '&cnt=scrap">Edit article</a>
-    <a class="dropdown-item" href="article/article_action.php?action=2&id=' . $row['id'] . '">Unhide</a>
-    <a class="dropdown-item" href="article/article_action.php?action=1&id=' . $row['id'] . '">Hide partially</a>
-    <a class="dropdown-item" href="article/article_action.php?action=0&id=' . $row['id'] . '">Hide fully</a>
-    <a class="dropdown-item" type="button" data-toggle="modal" data-target="#myModal' . $row['id'] . '">Delete article</a>
-  </div>
+         
+          <td>
+                     <div class="dropdown">
+                    <button type="button" class="btn btn-warning btn-sm dropdown-toggle" data-toggle="dropdown">
+                     Admin action
+                    </button>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="pending_news.php?id=' . $row['id'] . '&cnt=scrap">Edit article</a>
+                    <a class="dropdown-item" href="article/article_action.php?action=2&id=' . $row['id'] . '">Unhide</a>
+                    <a class="dropdown-item" href="article/article_action.php?action=1&id=' . $row['id'] . '">Hide partially</a>
+                    <a class="dropdown-item" href="article/article_action.php?action=0&id=' . $row['id'] . '">Hide fully</a>
+                    <a class="dropdown-item" type="button" data-toggle="modal" data-target="#myModal' . $row['id'] . '">Delete article</a>
+                 </div>
   
-<!-- The Modal -->
-<div class="modal" id="myModal' . $row['id'] . '">
-  <div class="modal-dialog">
-    <div class="modal-content">
+                 <!-- The Modal -->
+                 <div class="modal" id="myModal' . $row['id'] . '">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
 
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Deleting article</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
+                      <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Deleting article</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
 
-      <!-- Modal body -->
-      <div class="modal-body text-center">
+                        <!-- Modal body -->
+                           <div class="modal-body text-center">
        
-        <div class="callout callout-info">
-        <h4 class="text-danger"> Are you sure you want to completely delete this article?</h4>
+                             <div class="callout callout-info">
+                              <h4 class="text-danger"> Are you sure you want to completely delete this article?</h4>
             
-              ' . $row['title'] . '
-            </div>
+                                ' . $row['title'] . '
+                            </div>
         
-      </div>
+                           </div>
+                         
+                           <!-- Modal footer -->
+                               <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                                  <a type="button" class="btn btn-success" href="article/article_delete.php?id=' . $row['id'] . '">Yes</a>
+                               </div>
 
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-        <a type="button" class="btn btn-success" href="article/article_delete.php?id=' . $row['id'] . '">Yes</a>
-      </div>
-
-    </div>
-  </div>
-</div>
-</div>
-                    </td>
+                    </div>
+                 </div>
+               </div>
+             </div>
+          </td>
                   </tr>
   
    ';
                   }
+                  */
                   ?>
 
 
