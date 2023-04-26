@@ -130,13 +130,63 @@
 </script>
 <script>
   $(function() {
+    // Function to create Bootstrap modal
+    function createBootstrapModal(id) {
+      // Create modal HTML
+      var modalHTML = '<div class="modal" tabindex="-1" role="dialog">' +
+        '<div class="modal-dialog" role="document">' +
+        '<div class="modal-content">' +
+        '<div class="modal-header">' +
+        '<h5 class="modal-title">Deleting article</h5>' +
+        '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
+        '<span aria-hidden="true">&times;</span>' +
+        '</button>' +
+        '</div>' +
+        '<div class="modal-body">' +
+        ' <div class="callout callout-info">' +
+        '<h4 class="text-danger"> Are you sure you want to completely delete this article?</h4>' +
+        '</div>' +
+        '</div>' +
+        '<div class="modal-footer">' +
+        '<button type="button" class="btn btn-danger" data-dismiss="modal">No</button>' +
+        '<a type="button" class="btn btn-success" href="article/article_delete.php?id=' + id + '">Yes</a>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
+
+      // Append modal HTML to the body
+      $('body').append(modalHTML);
+
+      // Add onclick event listener to the modal button
+
+      // Toggle the modal
+      $('.modal').modal('toggle');
+
+    }
+
+    function toggleBootstrapModal(title, body, footer) {
+      // Set the modal title, body, and footer
+      $('.modal-title').text(title);
+      $('.modal-body').html(body);
+      $('.modal-footer').html(footer);
+
+      // Toggle the modal
+      $('#myModal').modal('toggle');
+    }
+
+    var myTitle = 'My Modal Title';
+    var myBody = '<p>My modal body content goes here.</p>';
+    var myFooter = '<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>';
+
+
     $("#scrapedData").DataTable({
       // "responsive": true,
-      //"processing": true,
-      //"deferRender": true,
+      "processing": true,
+      "deferRender": true,
       "lengthChange": true,
       "autoWidth": false,
-      //"stateSave": true,
+      "stateSave": true,
       "lengthMenu": [50, 100, 200, 300, 400],
       "scrollCollapse": true,
       "search": {
@@ -153,7 +203,7 @@
         dataSrc: '',
         //"data": "data"
       },
-      
+
       //*
       "columns": [
 
@@ -166,20 +216,20 @@
         {
           data: 'title',
           render: function(data, type, row) {
-            return '<div style="width:250px; overflow-y:hidden">' + data + '</div>'; 
+            return '<div style="width:250px; overflow-y:hidden">' + data + '</div>';
           }
         },
         {
           data: 'deep_link',
           render: function(data, type, row) {
-            return '<a href="' + data + '" class="btn btn-info btn-sm" target="_blank">Deep Link</a>'; 
+            return '<a href="' + data + '" class="btn btn-info btn-sm" target="_blank">Deep Link</a>';
           }
         },
         {
           data: null,
-          defaultContent: '', 
+          defaultContent: '',
           render: function(data, type, row) {
-            return ''; 
+            return 'Text';
           }
         },
         {
@@ -188,7 +238,7 @@
         {
           data: 'photo_url',
           render: function(data, type, row) {
-            return '<img src="' + data + '" height="50px" />'; 
+            return '<img src="' + data + '" height="50px" />';
           }
         },
         {
@@ -202,16 +252,16 @@
         },
         {
           data: null,
-          defaultContent: '', 
+          defaultContent: '',
           render: function(data, type, row) {
-            return ''; 
+            return 'News';
           }
         },
         {
           data: null,
-          defaultContent: '', 
+          defaultContent: '',
           render: function(data, type, row) {
-            return ''; 
+            return '';
           }
         },
         {
@@ -225,43 +275,43 @@
         },
         {
           data: null,
-          defaultContent: '', 
+          defaultContent: '',
           render: function(data, type, row) {
-            return ''; 
+            return '';
           }
         },
         {
           data: null,
-          defaultContent: '', 
+          defaultContent: '',
           render: function(data, type, row) {
-            return ''; 
+            return '';
           }
         },
         {
           data: null,
-          defaultContent: '', 
+          defaultContent: '',
           render: function(data, type, row) {
-            return ''; 
+            return '';
           }
         },
         {
           data: null,
-          defaultContent: '', 
+          defaultContent: '',
           render: function(data, type, row) {
-            return ''; 
+            return '';
           }
         },
         {
-          data: id, 
+          data: 'id',
           render: function(data, type, row) {
-            return '<a class="btn btn-info btn-sm" href="article_stats.php?id=' + data + '">STATS</a>'; 
+            return '<a class="btn btn-info btn-sm" href="article_stats.php?id=' + data + '">STATS</a>';
           }
         },
         {
           data: null,
-          defaultContent: '', 
+          defaultContent: '',
           render: function(data, type, row) {
-            return ''; 
+            return '';
           }
         },
         {
@@ -269,16 +319,16 @@
         },
         {
           data: null,
-          defaultContent: '', 
+          defaultContent: '',
           render: function(data, type, row) {
-            return ''; 
+            return '';
           }
         },
         {
           data: null,
-          defaultContent: '', 
+          defaultContent: '',
           render: function(data, type, row) {
-            return ''; 
+            return '';
           }
         },
         {
@@ -292,23 +342,35 @@
         },
         {
           data: 'hide_status',
+          defaultContent: '',
           render: function(data, type, row) {
-            if (data === '2') {
+            if (data === 2) {
               return '<div class="badge badge-success">NOT HIDDEN</div>';
             }
-            if (data === '1') {
+            if (data === 1) {
               return '<div class="badge badge-warning">HIDDEN PARTIALLY</div>';
             }
-            if (data === '0') {
+            if (data === 0) {
               return '<div class="badge badge-danger">FULLY HIDDEN</div>';
             }
           }
         },
         {
-          data: null,
-          defaultContent: '', 
+          data: 'id',
+          defaultContent: '',
           render: function(data, type, row) {
-            return ''; 
+
+            return '<div class="dropdown">' +
+              '<button type="button" class="btn btn-warning btn-sm dropdown-toggle" data-toggle="dropdown">' +
+              'Admin action' +
+              '</button>' +
+              '<div class="dropdown-menu">' +
+              '<a class="dropdown-item" href="pending_news.php?id=' + data + '&cnt=scrap">Edit article</a>' +
+              '<a class="dropdown-item" href="article/article_action.php?action=2&id=' + data + '">Unhide</a>' +
+              '<a class="dropdown-item" href="article/article_action.php?action=1&id=' + data + '">Hide partially</a>' +
+              '<a class="dropdown-item" href="article/article_action.php?action=0&id=' + data + '">Hide fully</a>' +
+              '<a class="dropdown-item" type="button" onclick="'+toggleBootstrapModal('My Modal Title', '<p>My modal body content goes here.</p>', '<button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; data-dismiss=&quot;modal&quot;>Close</button>')+'"">Delete article</a>' +
+              '</div>';
           }
         },
 
