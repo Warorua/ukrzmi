@@ -17,7 +17,7 @@
 
     <div class="tab-content" id="custom-content-above-tabContent">
       <div class="form-group">
-        <label>Meta Title</label>
+        <label>Meta Title<small class="text-danger"> <i class="fa fa-asterisk" aria-hidden="true"></i> (Required)</small></label>
 
         <div class="input-group">
           <input type="text" name="meta_title" class="form-control" placeholder="Meta Title">
@@ -29,7 +29,7 @@
         <!-- /.input group -->
       </div>
       <div class="form-group">
-        <label>Meta Description</label>
+        <label>Meta Description<small class="text-danger"> <i class="fa fa-asterisk" aria-hidden="true"></i> (Required)</small></label>
 
         <div class="input-group">
           <input type="text" name="meta_desc" class="form-control" placeholder="Meta Description">
@@ -41,7 +41,7 @@
         <!-- /.input group -->
       </div>
       <div class="form-group">
-        <label>Meta Keywords</label>
+        <label>Meta Keywords<small class="text-danger"> <i class="fa fa-asterisk" aria-hidden="true"></i> (Required)</small></label>
         <select class="select2" multiple="multiple" name="meta_keywords" data-placeholder="Enter keywords" style="width: 100%;">
           <?php
           $tags_obj = json_decode(file_get_contents('./components/tags.json'), true);
