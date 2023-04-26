@@ -1,12 +1,18 @@
 <?php
 
-function filter_by_key($array, $allowed_values, $key_value) {
+function filter_by_key($array, $allowed_values, $key, $unique_key) {
   //$allowed_values = ['Ken', 'pet', 'John', 'mat', 'Mike'];
-  $key = $key_value;
-  return array_filter($array, function($item) use ($allowed_values) {
-      return isset($item['source']) && in_array($item['source'], $allowed_values);
-  });
+  //$key = $key_value;
+  $unique_ages = [];
+return array_filter($array, function($item) use ($allowed_values, &$unique_ages, $key, $unique_key) {
+    if(isset($item[$key]) && in_array($item[$key], $allowed_values) && !in_array($item[$unique_key], $unique_ages)) {
+        $unique_ages[] = $item[$unique_key];
+        return true;
+    }
+    return false;
+});
 }
+
 
 /*
   $stmt = $conn->prepare("SELECT * FROM news 
@@ -34,7 +40,8 @@ ORDER BY id;");
         'pravda.com.ua/home',
         'eurointegration.com.ua/news/home'
   ],
-  'source'
+  'source',
+  'deep_link'
 );
 
  $block_news_orig = array_slice($block_allNews, 0, 39);
