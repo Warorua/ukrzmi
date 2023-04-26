@@ -110,6 +110,7 @@ include 'home/thematic/b9.php';
 
 for ($i = 1; $i <= 12; $i++) {
     $block_id = $i;
+    $block_no = $block[$i];
     $i_ = $i - 1;
     $i__ = $i + 1;
 
