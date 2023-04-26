@@ -2,10 +2,37 @@
   <?php
   if ($block[$block_id]['active'] == 1) {
 
+    include 'home/panels/headline_query.php';
     if ($block_id == 0) {
-      include 'home/panels/headline_query.php';
+      $block_allNews = filter_by_key(
+        $allNews,
+        [
+          'Unian.ua/home',
+          'ua.korrespondent.net/home',
+          'pravda.com.ua/home',
+          'eurointegration.com.ua/news/home'
+        ],
+        'source',
+        'deep_link'
+      );
+      $block_news_orig = array_slice($block_allNews, 0, 39);
+
+      $pageName = 'home';
+      $_SESSION[$pageName] = $block_allNews;
     } else {
-      include 'home/panels/blocks_query.php';
+      $block_news_orig = filter_by_key(
+        $allNews,
+        [
+          $block[$block_id]['type']
+        ],
+        'category',
+        'deep_link'
+      );
+
+      $block_allNews = array_slice($block_news_orig, 0, 39);
+
+      $pageName = 'home' . '_' . $block[$block_id]['id'];
+      $_SESSION[$pageName] = $block_allNews;
     }
 
 
@@ -64,7 +91,7 @@
 
       $block_news_orig = $block_news;
     }
-    
+
     if ($block_auth['numrows'] < 1) {
       $block_news = $block_news_orig;
     }
