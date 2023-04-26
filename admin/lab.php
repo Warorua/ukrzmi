@@ -1,21 +1,24 @@
 <?php
 include './includes/session.php';
-function filter_by_key($array, $allowed_values, $key, $unique_key) {
-      //$allowed_values = ['Ken', 'pet', 'John', 'mat', 'Mike'];
-      //$key = $key_value;
+function filter_by_key($array, $allowed_values, $key, $unique_key)
+{
       $unique_ages = [];
-    return array_filter($array, function($item) use ($allowed_values, &$unique_ages, $key, $unique_key) {
+    $filtered_array = array_filter($array, function($item) use ($allowed_values, &$unique_ages, $unique_key, $key) {
         if(isset($item[$key]) && in_array($item[$key], $allowed_values) && !in_array($item[$unique_key], $unique_ages)) {
             $unique_ages[] = $item[$unique_key];
             return true;
         }
         return false;
     });
-  }
+    usort($filtered_array, function($a, $b) {
+        return $b['id'] - $a['id'];
+    });
+    return $filtered_array;
+}
 
   
 $conn = $pdo->open();
-$stmt = $conn->prepare("SELECT id, source, deep_link, parent, photo FROM news");
+$stmt = $conn->prepare("SELECT id, source, deep_link, parent, photo, published FROM news");
 $stmt->execute();
 $author_select = $stmt->fetchAll();
 
