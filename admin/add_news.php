@@ -482,7 +482,7 @@ $('#reservationdatetimeTT" . $x . "').datetimepicker({ sideBySide: true, icons: 
         myDropzone.removeAllFiles(true);
         document.querySelector("#uploadButton").removeAttribute("disabled", "disabled")
         //logoImage.hide();
-        window.location.replace("manual_view.php");
+       // window.location.replace("manual_view.php");
       }, 2000);
 
     }
