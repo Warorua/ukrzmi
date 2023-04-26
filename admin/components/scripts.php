@@ -430,6 +430,12 @@
       theme: 'bootstrap4'
     })
 
+    //Initialize Select2 Elements
+    $('.select2bs5').select2({
+      theme: 'bootstrap4',
+      tags: true
+    })
+
     //Datemask dd/mm/yyyy
     $('#datemask').inputmask('dd/mm/yyyy', {
       'placeholder': 'dd/mm/yyyy'

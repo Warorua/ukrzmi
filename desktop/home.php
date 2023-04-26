@@ -108,7 +108,7 @@ include 'home/thematic/b9.php';
 }
 */
 
-for ($i = 1; $i <= 12; $i++) {
+for ($i = 1; $i <= 100; $i++) {
     $block_id = $i;
    // $block_no = $block[$block_id];
     $i_ = $i - 1;
