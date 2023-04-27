@@ -27,6 +27,8 @@
       $pageName = 'home';
       $_SESSION[$pageName] = $block_allNews;
     } else {
+      unset($block_news_orig);
+      unset($block_allNews);
       $block_news_orig = filter_by_key(
         $allNews,
         [
