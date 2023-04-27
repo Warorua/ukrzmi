@@ -27,7 +27,7 @@
       $pageName = 'home';
       $_SESSION[$pageName] = $block_allNews;
     } else {
-      $block_news_orig = filter_by_key(
+      $block_allNews = filter_by_key(
         $allNews,
         [
           $block[$block_id]['type']
@@ -36,7 +36,7 @@
         'deep_link'
       );
 
-      $block_allNews = array_slice($block_news_orig, 0, 39);
+      $block_news_orig = array_slice($block_allNews, 0, 39);
 
       $pageName = 'home' . '_' . $block[$block_id]['id'];
       $_SESSION[$pageName] = $block_allNews;
