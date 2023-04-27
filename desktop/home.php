@@ -21,8 +21,8 @@ include 'includes/navbar.php';
         <div class="col-md-9 col-lg-9 col-xl-9 cardColumn">
   <?php
   $allNews = newsFetch();
-  
-include 'home/headlines/main.php';
+
+//include 'home/headlines/main.php';
 include 'home/international_block.php';
 
 
