@@ -27,3 +27,23 @@ ORDER BY id;");
     $allNews = $stmt->fetchAll();
     return $allNews;
 }
+
+function rowParent($row){
+    if ($row['parent'] == "ua.korrespondent.net") {
+        $rowParent = "Кореспондент";
+      } elseif ($row['parent'] == "pravda.com.ua") {
+        $rowParent = "правда";
+      } elseif ($row['parent'] == "eurointegration.com.ua") {
+        $rowParent = "євроінтеграція";
+      } elseif ($row['parent'] == "unian.ua") {
+        $rowParent = "уніанської";
+      } elseif ($row['parent'] == "life.pravda.com.ua") {
+        $rowParent = "правда";
+      } elseif ($row['parent'] == "theguardian.com") {
+        $rowParent = "The guardian";
+      } elseif ($row['parent'] == "") {
+        $rowParent = "правда";
+      }
+
+      return $rowParent;
+}

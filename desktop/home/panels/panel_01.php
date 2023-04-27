@@ -27,8 +27,6 @@
       $pageName = 'home';
       $_SESSION[$pageName] = $block_allNews;
     } else {
-      unset($block_news_orig);
-      unset($block_allNews);
       $block_news_orig = filter_by_key(
         $allNews,
         [
@@ -56,7 +54,8 @@
   AND pin=:pin
   AND block_id=:block_id
   AND page=:page
-  ORDER BY pinned.position ASC");
+  ORDER BY pinned.position ASC
+  ");
     $stmt->execute(['cat_not' => 'international', 'type' => "", 'pin' => 1, 'block_id' => $block[$block_id]['id'], 'page' => '']);
     $block_news_pinned = $stmt->fetchAll();
     foreach ($block_news_pinned as $value => $row) {
@@ -106,6 +105,7 @@
     }
 
     $block_total_cards = sizeof($block_news);
+
     if ($block_total_cards >= 0 && $block_total_cards <= 8) {
       $slide_control = 0;
       $hide_control_button = 'disabled';
@@ -130,6 +130,7 @@
       $slide_control = 5;
       $hide_control_button = '';
     }
+
     if (!isset($slide_control)) {
       $slide_control = 5;
       $hide_control_button = '';
@@ -147,21 +148,8 @@
         $catHolder = 'General';
       }
 
-      if ($row['parent'] == "ua.korrespondent.net") {
-        $rowParent = "Кореспондент";
-      } elseif ($row['parent'] == "pravda.com.ua") {
-        $rowParent = "правда";
-      } elseif ($row['parent'] == "eurointegration.com.ua") {
-        $rowParent = "євроінтеграція";
-      } elseif ($row['parent'] == "unian.ua") {
-        $rowParent = "уніанської";
-      } elseif ($row['parent'] == "life.pravda.com.ua") {
-        $rowParent = "правда";
-      } elseif ($row['parent'] == "theguardian.com") {
-        $rowParent = "The guardian";
-      } elseif ($row['parent'] == "") {
-        $rowParent = "правда";
-      }
+        $rowParent = rowParent($row);
+     
 
 
 
@@ -174,11 +162,14 @@
  ...';
         $filtTit = str_replace('"', '', $row['title']);
       }
+
+
       if ($row['frame_color'] == "") {
         $frameColor = "rgb(0, 0, 0, 0.0)";
       } else {
         $frameColor = $row['frame_color'];
       }
+
       if ($row['title_badge'] == "") {
         $titleBadge = "";
       } else {
