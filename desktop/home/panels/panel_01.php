@@ -102,6 +102,14 @@
 
     if ($block_auth['numrows'] < 1) {
       $block_news = $block_news_orig;
+    } else {
+      $stmt = $conn->prepare("SELECT * FROM pinned WHERE block_id=:block_id AND page=:page ORDER BY id DESC LIMIT 1");
+      $stmt->execute(['block_id' => $block[$block_id]['id'], 'page' => '']);
+      $block_auth = $stmt->fetch();
+
+      if (getTimeDifference($block_auth['pinned_to']) > 1) {
+        $block_news = $block_news_orig;
+      }
     }
 
     $block_total_cards = sizeof($block_news);

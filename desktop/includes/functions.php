@@ -47,3 +47,10 @@ function rowParent($row){
 
       return $rowParent;
 }
+
+function getTimeDifference($dateStr) {
+    $timestamp = strtotime($dateStr);
+    $currentTimestamp = time();
+    $difference = $currentTimestamp - $timestamp;
+    return $difference;
+  }
