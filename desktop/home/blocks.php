@@ -49,4 +49,3 @@ function timeago($date) {
          return $diff . " " . $strTime[$i] . "s ago ";
     }
  }
-?>

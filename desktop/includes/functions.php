@@ -14,3 +14,16 @@ function filter_by_key($array, $allowed_values, $key, $unique_key)
     });
     return $filtered_array;
 }
+
+function newsFetch()
+{
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM news 
+ WHERE NOT category=:cat_not
+ AND type=:type
+ AND pin=:pin
+ORDER BY id;");
+    $stmt->execute(['cat_not' => 'international', 'type' => "", 'pin' => 0]);
+    $allNews = $stmt->fetchAll();
+    return $allNews;
+}
