@@ -9,7 +9,7 @@
   if ($block[$block_id]['active'] == 1) {
 
     //include 'home/panels/headline_query.php';
-    $allNews = newsFetch();
+    //$allNews = newsFetch();
     if ($block_id == 0 && $block[$block_id]['type'] == "") {
       $block_allNews = filter_by_key(
         $allNews,
