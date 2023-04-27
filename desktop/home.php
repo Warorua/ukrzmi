@@ -22,7 +22,7 @@ include 'includes/navbar.php';
   <?php
   $allNews = newsFetch();
 
-//include 'home/headlines/main.php';
+include 'home/headlines/main.php';
 include 'home/international_block.php';
 
 
