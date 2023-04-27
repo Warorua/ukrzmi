@@ -1,9 +1,5 @@
 <?php
-echo '<!----
-///////////BLOCK INFO:
-'.json_encode($block[$block_id]).'
-//////////BLOCK ID: '.$block_id.'
----->';
+
 ?>
 <style>
   .slickk-next-<?php echo $block[$block_id]['name']; ?> {

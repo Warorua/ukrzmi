@@ -1,5 +1,11 @@
 <div class="row">
+  
   <?php
+  echo '<!----
+  ///////////BLOCK INFO:
+  '.json_encode($block[$block_id]).'
+  //////////BLOCK ID: '.$block_id.'
+  ---->';
   if ($block[$block_id]['active'] == 1) {
 
     include 'home/panels/headline_query.php';
