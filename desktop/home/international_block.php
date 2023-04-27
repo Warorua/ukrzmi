@@ -16,10 +16,20 @@ $perc = ($x * 100)-100;
 
 <div class="cardPanel">
     <?php
-$conn = $pdo->open();
-$stmt = $conn->prepare("SELECT * FROM news WHERE category=:category AND NOT title=:title LIMIT 24");
-$stmt->execute(['category'=>'international', 'title'=>'']);
-$intern_block = $stmt->fetchAll();
+
+$intern_block = filter_by_key(
+  $allNews,
+  [
+    'international'
+  ],
+  'category',
+  'deep_link'
+);
+
+$intern_block = array_slice($intern_block, 0, 24);
+
+
+
     ?>
 <h2 class="newsHead">Top International Headlines</h2>
     <div class="me-3">
