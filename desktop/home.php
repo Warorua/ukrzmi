@@ -49,7 +49,7 @@ $page = 'home';
 
             </div>
 
-            <div class="col-md-3 sticky-top cardColumn_2">
+            <div class="col-md-3 sticky-top ">
                 <?php
                 include 'home/ad_column.php';
                 ?>
