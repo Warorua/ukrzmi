@@ -1377,12 +1377,7 @@ height: 100%;
       }
     }
 
-    #moveable-element {
-      position: sticky;
-      z-index: 9999;
-      top: 10px;
-     
-    }
+   
   </style>
 
   <!---news cards cdn--->
