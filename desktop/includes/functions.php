@@ -85,7 +85,7 @@ function getTimeDifference($dateStr) {
   }
 
 
-function articleCard($row, $block, $block_id, $rowParent, $frameColor, $filtTit, $titleBadge, $rowtitle = null, $catHolder)
+function articleCard($row, $block, $block_id, $rowParent = null, $frameColor, $filtTit, $titleBadge, $rowtitle = null, $catHolder)
 {
   if (isValidImage('../images/' . $row['photo'])) {
     $image = '../images/' . $row['photo'];
@@ -201,6 +201,7 @@ function blockAux($row)
   if (strlen($row['title']) < $maxPos) {
     $rowtitle = $row['title'];
     $filtTit = str_replace('"', '', $row['title']);
+    $lastPos = null;
   } else {
     $lastPos = ($maxPos - 3) - strlen($row['title']);
     $rowtitle = substr($row['title'], 0, strrpos($row['title'], ' ', $lastPos)) . ' 
