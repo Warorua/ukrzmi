@@ -16,9 +16,9 @@ $page = 'home';
     include 'includes/topbar.php';
     include 'includes/navbar.php';
     ?>
-    <div class="container">
-        <div class="row ">
-            <div class="col-md-9 col-lg-9 col-xl-9 ">
+    <div class="newsContainer">
+        <div class="row homeContent">
+            <div class="col-md-9 col-lg-9 col-xl-9 cardColumn">
                 <?php
                 $allNews = newsFetch();
                 $wanted_panels = 5;
@@ -49,7 +49,7 @@ $page = 'home';
 
             </div>
 
-            <div class="col-md-3 sticky-top ">
+            <div class="col-md-3 sticky-top cardColumn_2">
                 <?php
                 include 'home/ad_column.php';
                 ?>
