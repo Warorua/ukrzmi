@@ -1,5 +1,5 @@
 <?php
-  $wanted_panels = 5;
+  $wanted_panels = 10;
 
   $total_panel = $wanted_panels - 1;
   for ($mn = 1; $mn <= $total_panel; $mn++) {
