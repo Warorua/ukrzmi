@@ -165,7 +165,7 @@ if($thematic_block[$thematic_id]['city'] != ''){
   $stmt->execute(['cat_not'=>'international', 'pin'=>0]);
   $block_news_orig = $stmt->fetchAll();
 //*/
-  $block_news_orig = $allNews();
+  $block_news_orig = $allNews;
 
                 //*
                 if ($thematic_block[$thematic_id]['type'] != '') {
