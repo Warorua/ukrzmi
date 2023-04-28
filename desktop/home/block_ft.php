@@ -54,7 +54,7 @@
     }
 
     if ($panel_high == 8) {
-      echo '</div>';
+      echo '</div></div>';
     } else {
   ?>
       <div class="col-md-3 lastCard<?php echo $block[$block_id]['id']; ?>">
@@ -105,7 +105,7 @@
 </script>
 <?php
     }
-    echo '</div>';
+   
   }
 ?>
 
