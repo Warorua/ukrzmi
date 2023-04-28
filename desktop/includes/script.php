@@ -42,7 +42,19 @@
   });
 </script>
 <script>
-  $(window).scroll(function() {
+  var debounce = function(func, delay) {
+    var timeout;
+    return function() {
+      var context = this,
+        args = arguments;
+      clearTimeout(timeout);
+      timeout = setTimeout(function() {
+        func.apply(context, args);
+      }, delay);
+    };
+  };
+
+  $(window).scroll(debounce(function() {
     var scrollTop = $(window).scrollTop();
     var elementOffset = $('#moveable-element').offset().top;
     var distance = (elementOffset - scrollTop);
@@ -58,7 +70,7 @@
         'top': distance + 'px'
       });
     }
-  });
+  }, 50));
 </script>
 <?php
 $pdo->close();
