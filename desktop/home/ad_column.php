@@ -93,7 +93,7 @@
 
 
 
-<div class="col-md-12">
+<div class="col-md-12 sticky-top">
 
   <div class="sticky-top">
     <! AD BANNER1>
