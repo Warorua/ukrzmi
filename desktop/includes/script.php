@@ -1,14 +1,13 @@
-
 <script type="text/javascript">
   $(function() {
-     $( "#term" ).autocomplete({
-       source: 'search/title_autocomplete.php',
-       autoFocus: true,
-       classes: {
-    "ui-autocomplete": "autoSearch shadow",
-   
-  }
-     });
+    $("#term").autocomplete({
+      source: 'search/title_autocomplete.php',
+      autoFocus: true,
+      classes: {
+        "ui-autocomplete": "autoSearch shadow",
+
+      }
+    });
   });
 </script>
 
@@ -16,31 +15,44 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
 <script>
-    document.addEventListener('click',function(e){
-  // Hamburger menu
-  if(e.target.classList.contains('hamburger-toggle')){
-    e.target.children[0].classList.toggle('active');
-  }
-}) 
+  document.addEventListener('click', function(e) {
+    // Hamburger menu
+    if (e.target.classList.contains('hamburger-toggle')) {
+      e.target.children[0].classList.toggle('active');
+    }
+  })
 </script>
 <script>
-  $(function(){
-	$(".dropdown-menu > li > a.trigger").on("click",function(e){
-		var current=$(this).next();
-		var grandparent=$(this).parent().parent();
-		if($(this).hasClass('left-caret')||$(this).hasClass('right-caret'))
-			$(this).toggleClass('right-caret left-caret');
-		grandparent.find('.left-caret').not(this).toggleClass('right-caret left-caret');
-		grandparent.find(".sub-menu:visible").not(current).hide();
-		current.toggle();
-		e.stopPropagation();
-	});
-	$(".dropdown-menu > li > a:not(.trigger)").on("click",function(){
-		var root=$(this).closest('.dropdown');
-		root.find('.left-caret').toggleClass('right-caret left-caret');
-		root.find('.sub-menu:visible').hide();
-	});
-});
+  $(function() {
+    $(".dropdown-menu > li > a.trigger").on("click", function(e) {
+      var current = $(this).next();
+      var grandparent = $(this).parent().parent();
+      if ($(this).hasClass('left-caret') || $(this).hasClass('right-caret'))
+        $(this).toggleClass('right-caret left-caret');
+      grandparent.find('.left-caret').not(this).toggleClass('right-caret left-caret');
+      grandparent.find(".sub-menu:visible").not(current).hide();
+      current.toggle();
+      e.stopPropagation();
+    });
+    $(".dropdown-menu > li > a:not(.trigger)").on("click", function() {
+      var root = $(this).closest('.dropdown');
+      root.find('.left-caret').toggleClass('right-caret left-caret');
+      root.find('.sub-menu:visible').hide();
+    });
+  });
+</script>
+<script>
+  $(window).scroll(function() {
+    var scrollTop = $(window).scrollTop();
+    var elementOffset = $('.cardColumn_2').offset().top;
+    var distance = (elementOffset - scrollTop);
+
+    if (distance < 0) {
+      $('.cardColumn_2').css('top', '0');
+    } else {
+      $('.cardColumn_2').css('top', distance + 'px');
+    }
+  });
 </script>
 <?php
 $pdo->close();
