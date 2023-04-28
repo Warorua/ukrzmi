@@ -21,12 +21,14 @@ include 'includes/navbar.php';
         <div class="col-md-9 col-lg-9 col-xl-9 cardColumn">
   <?php
   $allNews = newsFetch();
+  $wanted_panels = 10;
+  $wanted_blocks = 100;
 
 include 'home/headlines/main.php';
 include 'home/international_block.php';
 
 
-for ($i = 1; $i <= 100; $i++) {
+for ($i = 1; $i <= $wanted_blocks; $i++) {
     $block_id = $i;
    // $block_no = $block[$block_id];
     $i_ = $i - 1;

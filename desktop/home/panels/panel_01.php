@@ -10,6 +10,7 @@
 
     //include 'home/panels/headline_query.php';
     //$allNews = newsFetch();
+    $card_calc = ($wanted_panels*8)-1;
     if ($block_id == 0 && $block[$block_id]['type'] == "") {
       $block_allNews = filter_by_key(
         $allNews,
@@ -22,7 +23,7 @@
         'source',
         'deep_link'
       );
-      $block_news_orig = array_slice($block_allNews, 0, 39);
+      $block_news_orig = array_slice($block_allNews, 0, $card_calc);
 
       $pageName = 'home';
       $_SESSION[$pageName] = $block_allNews;
@@ -36,7 +37,7 @@
         'deep_link'
       );
 
-      $block_news_orig = array_slice($block_allNews, 0, 39);
+      $block_news_orig = array_slice($block_allNews, 0, $card_calc);
 
       $pageName = 'home' . '_' . $block[$block_id]['id'];
       $_SESSION[$pageName] = $block_allNews;
