@@ -1,11 +1,14 @@
 <style>
-  #moveable-element {
-    position: sticky;
-  top: 0;
+#moveable-element {
+  position: fixed;
+   top: 200px;
+    bottom: 350px;
 
-  }
+}
+
+
 </style>
-<div id="containerSc" style="height: 100%; overflow-y: scroll;" class="col-md-12">
+<div class="col-md-12">
   <ul class="nav nav-tabs nav-pills flex-column flex-sm-row" id="myTab" role="tablist">
     <li class="nav-item adNav" role="presentation">
       <button class="nav-link adNavLink active" id="agenda-tab" data-bs-toggle="tab" data-bs-target="#agenda" type="button" role="tab" aria-controls="agenda" aria-selected="true">Календар</button>
@@ -26,7 +29,7 @@
 
   <! AGENDA>
 
-    <div id="element1" class="tab-content adNavContent" id="myTabContent">
+    <div class="tab-content adNavContent" id="myTabContent">
       <div class="tab-pane fade show active" id="agenda" role="tabpanel" aria-labelledby="agenda-tab">
 
         <ul class="list-group list-group-flush">
@@ -117,6 +120,6 @@
 
 
 
-    <div id="element3" class="col-md-12">
+    <div class="col-md-12">
 
     </div>

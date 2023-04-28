@@ -42,21 +42,6 @@
   });
 </script>
 <script>
-$(document).ready(function() {
-  var containerHeight = $('#containerSc').height();
-  var element2Height = $('#moveable-element').height();
-  
-  $('#containerSc').scroll(function() {
-    var scrollTop = $(this).scrollTop();
-    var maxScroll = containerHeight - element2Height;
-    
-    if (scrollTop > maxScroll) {
-      $('#moveable-element').css('top', maxScroll - scrollTop + 'px');
-    } else {
-      $('#moveable-element').css('top', '0');
-    }
-  });
-});
 
 </script>
 <?php
