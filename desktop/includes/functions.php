@@ -86,6 +86,11 @@ function getTimeDifference($dateStr) {
 
   
   function articleCard($row, $block, $block_id, $rowParent, $frameColor, $filtTit, $titleBadge, $rowtitle, $catHolder){
+  if (isValidImage('../images/' . $row['photo'])) {
+    $image = '../images/' . $row['photo'];
+  } else {
+    $image = $row['photo_url'];
+  }
     return '
     <div class="col-md-3">    
     <div class="card col-sm-4 col-md-3 newsCard" style="background-color:' . $block[$block_id]['bg_color'] . '">
@@ -96,7 +101,7 @@ function getTimeDifference($dateStr) {
         <div class="imgTitle">
            <p class="blogTitle">' . $rowParent . '</p>
           <div class="cardFrame" style="border-color: ' . $frameColor . ';"></div>
-          <img class="cardPhoto" src="../images/' . $row['photo'] . '" height="122px" alt="' . $row['title'] . '" />
+          <img class="cardPhoto" src="' . $image . '" height="122px" alt="' . $row['title'] . '" />
       </div>
    </div>   
     </a>    
