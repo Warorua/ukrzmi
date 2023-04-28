@@ -33,6 +33,10 @@ $content = $httpClient->load($h_link);
 //////////////TEST
 $json = $content->find('head script[type=application/ld+json]');
 
+//echo headJsonView($json);
+
+//echo $vid_dtt['embedUrl'];
+//*
 $js_1 = $json[0]->innertext;
 $rtt = strval($js_1);
 $datt = json_decode($rtt, TRUE);
@@ -50,19 +54,13 @@ $datt = json_decode($rtt, TRUE);
 
 //Video Fetch
 $output .= '<h3>Video</h3>';
-$video_2 =  $content->find('div.px-40 div.single-video__article div.full-frame span.ppv2');
-if(sizeof($video_2) == 0){
-    $news_type = "video";
-    $video_f = "";
-    $output .= $video_f."<br/>";
-}
-else{
-    $news_type = "video";
-$video_f = $video_2[0]->{'data-src'};
-$output .= $video_f."<br/>";
-$output .= '<iframe allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen="true" frameborder="0" height="314" scrolling="no" src="'.$video_f.'" style="border:none;overflow:hidden" width="560"></iframe>';
 
-}
+$news_type = "video";
+$vid_dtt = json_decode(headJson($json, 5), true);
+$video_f = $vid_dtt['embedUrl'];
+$output .= $video_f . "<br/>";
+$output .= '<iframe allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen="true" frameborder="0" height="314" scrolling="no" src="' . $video_f . '" style="border:none;overflow:hidden" width="560"></iframe>';
+
 $sub_2 = "";
 //Subcategory Fetch
 $sub_1 = "";
@@ -172,4 +170,5 @@ if (counter($h_link) < 1) {
    
     $output .= db_insertion_err($h_link);
 }
+//*/
 echo $output;

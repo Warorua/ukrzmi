@@ -435,3 +435,55 @@ function article_filter($ar_full)
 
     return $ar_full;
 }
+
+function videoScrapeUpt(){
+
+}
+
+function headJsonView(array $json){
+    $obj = '';
+    foreach($json as $id=>$row){
+        $row = str_replace('type="application/ld+json">','', $row);
+        $row = str_replace('<script','', $row);
+        $row = str_replace('</script>','', $row);
+        $row = str_replace(' ','', $row);
+        $obj .= $id.'<br/>'.$row.'<br/><br/><br/><br/><br/>';
+    }
+    return $obj;
+}
+
+function remove_spaces($sentence) {
+    $sentence = preg_replace('/\s+/', '', $sentence);
+    return $sentence;
+}
+
+
+function headJson(array $json, int $key){
+    foreach($json as $id=>$row){
+        $row = str_replace('type="application/ld+json">','', $row);
+        $row = str_replace('<script','', $row);
+        $row = str_replace('</script>','', $row);
+        $row = str_replace(' ','', $row);
+        
+        if($id == $key){
+            $row = remove_spaces($row);
+            //*
+            $row = str_replace('"',"'", $row);
+            $row = str_replace("':'",'":"', $row);
+            $row = str_replace("','",'","', $row);
+            $row = str_replace("'}",'"}', $row);
+            $row = str_replace("{'",'{"', $row);
+                $row = str_replace(",'",',"', $row);
+                $row = str_replace("':",'":', $row);
+                //*/
+            $obj = $row;
+        }
+        
+    }
+    return $obj;
+}
+
+function starts_with($word, $characters) {
+    $char_length = strlen($characters);
+    return substr($word, 0, $char_length) === $characters;
+}

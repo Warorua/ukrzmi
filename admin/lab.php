@@ -13,24 +13,18 @@ $thematic_block = $stmt->fetchAll();
 usort($thematic_block,'posiDescSort'); 
   */
 
-  $stmt = $conn->prepare("SELECT id, category, published, deep_link, pin FROM news 
-  WHERE NOT category=:cat_not
-  AND pin=:pin
+  $stmt = $conn->prepare("SELECT id, category, published, deep_link, pin, type, video_url FROM news 
+  WHERE type=:cat_not
  ORDER BY id DESC");
-  $stmt->execute(['cat_not'=>'international', 'pin'=>0]);
+  $stmt->execute(['cat_not'=>'video']);
+  
   $block_news_orig = $stmt->fetchAll();
+  
 
   //*
           
 
-            $block_news_orig = filter_by_key(
-              $block_news_orig,
-              [
-                'Lifestyle'
-              ],
-              'category',
-              'id'
-            );
+            //$block_news_orig = filter_by_key( $block_news_orig, [ 'Lifestyle' ], 'category', 'id' );
       
           //*/
   print_r($block_news_orig);
