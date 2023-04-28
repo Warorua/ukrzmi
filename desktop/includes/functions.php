@@ -610,7 +610,7 @@ function voicesCard($row, $tok){
  <div class="card voiceCard_2">
   <div class="card-body">
   <div class="d-flex">
-  <img src="../images/' . $profile . '" width="40px" height="40px"  class="rounded-circle" alt="...">
+  <img src="' . $row['photo_url'] . '" width="40px" height="40px"  class="rounded-circle" alt="...">
     <h6 style="white-space:nowrap" class="card-title p-2 lh-base fw-normal">' . $row['author'] . '</h6>
   </div>
   <p style="font-size:12px; line-height:1.2;" class="text-muted">With supporting text below as a natural lead-in.</p>

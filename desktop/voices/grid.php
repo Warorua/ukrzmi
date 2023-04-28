@@ -217,7 +217,7 @@ ORDER BY id;");
  <div class="card voiceCard">
   <div class="card-body">
   <div class="d-flex">
-  <img src="../images/' . $profile . '" width="50px" height="50px"  class="rounded-circle" alt="...">
+  <img src="' . $row['photo_url'] . '" width="50px" height="50px"  class="rounded-circle" alt="...">
     <h6 class="card-title p-2 lh-lg fw-normal">' . $row['author'] . '</h6>
   </div>
   <div style="height:40px">

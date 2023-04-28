@@ -137,7 +137,7 @@ if($row['sub_1'] != ''){
             <div class="imgTitle">
              <p class="blogTitle">'.$rowParent.'</p>
         <div class="cardFrame_2" style="border-color: '.$frameColor.';"></div>
-            <img class="listImage" src="../images/'.$row['photo'].'" height="100px" width="80%" alt="'.$row['title'].'" />
+            <img class="listImage" src="'.$row['photo_url'].'" height="100px" width="80%" alt="'.$row['title'].'" />
             '.$fc_icon.'
             </div>
              </div> 
