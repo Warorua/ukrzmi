@@ -27,11 +27,10 @@
   </div>
 
 
-  <div class="row">
   <?php
   include 'home/panels/panel_ft.php';
   ?>
-</div>
+
   
 
 

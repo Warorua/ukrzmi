@@ -3,7 +3,7 @@
 
   $total_panel = $wanted_panels - 1;
   for ($i = 1; $i <= $total_panel; $i++) {
-    echo '<div class="row">';
+    echo '<div class="row"><div class="row">';
     $panel_low = $i * 8;
     if ($i != $total_panel) {
       $panel_high = 8;
@@ -24,7 +24,7 @@
     }
 
     if ($panel_high == 8) {
-      echo '</div>';
+      echo '</div></div>';
     } else {
         $attr1 = ".lastCard".$block[$block_id]['id'];
         $attr2 = "carNext".$block[$block_id]['id'];
@@ -74,6 +74,7 @@
 
       }, 10);
      </script>
+     </div>
      ';
     }
    
