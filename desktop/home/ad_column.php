@@ -1,6 +1,7 @@
 <style>
   #moveable-element {
     position: sticky;
+  top: 0;
 
   }
 </style>
