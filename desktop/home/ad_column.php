@@ -90,7 +90,7 @@
 
 
 
-    <div class="moveable-element">
+    <div class="moveable-element sticky-top">
       <! AD BANNER1>
 
         <div class="col-md-12 specialBanner">
