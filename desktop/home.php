@@ -16,8 +16,8 @@ $page = 'home';
     include 'includes/topbar.php';
     include 'includes/navbar.php';
     ?>
-    <div class="newsContainer">
-        <div class="row homeContent">
+    <div class="container">
+        <div class="row ">
             <div class="col-md-9 col-lg-9 col-xl-9 cardColumn">
                 <?php
                 $allNews = newsFetch();
