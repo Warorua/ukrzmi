@@ -120,7 +120,7 @@
   <?php
 //////////////////////////////////////////////////////////////////////////////////////////////////
 $query = '';
-//*
+/*
 if ($thematic_block[$thematic_id]['type'] != '') {
   $query .= "AND category = '" . $thematic_block[$thematic_id]['type'] . "'";
 }
@@ -165,7 +165,7 @@ if($thematic_block[$thematic_id]['city'] != ''){
   $stmt->execute(['cat_not'=>'international', 'pin'=>0]);
   $block_news_orig = $stmt->fetchAll();
 
-  /*
+  //*
           if ($thematic_block[$thematic_id]['type'] != '') {
 
             $block_news_orig = filter_by_key(
