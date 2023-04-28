@@ -1,88 +1,92 @@
 <?php
 function filter_by_key($array, $allowed_values, $key, $unique_key)
 {
-      $unique_ages = [];
-    $filtered_array = array_filter($array, function($item) use ($allowed_values, &$unique_ages, $unique_key, $key) {
-        if(isset($item[$key]) && in_array($item[$key], $allowed_values) && !in_array($item[$unique_key], $unique_ages)) {
-            $unique_ages[] = $item[$unique_key];
-            return true;
-        }
-        return false;
-    });
-    usort($filtered_array, function($a, $b) {
-        return $b['id'] - $a['id'];
-    });
-    return $filtered_array;
+  $unique_ages = [];
+  $filtered_array = array_filter($array, function ($item) use ($allowed_values, &$unique_ages, $unique_key, $key) {
+    if (isset($item[$key]) && in_array($item[$key], $allowed_values) && !in_array($item[$unique_key], $unique_ages)) {
+      $unique_ages[] = $item[$unique_key];
+      return true;
+    }
+    return false;
+  });
+  usort($filtered_array, function ($a, $b) {
+    return $b['id'] - $a['id'];
+  });
+  return $filtered_array;
 }
 
 function newsFetch()
 {
-    global $conn;
-    $stmt = $conn->prepare("SELECT * FROM news 
+  global $conn;
+  $stmt = $conn->prepare("SELECT * FROM news 
  WHERE NOT category=:cat_not
  AND type=:type
  AND pin=:pin
-ORDER BY id;");
-    $stmt->execute(['cat_not' => 'international', 'type' => "", 'pin' => 0]);
-    $allNews = $stmt->fetchAll();
-    return $allNews;
+ ORDER BY id;");
+  $stmt->execute(['cat_not' => 'international', 'type' => "", 'pin' => 0]);
+  $allNews = $stmt->fetchAll();
+  return $allNews;
 }
 
-function rowParent($row){
-    if ($row['parent'] == "ua.korrespondent.net") {
-        $rowParent = "Кореспондент";
-      } elseif ($row['parent'] == "pravda.com.ua") {
-        $rowParent = "правда";
-      } elseif ($row['parent'] == "eurointegration.com.ua") {
-        $rowParent = "євроінтеграція";
-      } elseif ($row['parent'] == "unian.ua") {
-        $rowParent = "уніанської";
-      } elseif ($row['parent'] == "life.pravda.com.ua") {
-        $rowParent = "правда";
-      } elseif ($row['parent'] == "theguardian.com") {
-        $rowParent = "The guardian";
-      } elseif ($row['parent'] == "") {
-        $rowParent = "правда";
-      }
+function rowParent($row)
+{
+  if ($row['parent'] == "ua.korrespondent.net") {
+    $rowParent = "Кореспондент";
+  } elseif ($row['parent'] == "pravda.com.ua") {
+    $rowParent = "правда";
+  } elseif ($row['parent'] == "eurointegration.com.ua") {
+    $rowParent = "євроінтеграція";
+  } elseif ($row['parent'] == "unian.ua") {
+    $rowParent = "уніанської";
+  } elseif ($row['parent'] == "life.pravda.com.ua") {
+    $rowParent = "правда";
+  } elseif ($row['parent'] == "theguardian.com") {
+    $rowParent = "The guardian";
+  } elseif ($row['parent'] == "") {
+    $rowParent = "правда";
+  }
 
-      return $rowParent;
+  return $rowParent;
 }
 
-function getTimeDifference($dateStr) {
-    $timestamp = strtotime($dateStr);
-    $currentTimestamp = time();
-    $difference = $currentTimestamp - $timestamp;
-    return $difference;
+function getTimeDifference($dateStr)
+{
+  $timestamp = strtotime($dateStr);
+  $currentTimestamp = time();
+  $difference = $currentTimestamp - $timestamp;
+  return $difference;
+}
+
+function table_columns($table)
+{
+  global $conn;
+  $stmt = $conn->prepare("SHOW COLUMNS FROM " . $table);
+  $stmt->execute(['code' => '']);
+  $data = $stmt->fetch();
+  $output = '';
+  foreach ($data as $row) {
+    //$output .= $row['']
   }
 
-  function table_columns($table){
-    global $conn;
-    $stmt = $conn->prepare("SHOW COLUMNS FROM ".$table);
-    $stmt->execute([ 'code' => '']);
-    $data = $stmt->fetch();
-    $output = '';
-    foreach($data as $row){
-        //$output .= $row['']
-    }
+  return $data;
+}
 
-    return $data;
+function isValidImage($imagePath)
+{
+  // Check if the file exists
+  if (!file_exists($imagePath)) {
+    return false;
   }
 
-  function isValidImage($imagePath) {
-    // Check if the file exists
-    if (!file_exists($imagePath)) {
-      return false;
-    }
-  
-    // Check if the file is an image
-    $imageTypes = array(IMAGETYPE_JPEG, IMAGETYPE_PNG, IMAGETYPE_GIF);
-    $detectedType = exif_imagetype($imagePath);
-    if (!in_array($detectedType, $imageTypes)) {
-      return false;
-    }
-  
-    return true;
+  // Check if the file is an image
+  $imageTypes = array(IMAGETYPE_JPEG, IMAGETYPE_PNG, IMAGETYPE_GIF);
+  $detectedType = exif_imagetype($imagePath);
+  if (!in_array($detectedType, $imageTypes)) {
+    return false;
   }
+
+  return true;
+}
 
 
 function articleCard($row, $block, $block_id, $frameColor, $filtTit, $titleBadge, $rowtitle = null, $catHolder)
@@ -153,8 +157,9 @@ function articleCard($row, $block, $block_id, $frameColor, $filtTit, $titleBadge
  ';
 }
 
-function blockControl($block_total_cards){
-  
+function blockControl($block_total_cards)
+{
+
   if ($block_total_cards >= 0 && $block_total_cards <= 8) {
     $slide_control = 0;
     $hide_control_button = 'disabled';
@@ -469,96 +474,98 @@ function listCard($row)
  ';
 }
 
-function timeago($date) {
-  $timestamp = strtotime($date);	
-  
+function timeago($date)
+{
+  $timestamp = strtotime($date);
+
   $strTime = array("sec", "min", "hr", "day", "mon", "year");
-  $length = array("60","60","24","30","12","10");
+  $length = array("60", "60", "24", "30", "12", "10");
 
   $currentTime = date("D, d M Y H:i:s");;
-  if($currentTime >= $timestamp) {
-       $diff     = time()- $timestamp;
-       for($i = 0; $diff >= $length[$i] && $i < count($length)-1; $i++) {
-       $diff = $diff / $length[$i];
-       }
+  if ($currentTime >= $timestamp) {
+    $diff     = time() - $timestamp;
+    for ($i = 0; $diff >= $length[$i] && $i < count($length) - 1; $i++) {
+      $diff = $diff / $length[$i];
+    }
 
-       $diff = round($diff);
-       return $diff . " " . $strTime[$i] . "s ago ";
+    $diff = round($diff);
+    return $diff . " " . $strTime[$i] . "s ago ";
   }
 }
 
-function voicesCard($row, $tok){
+function voicesCard($row, $tok)
+{
   $rowtitle = $row['title'];
 
-    $maxPos = 500;
-    if ($row['sub_1'] != '') {
-      $catHolder = $row['sub_1'];
-    } else {
-      $catHolder = 'General';
-    }
-    if ($row['parent'] == "ua.korrespondent.net") {
-      $rowParent = "Кореспондент";
-    } elseif ($row['parent'] == "pravda.com.ua") {
-      $rowParent = "правда";
-    } elseif ($row['parent'] == "eurointegration.com.ua") {
-      $rowParent = "євроінтеграція";
-    } elseif ($row['parent'] == "unian.ua") {
-      $rowParent = "уніанської";
-    } elseif ($row['parent'] == "life.pravda.com.ua") {
-      $rowParent = "правда";
-    } elseif ($row['parent'] == "theguardian.com") {
-      $rowParent = "The guardian";
-    } elseif ($row['parent'] == "") {
-      $rowParent = "правда";
-    }
+  $maxPos = 500;
+  if ($row['sub_1'] != '') {
+    $catHolder = $row['sub_1'];
+  } else {
+    $catHolder = 'General';
+  }
+  if ($row['parent'] == "ua.korrespondent.net") {
+    $rowParent = "Кореспондент";
+  } elseif ($row['parent'] == "pravda.com.ua") {
+    $rowParent = "правда";
+  } elseif ($row['parent'] == "eurointegration.com.ua") {
+    $rowParent = "євроінтеграція";
+  } elseif ($row['parent'] == "unian.ua") {
+    $rowParent = "уніанської";
+  } elseif ($row['parent'] == "life.pravda.com.ua") {
+    $rowParent = "правда";
+  } elseif ($row['parent'] == "theguardian.com") {
+    $rowParent = "The guardian";
+  } elseif ($row['parent'] == "") {
+    $rowParent = "правда";
+  }
 
 
 
-    if (strlen($row['title']) < $maxPos) {
-      $rowtitle = $row['title'];
-      $filtTit = str_replace('"', '', $row['title']);
-    } else {
-      $lastPos = ($maxPos - 3) - strlen($row['title']);
-      $rowtitle = substr($row['title'], 0, strrpos($row['title'], ' ', $lastPos)) . '...';
-    }
-    if ($row['frame_color'] == "") {
-      $frameColor = "rgb(0, 0, 0, 0.0)";
-    } else {
-      $frameColor = $row['frame_color'];
-    }
-    if ($row['title_badge'] == "") {
-      $titleBadge = "";
-    } else {
-      $titleBadge = '<img src="../admin/' . $row['title_badge'] . '" class="titleBadge" />';
-    }
+  if (strlen($row['title']) < $maxPos) {
+    $rowtitle = $row['title'];
+    $filtTit = str_replace('"', '', $row['title']);
+  } else {
+    $lastPos = ($maxPos - 3) - strlen($row['title']);
+    $rowtitle = substr($row['title'], 0, strrpos($row['title'], ' ', $lastPos)) . '...';
+  }
+  if ($row['frame_color'] == "") {
+    $frameColor = "rgb(0, 0, 0, 0.0)";
+  } else {
+    $frameColor = $row['frame_color'];
+  }
+  if ($row['title_badge'] == "") {
+    $titleBadge = "";
+  } else {
+    $titleBadge = '<img src="../admin/' . $row['title_badge'] . '" class="titleBadge" />';
+  }
 
-    $content = strip_tags(substr($row['article'], 0, 260)) . '...';
-    if ($row['type'] == 'video') {
-      $fc_icon = '<div class="fcIcon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>';
-      $fc_icon_title = '<i class="fa fa-play-circle" aria-hidden="true"></i>';
-      $fc_link = 'video_content';
-    } elseif ($row['type'] == 'podcast') {
-      $fc_icon = '<div class="fcIcon"><i class="fa fa-podcast" aria-hidden="true"></i></div>';
-      $fc_icon_title = '<i class="fa fa-podcast" aria-hidden="true"></i>';
-      $fc_link = 'podcast';
-    } elseif ($row['type'] == '') {
-      $fc_icon = '';
-      $fc_icon_title = '';
-      $fc_link = 'article_content';
-    } else {
-      $fc_icon = '';
-      $fc_icon_title = '';
-      $fc_link = 'article_content';
-    }
-    if (!isset($row['voice_profile'])) {
-      $profile = $row['photo_url'];
-    } else {
-      $profile = $row['voice_profile'];
-    }
-    $contentFull = strip_tags($row['article']);
-    $setA = $tok->tokenize($contentFull);
-    $contentTime = number_format(sizeof($setA) / 200, 0);
-    echo '
+  $content = strip_tags(substr($row['article'], 0, 260)) . '...';
+  if ($row['type'] == 'video') {
+    $fc_icon = '<div class="fcIcon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>';
+    $fc_icon_title = '<i class="fa fa-play-circle" aria-hidden="true"></i>';
+    $fc_link = 'video_content';
+  } elseif ($row['type'] == 'podcast') {
+    $fc_icon = '<div class="fcIcon"><i class="fa fa-podcast" aria-hidden="true"></i></div>';
+    $fc_icon_title = '<i class="fa fa-podcast" aria-hidden="true"></i>';
+    $fc_link = 'podcast';
+  } elseif ($row['type'] == '') {
+    $fc_icon = '';
+    $fc_icon_title = '';
+    $fc_link = 'article_content';
+  } else {
+    $fc_icon = '';
+    $fc_icon_title = '';
+    $fc_link = 'article_content';
+  }
+  if (!isset($row['voice_profile'])) {
+    $profile = $row['photo_url'];
+  } else {
+    $profile = $row['voice_profile'];
+  }
+  $contentFull = strip_tags($row['article']);
+  $setA = $tok->tokenize($contentFull);
+  $contentTime = number_format(sizeof($setA) / 200, 0);
+  return '
  <li class="list-group-item my-2 post ps-0 pe-0">
  <div class="row">
 
@@ -621,5 +628,245 @@ function voicesCard($row, $tok){
  </div>
 
  </li>
+ ';
+}
+
+function voicesListCard($row)
+{
+  $rowtitle = $row['title'];
+
+  $maxPos = 92;
+  if ($row['sub_1'] != '') {
+    $catHolder = $row['sub_1'];
+  } else {
+    $catHolder = 'General';
+  }
+
+  if ($row['parent'] == "ua.korrespondent.net") {
+    $rowParent = "Кореспондент";
+  } elseif ($row['parent'] == "pravda.com.ua") {
+    $rowParent = "правда";
+  } elseif ($row['parent'] == "eurointegration.com.ua") {
+    $rowParent = "євроінтеграція";
+  } elseif ($row['parent'] == "unian.ua") {
+    $rowParent = "уніанської";
+  } elseif ($row['parent'] == "life.pravda.com.ua") {
+    $rowParent = "правда";
+  } elseif ($row['parent'] == "theguardian.com") {
+    $rowParent = "The guardian";
+  } elseif ($row['parent'] == "") {
+    $rowParent = "правда";
+  }
+
+
+
+  if (strlen($row['title']) > $maxPos) {
+    $lastPos = ($maxPos - 3) - strlen($row['title']);
+    $rowtitle = substr($row['title'], 0, strrpos($row['title'], ' ', $lastPos)) . ' 
+ ...';
+    $filtTit = str_replace('"', '', $row['title']);
+  }
+  if ($row['frame_color'] == "") {
+    $frameColor = "rgb(0, 0, 0, 0.0)";
+  } else {
+    $frameColor = $row['frame_color'];
+  }
+  if ($row['title_badge'] == "") {
+    $titleBadge = "";
+  } else {
+    $titleBadge = '<img src="../admin/' . $row['title_badge'] . '" class="titleBadge" />';
+  }
+  ///////////////////////////////////////////////////////////////////////////////////////
+  if ($row['type'] == 'video') {
+    $fc_icon = '<div class="fcIcon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>';
+    $fc_icon_title = '<i class="fa fa-play-circle" aria-hidden="true"></i>';
+    $fc_link = 'video_content';
+  } elseif ($row['type'] == 'podcast') {
+    $fc_icon = '<div class="fcIcon"><i class="fa fa-podcast" aria-hidden="true"></i></div>';
+    $fc_icon_title = '<i class="fa fa-podcast" aria-hidden="true"></i>';
+    $fc_link = 'podcast';
+  } elseif ($row['type'] == '') {
+    $fc_icon = '';
+    $fc_icon_title = '';
+    $fc_link = 'article_content';
+  } else {
+    $fc_icon = '';
+    $fc_icon_title = '';
+    $fc_link = 'article_content';
+  }
+
+
+  return '
+          <li class="list-group-item my-2 post">
+          <div class="row">
+
+          <div class="col-md-9">
+          <div class="row">
+          <div class="col-md-1">
+          <img width="35px" src="https://www.pravda.com.ua/android-chrome-192x192.png"/>
+          </div>
+          <div class="col-md-10">
+          <a href="' . $fc_link . '.php?code=' . $row['code'] . '" class="text-dark stretched-link text-decoration-none">
+          <h5 class="">' . $fc_icon_title . ' ' . $row['title'] . '</h5>        
+          </a>  
+             <div class="w-100 justify-content-start">
+             <small style="margin-top:25px">
+             <span class="text-muted">By ' . $row['author'] . '
+              <span style="font-size:5px; margin-left:4px; margin-right:4px; padding-bottom:10px;">
+              <i style="font-size:5px; margin-left:4px; margin-right:4px;" class="fa fa-circle" aria-hidden="true"></i>
+           </span>
+              
+            ' . $row['time'] . '
+
+            
+            <span style="font-size:5px; margin-left:4px; margin-right:4px; padding-bottom:10px;">
+            <i style="font-size:5px; margin-left:4px; margin-right:4px;" class="fa fa-circle" aria-hidden="true"></i>
+         </span>
+          17 minutes reading
+
+
+           </span>
+           </small>
+             </div>  
+          </div>
+          <div class="col-md-1">
+          <div class="btn-group dropend shareIcon">
+          <a type="button" class="" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu">
+           <li><h6 class="dropdown-header">Share</h6></li>
+            <li><a class="dropdown-item" href="https://www.facebook.com/sharer.php?u=https://www.ukrzmi.com/desktop/' . $fc_link . '.php?code=' . $row['code'] . '" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+            <li><a class="dropdown-item" href="https://twitter.com/share?url=https://www.ukrzmi.com/desktop/' . $fc_link . '.php?code=' . $row['code'] . '" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+            <li><a class="dropdown-item" href="whatsapp://send?text=https://www.ukrzmi.com/desktop/' . $fc_link . '.php?code=' . $row['code'] . '" data-action="share/whatsapp/share"><i class="fab fa-whatsapp" aria-hidden="true"></i> Whatsapp</a></li>
+            <li><a class="dropdown-item" href="https://pinterest.com/pin/create/button/?url=https://www.ukrzmi.com/desktop/' . $fc_link . '.php?code=' . $row['code'] . '&media=https://www.ukrzmi.com/images/' . $row['photo'] . '&description=' . $row['title'] . '" target="_blank"><i class="fab fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="full_coverage.php?id=' . $row['id'] . '" target="_blank"><i class="fa fa-clipboard" aria-hidden="true"></i> Full Coverage</a></li>
+            <li><a class="dropdown-item" href="#" target="_blank"><i class="fa fa-flag" aria-hidden="true"></i> Report</a></li>
+          </ul>
+        </div>
+          </div>
+          </div>
+           
+                
+          </div>
+            <div class="col-md-3">
+           <div class="imgFrame">
+            <div class="imgTitle">
+             <p class="blogTitle">' . $rowParent . '</p>
+        <div class="cardFrame_2" style="border-color: ' . $frameColor . ';"></div>
+            <img class="listImage" src="' . $row['photo_url'] . '" height="100px" width="80%" alt="' . $row['title'] . '" />
+            ' . $fc_icon . '
+            </div>
+             </div> 
+          </div>
+
+
+         </div>
+    
+      </li>
+      ';
+}
+
+function voicesGridcard($row){
+  $rowtitle = $row['title'];
+
+  $maxPos = 92;
+  if ($row['sub_1'] != '') {
+    $catHolder = $row['sub_1'];
+  } else {
+    $catHolder = 'General';
+  }
+
+  if ($row['parent'] == "ua.korrespondent.net") {
+    $rowParent = "Кореспондент";
+  } elseif ($row['parent'] == "pravda.com.ua") {
+    $rowParent = "правда";
+  } elseif ($row['parent'] == "eurointegration.com.ua") {
+    $rowParent = "євроінтеграція";
+  } elseif ($row['parent'] == "unian.ua") {
+    $rowParent = "уніанської";
+  } elseif ($row['parent'] == "life.pravda.com.ua") {
+    $rowParent = "правда";
+  } elseif ($row['parent'] == "theguardian.com") {
+    $rowParent = "The guardian";
+  } elseif ($row['parent'] == "") {
+    $rowParent = "правда";
+  }
+
+
+
+  if (strlen($row['title']) < $maxPos) {
+    $rowtitle = $row['title'];
+    $filtTit = str_replace('"', '', $row['title']);
+  } else {
+    $lastPos = ($maxPos - 3) - strlen($row['title']);
+    $rowtitle = substr($row['title'], 0, strrpos($row['title'], ' ', $lastPos)) . ' 
+  ...';
+  }
+  if ($row['frame_color'] == "") {
+    $frameColor = "rgb(0, 0, 0, 0.0)";
+  } else {
+    $frameColor = $row['frame_color'];
+  }
+  if ($row['title_badge'] == "") {
+    $titleBadge = "";
+  } else {
+    $titleBadge = '<img src="../admin/' . $row['title_badge'] . '" class="titleBadge" />';
+  }
+  if (!isset($row['voice_profile'])) {
+    $profile = $row['photo_url'];
+  } else {
+    $profile = $row['voice_profile'];
+  }
+  if ($row['type'] == 'video') {
+    $fc_icon = '<div class="fcIcon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>';
+    $fc_icon_title = '<i class="fa fa-play-circle" aria-hidden="true"></i>';
+    $fc_link = 'video_content';
+  } elseif ($row['type'] == 'podcast') {
+    $fc_icon = '<div class="fcIcon"><i class="fa fa-podcast" aria-hidden="true"></i></div>';
+    $fc_icon_title = '<i class="fa fa-podcast" aria-hidden="true"></i>';
+    $fc_link = 'podcast';
+  } elseif ($row['type'] == '') {
+    $fc_icon = '';
+    $fc_icon_title = '';
+    $fc_link = 'article_content';
+  } else {
+    $fc_icon = '';
+    $fc_icon_title = '';
+    $fc_link = 'article_content';
+  }
+  return '
+  <div class="col-md-4">    
+ <div class="card voiceCard">
+ <div class="card-body">
+ <div class="d-flex">
+ <img src="' . $row['photo_url'] . '" width="50px" height="50px"  class="rounded-circle" alt="...">
+  <h6 class="card-title p-2 lh-lg fw-normal">' . $row['author'] . '</h6>
+ </div>
+ <div style="height:40px">
+ <p style="font-size:12px; line-height:1.2" class="text-muted">With supporting text below as a natural lead-in to additional content.</p>
+ </div>
+ <div style="height:130px">
+ <p class="card-text" style="color:black; font-size:20px; line-height:1.3; font-weight:500">
+  ' . $row['title'] . '
+  </p>
+ </div>
+ <a href="' . $fc_link . '.php?code=' . $row['code'] . '" class="stretched-link"></a>  
+  <div class="d-flex justify-content-between">
+  <i class="fa fa-square text-dark"></i> 
+
+  <div>
+  <i class="fa fa-eye text-dark"></i>
+  <span class="text-muted lh-lg" style="font-size:10px;"> 1,000</span>
+  </div>
+
+
+
+  <i class="fa fa-ellipsis-v text-dark"></i>
+  </div>
+ </div>
+ </div>
+ </div>
  ';
 }

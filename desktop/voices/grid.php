@@ -113,138 +113,15 @@ ORDER BY id;");
   }
 
   $block_total_cards = sizeof($block_news);
-  if ($block_total_cards >= 0 && $block_total_cards <= 8) {
-    $slide_control = 0;
-    $hide_control_button = 'disabled';
-  }
-  if ($block_total_cards >= 9 && $block_total_cards <= 16) {
-    $slide_control = 1;
-    $hide_control_button = '';
-  }
-  if ($block_total_cards >= 17 && $block_total_cards <= 24) {
-    $slide_control = 2;
-    $hide_control_button = '';
-  }
-  if ($block_total_cards >= 25 && $block_total_cards <= 32) {
-    $slide_control = 3;
-    $hide_control_button = '';
-  }
-  if ($block_total_cards >= 33 && $block_total_cards <= 40) {
-    $slide_control = 4;
-    $hide_control_button = '';
-  }
-  if ($block_total_cards >= 41 && $block_total_cards <= 48) {
-    $slide_control = 5;
-    $hide_control_button = '';
-  }
-  if (!isset($slide_control)) {
-    $slide_control = 5;
-    $hide_control_button = '';
-  }
+  
+    $slide_control = blockControl($block_total_cards)[0];
+    $hide_control_button = blockControl($block_total_cards)[1];
+  
 
   $block_news_1 = array_slice($block_news, 0, 3);
 
   foreach ($block_news_1 as $row) {
-    $rowtitle = $row['title'];
-
-    $maxPos = 92;
-    if ($row['sub_1'] != '') {
-      $catHolder = $row['sub_1'];
-    } else {
-      $catHolder = 'General';
-    }
-
-    if ($row['parent'] == "ua.korrespondent.net") {
-      $rowParent = "Кореспондент";
-    } elseif ($row['parent'] == "pravda.com.ua") {
-      $rowParent = "правда";
-    } elseif ($row['parent'] == "eurointegration.com.ua") {
-      $rowParent = "євроінтеграція";
-    } elseif ($row['parent'] == "unian.ua") {
-      $rowParent = "уніанської";
-    } elseif ($row['parent'] == "life.pravda.com.ua") {
-      $rowParent = "правда";
-    } elseif ($row['parent'] == "theguardian.com") {
-      $rowParent = "The guardian";
-    } elseif ($row['parent'] == "") {
-      $rowParent = "правда";
-    }
-
-
-
-    if (strlen($row['title']) < $maxPos) {
-      $rowtitle = $row['title'];
-      $filtTit = str_replace('"', '', $row['title']);
-    } else {
-      $lastPos = ($maxPos - 3) - strlen($row['title']);
-      $rowtitle = substr($row['title'], 0, strrpos($row['title'], ' ', $lastPos)) . ' 
- ...';
-    }
-    if ($row['frame_color'] == "") {
-      $frameColor = "rgb(0, 0, 0, 0.0)";
-    } else {
-      $frameColor = $row['frame_color'];
-    }
-    if ($row['title_badge'] == "") {
-      $titleBadge = "";
-    } else {
-      $titleBadge = '<img src="../admin/' . $row['title_badge'] . '" class="titleBadge" />';
-    }
-    if (!isset($row['voice_profile'])) {
-      $profile = $row['photo_url'];
-    } else {
-      $profile = $row['voice_profile'];
-    }
-    if ($row['type'] == 'video') {
-      $fc_icon = '<div class="fcIcon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>';
-      $fc_icon_title = '<i class="fa fa-play-circle" aria-hidden="true"></i>';
-      $fc_link = 'video_content';
-    } elseif ($row['type'] == 'podcast') {
-      $fc_icon = '<div class="fcIcon"><i class="fa fa-podcast" aria-hidden="true"></i></div>';
-      $fc_icon_title = '<i class="fa fa-podcast" aria-hidden="true"></i>';
-      $fc_link = 'podcast';
-    } elseif ($row['type'] == '') {
-      $fc_icon = '';
-      $fc_icon_title = '';
-      $fc_link = 'article_content';
-    } else {
-      $fc_icon = '';
-      $fc_icon_title = '';
-      $fc_link = 'article_content';
-    }
-    echo '
-  <div class="col-md-4">    
- <div class="card voiceCard">
-  <div class="card-body">
-  <div class="d-flex">
-  <img src="' . $row['photo_url'] . '" width="50px" height="50px"  class="rounded-circle" alt="...">
-    <h6 class="card-title p-2 lh-lg fw-normal">' . $row['author'] . '</h6>
-  </div>
-  <div style="height:40px">
-  <p style="font-size:12px; line-height:1.2" class="text-muted">With supporting text below as a natural lead-in to additional content.</p>
-  </div>
-  <div style="height:130px">
-   <p class="card-text" style="color:black; font-size:20px; line-height:1.3; font-weight:500">
-    ' . $row['title'] . '
-    </p>
-  </div>
- <a href="' . $fc_link . '.php?code=' . $row['code'] . '" class="stretched-link"></a>  
-    <div class="d-flex justify-content-between">
-    <i class="fa fa-square text-dark"></i> 
-
-    <div>
-    <i class="fa fa-eye text-dark"></i>
-    <span class="text-muted lh-lg" style="font-size:10px;"> 1,000</span>
-    </div>
-
-
-
-    <i class="fa fa-ellipsis-v text-dark"></i>
-    </div>
-  </div>
-</div>
-  </div>
-  ';
+   echo voicesGridcard($row);
   }
 
   //for ($x = 0; $x <= 48; $x++) {}
