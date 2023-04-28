@@ -49,7 +49,7 @@ include 'includes/subscribe.php';
 
         </div>
 
-        <div class="col-md-3 cardColumn_2">
+        <div class="col-md-3 sticky-md-top cardColumn_2">
         <?php
 include 'home/ad_column.php';
 ?>
