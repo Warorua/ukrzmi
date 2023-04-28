@@ -1,8 +1,4 @@
-<style>
-#moveable-element {
-  position: sticky;
-  }
-</style>
+
 <div class="col-md-12">
   <ul class="nav nav-tabs nav-pills flex-column flex-sm-row" id="myTab" role="tablist">
     <li class="nav-item adNav" role="presentation">
@@ -87,7 +83,7 @@
 
 
 
-    <div id="moveable-element">
+    <div>
       <! AD BANNER1>
 
         <div class="col-md-12 specialBanner">
