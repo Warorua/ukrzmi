@@ -1,5 +1,22 @@
 <?php
 session_start();
+function timeago($date) {
+  $timestamp = strtotime($date);	
+  
+  $strTime = array("sec", "min", "hr", "day", "mon", "year");
+  $length = array("60","60","24","30","12","10");
+
+  $currentTime = date("D, d M Y H:i:s");;
+  if($currentTime >= $timestamp) {
+       $diff     = time()- $timestamp;
+       for($i = 0; $diff >= $length[$i] && $i < count($length)-1; $i++) {
+       $diff = $diff / $length[$i];
+       }
+
+       $diff = round($diff);
+       return $diff . " " . $strTime[$i] . "s ago ";
+  }
+}
 $row = $_POST['row'];
 $rowperpage = 4;
 $data = $_SESSION['block_items'];
