@@ -118,53 +118,7 @@
 <div class="MS-content">
 
   <?php
-//////////////////////////////////////////////////////////////////////////////////////////////////
-$query = '';
-/*
-if ($thematic_block[$thematic_id]['type'] != '') {
-  $query .= "AND category = '" . $thematic_block[$thematic_id]['type'] . "'";
-}
 
-
-if($thematic_block[$thematic_id]['sub_cat'] != ''){
-    $query .= "AND sub_1 = '".$thematic_block[$thematic_id]['sub_cat']."'";
-}
-
-if($thematic_block[$thematic_id]['content'] != ''){
-    $query .= "AND type = '".$thematic_block[$thematic_id]['content']."'";
-}
-
-if($thematic_block[$thematic_id]['city'] != ''){
-    $city = $thematic_block[$thematic_id]['city'];
-    if($city == 'kyiv'){
-        $query .= "AND source = 'Unian.ua/kyiv' OR source = 'ua.korrespondent.net/city/kiev/'";
-      }
-      elseif($city == 'lviv'){
-        $query .= "AND source = 'Unian.ua/lviv'";
-      }
-      elseif($city == 'odessa'){
-        $query .= "AND source = 'Unian.ua/odessa'";
-      }
-      elseif($city == 'kharkiv'){
-        $query .= "AND source = 'Unian.ua/kharkiv'";
-      }
-      elseif($city == 'dnepropetrovsk'){
-        $query .= "AND source = 'Unian.ua/dnepropetrovsk'";
-      }
-      else{
-        $query .= "";
-      }
-}
-
-/////////////////////////////////////////////////////////////////////////////////////////////////
-  $stmt = $conn->prepare("SELECT * FROM news 
-  WHERE NOT category=:cat_not
-  ".$query."
-  AND pin=:pin
- ORDER BY id DESC LIMIT 60");
-  $stmt->execute(['cat_not'=>'international', 'pin'=>0]);
-  $block_news_orig = $stmt->fetchAll();
-//*/
   $block_news_orig = $allNews;
 
                 //*
