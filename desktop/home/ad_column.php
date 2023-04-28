@@ -1,8 +1,8 @@
 <style>
 #moveable-element {
   position: fixed;
-   top: 200px;
-    bottom: 350px;
+   top: 25%;
+    bottom: 35%;
 
 }
 
