@@ -48,9 +48,15 @@
     var distance = (elementOffset - scrollTop);
 
     if (distance < 0) {
-      $('#moveable-element').css('top', '0');
+      $('#moveable-element').css({
+        'position': 'fixed',
+        'top': '0'
+      });
     } else {
-      $('#moveable-element').css('top', distance + 'px');
+      $('#moveable-element').css({
+        'position': 'absolute',
+        'top': distance + 'px'
+      });
     }
   });
 </script>

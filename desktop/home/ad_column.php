@@ -1,8 +1,11 @@
 <style>
-  #moveable-element {
-  position: absolute;
+#moveable-element {
+  position: fixed;
   top: 100px;
+  z-index: 9999;
+  margin-top: 50px; /* replace 50px with the actual height of the element */
 }
+
 
 </style>
 <div class="col-md-12">
