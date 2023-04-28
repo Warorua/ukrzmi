@@ -202,7 +202,7 @@ if (!isset($_GET['id'])) {
                     <div class="card-body">
                       <div class="row">
                         <div class="col-md-6">
-                          <img src="../images/<?php echo $auth['photo'] ?>" width="100%" />
+                          <img src="<?php echo $auth['photo_url'] ?>" width="100%" />
                         </div>
                         <div class="col-md-6">
                           <div class="row">
@@ -229,7 +229,7 @@ if (!isset($_GET['id'])) {
                                     } else {
                                       $fl_outp = $row;
                                     }
-                                    echo '<li class="list-group-item"><b>' . $id . ':</b> ' . $row . ' </li>';
+                                    echo '<li class="list-group-item"><b>' . $id . ':</b> ' . $fl_outp . ' </li>';
                                   }
                                 } else {
                                   echo '<li class="list-group-item"><b>Error:</b> ' . $exif . ' </li>';
