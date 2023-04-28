@@ -1,6 +1,10 @@
 <?php
 include './includes/session.php';
 $conn = $pdo->open();
+function starts_with($word, $characters) {
+      $char_length = strlen($characters);
+      return substr($word, 0, $char_length) === $characters;
+  }
 /*
 function posiDescSort($item1,$item2)
 {
@@ -20,8 +24,17 @@ usort($thematic_block,'posiDescSort');
   
   $block_news_orig = $stmt->fetchAll();
   
-
-  //*
+   /*
+  foreach ($block_news_orig as $id => $row) {
+        
+      if (starts_with($row['video_url'], 'https://www.unian.ua/player/')) {
+         
+             echo $id . '<br/>' . $row['video_url'] . '<br/>' . $row['deep_link'] . '<br/>';
+      }
+  
+     
+  }
+ 
           
 
             //$block_news_orig = filter_by_key( $block_news_orig, [ 'Lifestyle' ], 'category', 'id' );
