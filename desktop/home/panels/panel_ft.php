@@ -2,10 +2,10 @@
   $wanted_panels = 5;
 
   $total_panel = $wanted_panels - 1;
-  for ($i = 1; $i <= $total_panel; $i++) {
+  for ($mn = 1; $mn <= $total_panel; $mn++) {
     echo '<div class="row"><div class="row">';
-    $panel_low = $i * 8;
-    if ($i != $total_panel) {
+    $panel_low = $mn * 8;
+    if ($mn != $total_panel) {
       $panel_high = 8;
     } else {
       $panel_high = 7;
