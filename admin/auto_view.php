@@ -81,7 +81,7 @@ include 'components/header.php';
         $type_fin = '';
       }
 
-      $search_where = " WHERE NOT category='international'
+  $search_where = " WHERE NOT category='international'
                 " . $type_fin . "
                 " . $tag_1_fin . "
                 " . $tag_2_fin . "
@@ -91,6 +91,26 @@ include 'components/header.php';
                  OR tag_3 =N'$tag_id')
                  
                  ";
+  $ser_obj = '{';
+  if ($tag_1 != '') {
+    $ser_obj .= cleandt($tag_1_fin) . ',';
+  }
+  if ($tag_2 != '') {
+    $ser_obj .= cleandt($tag_2_fin) . ',';
+  }
+  if ($tag_3 != '') {
+    $ser_obj .= cleandt($tag_3_fin) . ',';
+  }
+  if ($type != '') {
+    $ser_obj .= cleandt($type_fin) . ',';
+  }
+  $ser_obj .= '}';
+  $ser_obj = str_replace(",}", "}", $ser_obj);
+  if($tag_1 == '' && $tag_2 == '' && $tag_3 == '' && $type == ''){
+    $ser_obj = '';
+  } else{
+    $ser_obj = $ser_obj;
+  }       
 
       // Total data row count in the database
       $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM `news`");

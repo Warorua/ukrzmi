@@ -54,3 +54,16 @@ function getTimeDifference($dateStr) {
     $difference = $currentTimestamp - $timestamp;
     return $difference;
   }
+
+  function table_columns($table){
+    global $conn;
+    $stmt = $conn->prepare("SHOW COLUMNS FROM ".$table);
+    $stmt->execute([ 'code' => '']);
+    $data = $stmt->fetch();
+    $output = '';
+    foreach($data as $row){
+        //$output .= $row['']
+    }
+
+    return $data;
+  }

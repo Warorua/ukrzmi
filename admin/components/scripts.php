@@ -199,7 +199,7 @@
         loadingIndicator: true
       },
       "ajax": {
-        "url": "./data_fetch.php?query=<?php echo urlencode($search_where) ?>",
+        "url": "./data_fetch.php?query=<?php echo base64_encode($ser_obj) ?>",
         dataSrc: '',
         //"data": "data"
       },
