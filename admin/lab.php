@@ -15,3 +15,35 @@ for ($i = 1; $i <= $total_panel; $i++) {
       echo $panel_low . ' ' . $panel_high . '<br>';
 }
  ?>
+
+
+
+<div class="row">
+  <?php
+  include 'home/panels/panel_02.php';
+  ?>
+</div>
+
+<div class="row">
+  <?php
+  include 'home/panels/panel_03.php';
+  ?>
+</div>
+
+<div class="row">
+  <?php
+  include 'home/panels/panel_04.php';
+  ?>
+</div>
+
+<div class="row">
+  <?php
+  include 'home/panels/panel_05.php';
+  ?>
+</div>
+<div class="row">
+  <?php
+  include 'home/panels/panel_06.php';
+  ?>
+</div>
+
