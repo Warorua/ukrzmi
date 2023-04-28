@@ -17,10 +17,10 @@ $thematic_block = $stmt->fetchAll();
 usort($thematic_block,'posiDescSort'); 
   */
 
-  $stmt = $conn->prepare("SELECT id, category, published, deep_link, pin, type, video_url FROM news 
+  $stmt = $conn->prepare("SELECT id, category, published, deep_link, pin, type, voice_profile, photo, photo_url, code FROM news 
   WHERE type=:cat_not
  ORDER BY id DESC");
-  $stmt->execute(['cat_not'=>'video']);
+  $stmt->execute(['cat_not'=>'voice']);
   
   $block_news_orig = $stmt->fetchAll();
   

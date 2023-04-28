@@ -10,6 +10,7 @@ include 'includes/header.php';
 include 'home/blocks.php';
 include 'includes/topbar.php';
 include 'includes/navbar.php';
+$allNews = newsFetch();
 ?>
 <div class="newsContainer">
     <div class="row homeContent">
