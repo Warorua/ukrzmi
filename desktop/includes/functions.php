@@ -102,7 +102,7 @@ function articleCard($row, $block, $block_id, $frameColor, $filtTit, $titleBadge
         <div class="imgTitle">
            <p class="blogTitle">' . rowParent($row) . '</p>
           <div class="cardFrame" style="border-color: ' . $frameColor . ';"></div>
-          <img class="cardPhoto" src="' . $image . '" height="122px" alt="' . $row['title'] . '" />
+          <img class="cardPhoto" src="' . $image . '" height="122px" alt="' . $row['title'] . '" loading="lazy"/>
       </div>
    </div>   
     </a>    
