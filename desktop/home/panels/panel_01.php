@@ -129,7 +129,7 @@
         $frameColor = blockAux($row)['frameColor'];
         $titleBadge = blockAux($row)['titleBadge'];
 
-      echo articleCard($row, $block, $block_id, $rowParent, $frameColor, $filtTit, $titleBadge, $rowtitle, $catHolder);
+      echo articleCard($row, $block, $block_id, $frameColor, $filtTit, $titleBadge, $rowtitle, $catHolder);
     }
   }
   //for ($x = 0; $x <= 48; $x++) {}

@@ -11,7 +11,7 @@ foreach($block_news_3 as $row){
   $filtTit = blockAux($row)['filtTit'];
   $frameColor = blockAux($row)['frameColor'];
   $titleBadge = blockAux($row)['titleBadge'];
-      echo articleCard($row, $block, $block_id, $rowParent, $frameColor, $filtTit, $titleBadge, $rowtitle, $catHolder);
+      echo articleCard($row, $block, $block_id, $frameColor, $filtTit, $titleBadge, $rowtitle, $catHolder);
 }
 
 //for ($x = 0; $x <= 48; $x++) {}

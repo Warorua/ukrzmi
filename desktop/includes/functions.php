@@ -85,7 +85,7 @@ function getTimeDifference($dateStr) {
   }
 
 
-function articleCard($row, $block, $block_id, $rowParent = null, $frameColor, $filtTit, $titleBadge, $rowtitle = null, $catHolder)
+function articleCard($row, $block, $block_id, $frameColor, $filtTit, $titleBadge, $rowtitle = null, $catHolder)
 {
   if (isValidImage('../images/' . $row['photo'])) {
     $image = '../images/' . $row['photo'];
