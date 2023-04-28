@@ -882,6 +882,7 @@ include 'includes/session.php';
     .specialBanner {
       background-color: bisque;
       height: 130px;
+      margin-top: 20px;
     }
 
     .blogTitleInt {
