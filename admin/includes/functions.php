@@ -115,8 +115,7 @@ function generate_exif_data_from_url($image_url)
       $image = $path . $filename;
       $image_type = exif_imagetype($image);
       if ($image_type === IMAGETYPE_JPEG || $image_type === IMAGETYPE_TIFF_II || $image_type === IMAGETYPE_TIFF_MM) {
-          $exif_data = generate_exif_data($image);
-      unlink($image);  
+          $exif_data = generate_exif_data($image);  
       }else{
             $exif_data = 'Unsupported file format: '.$image_type;
       }

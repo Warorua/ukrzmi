@@ -221,7 +221,10 @@ if (!isset($_GET['id'])) {
                                       $fl_outp = formatBytes($row);
                                     } elseif (is_array($row)) {
                                       foreach ($row as $id => $row2) {
-                                        $fl_outp = $row2;
+                                        if(!is_array($row2)){
+                                          $fl_outp = $row2;
+                                        }
+                                        
                                       }
                                     } else {
                                       $fl_outp = $row;
