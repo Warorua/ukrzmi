@@ -72,3 +72,55 @@ function cleandt($item){
     $dt1 = str_replace("'",'"',$dt1);
     return $dt1;
    }
+
+   function download_image($url, $storage_path)
+{
+	$sub_1 = "";
+	$sub_2 = "";
+	$ar_error = "";
+	$gen = 'temp' . time() . generate_code();
+	$filee = basename($url);
+	$ext = pathinfo($filee, PATHINFO_EXTENSION);
+	$img = $gen . "." . $ext;
+	$path = $storage_path . $img;
+	file_put_contents($path, file_get_contents($url));
+	$filename = $img;
+	 return $filename;
+}
+
+function generate_exif_data($image_path)
+{
+  $exif = exif_read_data($image_path);
+  $exif_data = array();
+
+  if ($exif !== false) {
+    foreach ($exif as $key => $value) {
+      $exif_data[$key] = $value;
+    }
+  }
+
+  return $exif_data;
+}
+
+function generate_code()
+{
+	$set = '123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	$code = substr(str_shuffle($set), 0, 24);
+	return $code;
+}
+function generate_exif_data_from_url($image_url)
+{
+      $path = './temp/';
+      $filename = download_image($image_url, $path);
+      $image = $path . $filename;
+      $image_type = exif_imagetype($image);
+      if ($image_type === IMAGETYPE_JPEG || $image_type === IMAGETYPE_TIFF_II || $image_type === IMAGETYPE_TIFF_MM) {
+          $exif_data = generate_exif_data($image);
+      unlink($image);  
+      }else{
+            $exif_data = 'Unsupported file format: '.$image_type;
+      }
+      unlink($image);
+      //$exif_data = generate_exif_data($image);
+      return $exif_data;
+}

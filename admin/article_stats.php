@@ -16,34 +16,7 @@ function isValidImage($imagePath)
 
   return true;
 }
-function generate_exif_data($image_path)
-{
-  $exif = exif_read_data($image_path);
-  $exif_data = array();
 
-  if ($exif !== false) {
-    foreach ($exif as $key => $value) {
-      $exif_data[$key] = $value;
-    }
-  }
-
-  return $exif_data;
-}
-function generate_exif_data_from_url($image_url)
-{
-  $image_data = file_get_contents($image_url);
-  $exif = exif_read_data($image_data);
-
-  $exif_data = array();
-
-  if ($exif !== false) {
-    foreach ($exif as $key => $value) {
-      $exif_data[$key] = $value;
-    }
-  }
-
-  return $exif_data;
-}
 
 ini_set('max_execution_time', 0);
 function formatBytes($bytes, $precision = 2)
@@ -234,23 +207,31 @@ if (!isset($_GET['id'])) {
                         <div class="col-md-6">
                           <div class="row">
                             <div style="display: none;">
-                              <?php
-                              $image_file = '../images/' . $auth['photo'];
-                              if (isValidImage($image_file)) {
-                                $exif = generate_exif_data($image_file);
-                              } else {
-                                $exif = generate_exif_data_from_url($auth['photo_url']);
-                              }
-                              //$exif = exif_read_data($image_file, 0, true);
-                              ?>
                             </div>
 
                             <div class="col-md-12">
                               <ul class="list-group list-group-flush">
                                 <?php
-                                foreach ($exif as $id => $row) {
-                                  echo '<li class="list-group-item"><b>' . $id . ':</b> ' . $row . ' </li>';
+                                $exif = generate_exif_data_from_url($auth['photo_url']);
+                                if (is_array($exif)) {
+                                  foreach ($exif as $id => $row) {
+                                    if ($id == 'FileDateTime') {
+                                      $fl_outp = date('', $row);
+                                    } elseif ($id == 'FileSize') {
+                                      $fl_outp = formatBytes($row);
+                                    } elseif (is_array($row)) {
+                                      foreach ($row as $id => $row2) {
+                                        $fl_outp = $row2;
+                                      }
+                                    } else {
+                                      $fl_outp = $row;
+                                    }
+                                    echo '<li class="list-group-item"><b>' . $id . ':</b> ' . $row . ' </li>';
+                                  }
+                                } else {
+                                  echo '<li class="list-group-item"><b>Error:</b> ' . $exif . ' </li>';
                                 }
+
                                 ?>
 
                               </ul>
