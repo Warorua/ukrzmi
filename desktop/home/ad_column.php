@@ -93,9 +93,9 @@
 
 
 
-<div class="col-md-12 sticky-top">
+<div class="col-md-12 ">
 
-  <div class="sticky-top">
+  <div class="">
     <! AD BANNER1>
 
       <div class="specialBanner">
