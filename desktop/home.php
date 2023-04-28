@@ -21,7 +21,7 @@ include 'includes/navbar.php';
         <div class="col-md-9 col-lg-9 col-xl-9 cardColumn">
   <?php
   $allNews = newsFetch();
-  $wanted_panels = 10;
+  $wanted_panels = 5;
   $wanted_blocks = 100;
 
 include 'home/headlines/main.php';
