@@ -18,7 +18,7 @@ $page = 'home';
     ?>
     <div class="container">
         <div class="row ">
-            <div class="col-md-9 col-lg-9 col-xl-9 cardColumn">
+            <div class="col-md-9 col-lg-9 col-xl-9 ">
                 <?php
                 $allNews = newsFetch();
                 $wanted_panels = 5;
