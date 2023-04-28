@@ -83,7 +83,7 @@
 
 
 
-    <div>
+    <div id="moveable-element">
       <! AD BANNER1>
 
         <div class="col-md-12 specialBanner">

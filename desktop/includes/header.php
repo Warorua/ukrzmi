@@ -157,6 +157,7 @@ include 'includes/session.php';
       }
 
       .cardColumn_2 {
+height: 100%;
 
         padding-left: 0px;
         padding-right: 0px;
@@ -194,6 +195,7 @@ include 'includes/session.php';
     /* Medium devices (desktops, 992px and up)//////////////////////////////////////// */
     @media (min-width: 992px) {
       .cardColumn_2 {
+height: 100%;
 
         padding-left: 10px;
         padding-right: 0px;
@@ -727,6 +729,7 @@ include 'includes/session.php';
     }
 
     .cardColumn_2 {
+height: 100%;
 
       padding-left: 10px;
       padding-right: 0px;
@@ -1376,6 +1379,9 @@ include 'includes/session.php';
 
     #moveable-element {
       position: sticky;
+      z-index: 9999;
+      top: 10px;
+      bottom: 10px;
     }
   </style>
 
