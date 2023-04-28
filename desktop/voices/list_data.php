@@ -15,7 +15,7 @@ $list_item = array_slice($data, $row, $rowperpage);
 $html = '';
 
 foreach ($list_item as $row) {
-  $html .= voicesListCard($row);
+  $html .= voicesCard($row, $tok);
 }
 
 echo $html;
