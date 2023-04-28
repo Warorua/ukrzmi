@@ -120,9 +120,11 @@
   <?php
 //////////////////////////////////////////////////////////////////////////////////////////////////
 $query = '';
-if($thematic_block[$thematic_id]['type'] != ''){
-    $query .= "AND category = '".$thematic_block[$thematic_id]['type']."'";
+//*
+if ($thematic_block[$thematic_id]['type'] != '') {
+  $query .= "AND category = '" . $thematic_block[$thematic_id]['type'] . "'";
 }
+//*/
 
 if($thematic_block[$thematic_id]['sub_cat'] != ''){
     $query .= "AND sub_1 = '".$thematic_block[$thematic_id]['sub_cat']."'";
@@ -163,6 +165,19 @@ if($thematic_block[$thematic_id]['city'] != ''){
   $stmt->execute(['cat_not'=>'international', 'pin'=>0]);
   $block_news_orig = $stmt->fetchAll();
 
+  /*
+          if ($thematic_block[$thematic_id]['type'] != '') {
+
+            $block_news_orig = filter_by_key(
+              $block_news_orig,
+              [
+                $thematic_block[$thematic_id]['type']
+              ],
+              'category',
+              'deep_link'
+            );
+          }
+          //*/
    
   $block_name = $thematic_block[$thematic_id]['id'];
  
