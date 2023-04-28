@@ -6,7 +6,7 @@
 
   }
 </style>
-<div style="height:100%" class="col-md-12">
+<div class="col-md-12">
   <ul class="nav nav-tabs nav-pills flex-column flex-sm-row" id="myTab" role="tablist">
     <li class="nav-item adNav" role="presentation">
       <button class="nav-link adNavLink active" id="agenda-tab" data-bs-toggle="tab" data-bs-target="#agenda" type="button" role="tab" aria-controls="agenda" aria-selected="true">Календар</button>
@@ -95,29 +95,21 @@
 
 <div class="col-md-12">
 
-  <div class="sticky-md-top">
-    <! AD BANNER1>
+  <! AD BANNER1>
 
-      <div class="col-md-12 specialBanner">
+    <div class="specialBanner sticky-md-top">
+      <a href="https://www.iaaglobal.org/" target=”_blank”>
+        <img class="horAdBanner" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSon7jb5XjcoiV7DoPrfFZaKKJF10xD6ujxbVqlcrpxi3E8ML_TNQen49o3xUDeErkT6AQ&usqp=CAU" width="385" height="130">
+      </a>
+    </div>
 
-        <a href="https://www.iaaglobal.org/" target=”_blank”>
-          <img class="horAdBanner" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSon7jb5XjcoiV7DoPrfFZaKKJF10xD6ujxbVqlcrpxi3E8ML_TNQen49o3xUDeErkT6AQ&usqp=CAU" width="385" height="130">
+    <! AD BANNER2>
+
+      <div class="specialBanner sticky-md-top">
+        <a href="https://www.lexus.ua" target=”_blank”>
+          <img class="horAdBanner" src="https://i.pinimg.com/originals/de/80/9f/de809f68a92ad72a2887994dbd4bee9c.jpg" width="385" height="454">
         </a>
-        <p> </p>
+        <div align="right"> <a href="mailto:admin@ukrzmi.com" style="color: #000000">Ad</a></div>
       </div>
 
-      <p> </p>
-
-
-
-      <! AD BANNER2>
-
-        <div class="col-md-12 specialBanner">
-          <a href="https://www.lexus.ua" target=”_blank”>
-            <img class="horAdBanner" src="https://i.pinimg.com/originals/de/80/9f/de809f68a92ad72a2887994dbd4bee9c.jpg" width="385" height="454">
-          </a>
-
-          <div align="right"> <a href="mailto:admin@ukrzmi.com" style="color: #000000">Ad</a></div>
-        </div>
-  </div>
 </div>
