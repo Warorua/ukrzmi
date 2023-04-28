@@ -44,13 +44,13 @@
 <script>
   $(window).scroll(function() {
     var scrollTop = $(window).scrollTop();
-    var elementOffset = $('.cardColumn_2').offset().top;
+    var elementOffset = $('#moveable-element').offset().top;
     var distance = (elementOffset - scrollTop);
 
     if (distance < 0) {
-      $('.cardColumn_2').css('top', '0');
+      $('#moveable-element').css('top', '0');
     } else {
-      $('.cardColumn_2').css('top', distance + 'px');
+      $('#moveable-element').css('top', distance + 'px');
     }
   });
 </script>
