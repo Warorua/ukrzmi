@@ -7,7 +7,7 @@
 
 <div class="position-relative">
 <div style="width: 30px; height:30px;" class="position-absolute bg-light mt-1 ms-1"></div>
- <img style="z-index: 10" src="images/logo.png" class="position-absolute" width="45px" height="45px"/> 
+ <img style="z-index: 10" src="../bower/dist/img/AdminLTELogo.png" class="position-absolute" width="45px" height="45px"/> 
 </div>
 
 
