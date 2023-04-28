@@ -1,5 +1,47 @@
 <?php
 // Sets to unlimited period of time
+function isValidImage($imagePath) {
+  // Check if the file exists
+  if (!file_exists($imagePath)) {
+    return false;
+  }
+
+  // Check if the file is an image
+  $imageTypes = array(IMAGETYPE_JPEG, IMAGETYPE_PNG, IMAGETYPE_GIF);
+  $detectedType = exif_imagetype($imagePath);
+  if (!in_array($detectedType, $imageTypes)) {
+    return false;
+  }
+
+  return true;
+}
+function generate_exif_data($image_path) {
+  $exif = exif_read_data($image_path);
+  $exif_data = array();
+  
+  if($exif !== false) {
+      foreach ($exif as $key => $value) {
+          $exif_data[$key] = $value;
+      }
+  }
+  
+  return $exif_data;
+}
+function generate_exif_data_from_url($image_url) {
+  $image_data = file_get_contents($image_url);
+  $exif = exif_read_data($image_data);
+
+  $exif_data = array();
+  
+  if($exif !== false) {
+      foreach ($exif as $key => $value) {
+          $exif_data[$key] = $value;
+      }
+  }
+  
+  return $exif_data;
+}
+
 ini_set('max_execution_time', 0);
 function formatBytes($bytes, $precision = 2) { 
     $units = array('B', 'KB', 'MB', 'GB', 'TB'); 
@@ -190,16 +232,23 @@ $author2 = $stmt->fetchAll();
         <div style="display: none;">
     <?php
 $image_file = '../images/'.$auth['photo'];
-$exif = exif_read_data($image_file, 0, true);
+if(isValidImage($image_file)){
+$exif = generate_exif_data($image_file);
+}else{
+  $exif = generate_exif_data_from_url($auth['photo_url']);
+}
+//$exif = exif_read_data($image_file, 0, true);
 ?>        
         </div>
 
 <div class="col-md-12">
 <ul class="list-group list-group-flush">
-  <li class="list-group-item"><b>Height:</b> <?php echo $exif["COMPUTED"]["Height"] ?>px</li>
-  <li class="list-group-item"><b>Width:</b> <?php echo $exif["COMPUTED"]["Width"] ?>px</li>
-  <li class="list-group-item"><b>Type:</b> <?php echo $exif["FILE"]["MimeType"] ?> </li>
-  <li class="list-group-item"><b>Size:</b> <?php echo formatBytes($exif["FILE"]["FileSize"]) ?></li>
+  <?php
+foreach($exif as $id=>$row){
+  echo '<li class="list-group-item"><b>'.$id.':</b> '.$row.' </li>';
+}
+  ?>
+  
 </ul>
  </div>
 
