@@ -114,76 +114,20 @@
 
     $block_total_cards = sizeof($block_news);
 
-    if ($block_total_cards >= 0 && $block_total_cards <= 8) {
-      $slide_control = 0;
-      $hide_control_button = 'disabled';
-    }
-    if ($block_total_cards >= 9 && $block_total_cards <= 16) {
-      $slide_control = 1;
-      $hide_control_button = '';
-    }
-    if ($block_total_cards >= 17 && $block_total_cards <= 24) {
-      $slide_control = 2;
-      $hide_control_button = '';
-    }
-    if ($block_total_cards >= 25 && $block_total_cards <= 32) {
-      $slide_control = 3;
-      $hide_control_button = '';
-    }
-    if ($block_total_cards >= 33 && $block_total_cards <= 40) {
-      $slide_control = 4;
-      $hide_control_button = '';
-    }
-    if ($block_total_cards >= 41 && $block_total_cards <= 48) {
-      $slide_control = 5;
-      $hide_control_button = '';
-    }
-
-    if (!isset($slide_control)) {
-      $slide_control = 5;
-      $hide_control_button = '';
-    }
+    
+      $slide_control = blockControl($block_total_cards)[0];
+      $hide_control_button = blockControl($block_total_cards)[1];
+   
 
     $block_news_1 = array_slice($block_news, 0, 8);
 
     foreach ($block_news_1 as $row) {
-      $rowtitle = $row['title'];
-
-      $maxPos = 500;
-      if ($row['sub_1'] != '') {
-        $catHolder = $row['sub_1'];
-      } else {
-        $catHolder = 'General';
-      }
-
-        $rowParent = rowParent($row);
-     
-
-
-
-      if (strlen($row['title']) < $maxPos) {
-        $rowtitle = $row['title'];
-        $filtTit = str_replace('"', '', $row['title']);
-      } else {
-        $lastPos = ($maxPos - 3) - strlen($row['title']);
-        $rowtitle = substr($row['title'], 0, strrpos($row['title'], ' ', $lastPos)) . ' 
- ...';
-        $filtTit = str_replace('"', '', $row['title']);
-      }
-
-
-      if ($row['frame_color'] == "") {
-        $frameColor = "rgb(0, 0, 0, 0.0)";
-      } else {
-        $frameColor = $row['frame_color'];
-      }
-
-      if ($row['title_badge'] == "") {
-        $titleBadge = "";
-      } else {
-        $titleBadge = '<img src="../admin/' . $row['title_badge'] . '" class="titleBadge" />';
-      }
-
+       $catHolder = blockAux($row)['catHolder'];
+        $lastPos = blockAux($row)['lastPos'];
+        $rowtitle = blockAux($row)['rowtitle'];
+        $filtTit = blockAux($row)['filtTit'];
+        $frameColor = blockAux($row)['frameColor'];
+        $titleBadge = blockAux($row)['titleBadge'];
 
       echo articleCard($row, $block, $block_id, $rowParent, $frameColor, $filtTit, $titleBadge, $rowtitle, $catHolder);
     }

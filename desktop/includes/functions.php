@@ -84,14 +84,15 @@ function getTimeDifference($dateStr) {
     return true;
   }
 
-  
-  function articleCard($row, $block, $block_id, $rowParent, $frameColor, $filtTit, $titleBadge, $rowtitle, $catHolder){
+
+function articleCard($row, $block, $block_id, $rowParent, $frameColor, $filtTit, $titleBadge, $rowtitle = null, $catHolder)
+{
   if (isValidImage('../images/' . $row['photo'])) {
     $image = '../images/' . $row['photo'];
   } else {
     $image = $row['photo_url'];
   }
-    return '
+  return '
     <div class="col-md-3">    
     <div class="card col-sm-4 col-md-3 newsCard" style="background-color:' . $block[$block_id]['bg_color'] . '">
       <div class="card-content">
@@ -99,7 +100,7 @@ function getTimeDifference($dateStr) {
   <a href="article_content.php?code=' . $row['code'] . '">
    <div class="imgFrame">
         <div class="imgTitle">
-           <p class="blogTitle">' . $rowParent . '</p>
+           <p class="blogTitle">' . rowParent($row) . '</p>
           <div class="cardFrame" style="border-color: ' . $frameColor . ';"></div>
           <img class="cardPhoto" src="' . $image . '" height="122px" alt="' . $row['title'] . '" />
       </div>
@@ -107,7 +108,7 @@ function getTimeDifference($dateStr) {
     </a>    
       <div class="">
             <a href="article_content.php?code=' . $row['code'] . '" class="cardLink cardTitRow"> 
-          <h6 class="cardHead" data-toggle="tooltip" data-placement="bottom" title="' . $filtTit . '">' . $titleBadge . '' . $rowtitle . '</h6>
+          <h6 class="cardHead" data-toggle="tooltip" data-placement="bottom" title="' . $filtTit . '">' . $titleBadge . '' . $row['title'] . '</h6>
         </a>
         <div class="cardFoot clearfix">
           <div class="cardCat">
@@ -149,5 +150,76 @@ function getTimeDifference($dateStr) {
       
     </div>
     </div>    </div>
-';
+ ';
+}
+
+function blockControl($block_total_cards){
+  
+  if ($block_total_cards >= 0 && $block_total_cards <= 8) {
+    $slide_control = 0;
+    $hide_control_button = 'disabled';
   }
+  if ($block_total_cards >= 9 && $block_total_cards <= 16) {
+    $slide_control = 1;
+    $hide_control_button = '';
+  }
+  if ($block_total_cards >= 17 && $block_total_cards <= 24) {
+    $slide_control = 2;
+    $hide_control_button = '';
+  }
+  if ($block_total_cards >= 25 && $block_total_cards <= 32) {
+    $slide_control = 3;
+    $hide_control_button = '';
+  }
+  if ($block_total_cards >= 33 && $block_total_cards <= 40) {
+    $slide_control = 4;
+    $hide_control_button = '';
+  }
+  if ($block_total_cards >= 41 && $block_total_cards <= 48) {
+    $slide_control = 5;
+    $hide_control_button = '';
+  }
+
+  if (!isset($slide_control)) {
+    $slide_control = 5;
+    $hide_control_button = '';
+  }
+
+  return [$slide_control, $hide_control_button];
+}
+
+function blockAux($row)
+{
+
+  $maxPos = 500;
+  if ($row['sub_1'] != '') {
+    $catHolder = $row['sub_1'];
+  } else {
+    $catHolder = 'General';
+  }
+
+  if (strlen($row['title']) < $maxPos) {
+    $rowtitle = $row['title'];
+    $filtTit = str_replace('"', '', $row['title']);
+  } else {
+    $lastPos = ($maxPos - 3) - strlen($row['title']);
+    $rowtitle = substr($row['title'], 0, strrpos($row['title'], ' ', $lastPos)) . ' 
+...';
+    $filtTit = str_replace('"', '', $row['title']);
+  }
+
+
+  if ($row['frame_color'] == "") {
+    $frameColor = "rgb(0, 0, 0, 0.0)";
+  } else {
+    $frameColor = $row['frame_color'];
+  }
+
+  if ($row['title_badge'] == "") {
+    $titleBadge = "";
+  } else {
+    $titleBadge = '<img src="../admin/' . $row['title_badge'] . '" class="titleBadge" />';
+  }
+
+  return ['titleBadge' => $titleBadge, 'frameColor' => $frameColor, 'filtTit' => $filtTit, 'rowtitle' => $rowtitle, 'lastPos' => $lastPos, 'catHolder' => $catHolder];
+}
