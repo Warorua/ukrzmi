@@ -98,7 +98,7 @@
   <div class="sticky-top">
     <! AD BANNER1>
 
-      <div class="specialBanner sticky-md-top">
+      <div class="specialBanner">
 
         <a href="https://www.iaaglobal.org/" target=”_blank”>
           <img class="horAdBanner" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSon7jb5XjcoiV7DoPrfFZaKKJF10xD6ujxbVqlcrpxi3E8ML_TNQen49o3xUDeErkT6AQ&usqp=CAU" width="385" height="130">
@@ -108,7 +108,7 @@
 
       <! AD BANNER2>
 
-        <div class="specialBanner sticky-md-top">
+        <div class="specialBanner">
           <a href="https://www.lexus.ua" target=”_blank”>
             <img class="horAdBanner" src="https://i.pinimg.com/originals/de/80/9f/de809f68a92ad72a2887994dbd4bee9c.jpg" width="385" height="454">
           </a>
