@@ -124,7 +124,7 @@ $query = '';
 if ($thematic_block[$thematic_id]['type'] != '') {
   $query .= "AND category = '" . $thematic_block[$thematic_id]['type'] . "'";
 }
-//*/
+
 
 if($thematic_block[$thematic_id]['sub_cat'] != ''){
     $query .= "AND sub_1 = '".$thematic_block[$thematic_id]['sub_cat']."'";
@@ -164,20 +164,47 @@ if($thematic_block[$thematic_id]['city'] != ''){
  ORDER BY id DESC LIMIT 60");
   $stmt->execute(['cat_not'=>'international', 'pin'=>0]);
   $block_news_orig = $stmt->fetchAll();
+//*/
+  $block_news_orig = $$allNews();
 
-  //*
-          if ($thematic_block[$thematic_id]['type'] != '') {
+                //*
+                if ($thematic_block[$thematic_id]['type'] != '') {
 
-            $block_news_orig = filter_by_key(
-              $block_news_orig,
-              [
-                $thematic_block[$thematic_id]['type']
-              ],
-              'category',
-              'deep_link'
-            );
-          }
-          //*/
+                  $block_news_orig = filter_by_key($block_news_orig, [$thematic_block[$thematic_id]['type']], 'category', 'deep_link');
+                }
+                //*/
+
+                //*
+                if ($thematic_block[$thematic_id]['sub_cat'] != '') {
+
+                  $block_news_orig = filter_by_key($block_news_orig, [$thematic_block[$thematic_id]['sub_cat']], 'sub_1', 'deep_link');
+                }
+                //*/
+
+                //*
+                if ($thematic_block[$thematic_id]['content'] != '') {
+
+                  $block_news_orig = filter_by_key($block_news_orig, [$thematic_block[$thematic_id]['content']], 'type', 'deep_link');
+                }
+                //*/
+
+                //*
+                if ($thematic_block[$thematic_id]['city'] != '') {
+
+                  $city = $thematic_block[$thematic_id]['city'];
+                  if ($city == 'kyiv') {
+                    $block_news_orig = filter_by_key($block_news_orig, ['Unian.ua/kyiv', 'ua.korrespondent.net/city/kiev/'], 'source', 'deep_link');
+                  } elseif ($city == 'lviv') {
+                    $block_news_orig = filter_by_key($block_news_orig, ['Unian.ua/lviv'], 'source', 'deep_link');
+                  } elseif ($city == 'odessa') {
+                    $block_news_orig = filter_by_key($block_news_orig, ['Unian.ua/odessa'], 'source', 'deep_link');
+                  } elseif ($city == 'kharkiv') {
+                    $block_news_orig = filter_by_key($block_news_orig, ['Unian.ua/kharkiv'], 'source', 'deep_link');
+                  } elseif ($city == 'dnepropetrovsk') {
+                    $block_news_orig = filter_by_key($block_news_orig, ['Unian.ua/dnepropetrovsk'], 'source', 'deep_link');
+                  }
+                }
+            //*/
    
   $block_name = $thematic_block[$thematic_id]['id'];
  
