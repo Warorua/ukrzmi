@@ -6,7 +6,7 @@
 
   }
 </style>
-<div style="height:100%" class="col-md-12">
+<div class="col-md-12">
   <ul class="nav nav-tabs nav-pills flex-column flex-sm-row" id="myTab" role="tablist">
     <li class="nav-item adNav" role="presentation">
       <button class="nav-link adNavLink active" id="agenda-tab" data-bs-toggle="tab" data-bs-target="#agenda" type="button" role="tab" aria-controls="agenda" aria-selected="true">Календар</button>
