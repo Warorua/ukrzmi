@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../includes/functions.php';
+include '../../includes/functions.php';
 $row = $_POST['row'];
 $rowperpage = 4;
 $data = $_SESSION['block_items'];
