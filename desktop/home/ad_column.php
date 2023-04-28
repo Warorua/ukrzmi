@@ -1,12 +1,7 @@
 <style>
 #moveable-element {
-  position: fixed;
-   top: 25%;
-    bottom: 35%;
-
-}
-
-
+  position: sticky;
+  }
 </style>
 <div class="col-md-12">
   <ul class="nav nav-tabs nav-pills flex-column flex-sm-row" id="myTab" role="tablist">
