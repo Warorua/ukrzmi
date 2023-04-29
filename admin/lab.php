@@ -25,7 +25,7 @@ $stmt->execute();
 $block_news_orig = $stmt->fetchAll();
 //usort($thematic_block,'posiDescSort'); 
   //*/
-//*
+/*
   $stmt = $conn->prepare("SELECT id, category, time, deep_link, pin, type, post_date, photo, photo_url, code FROM news 
   WHERE NOT p_grapher=:cat_not
  ORDER BY id DESC");

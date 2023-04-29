@@ -29,6 +29,7 @@
 
     $block_news_list = $block_news;
     $allcount = sizeof($block_news) - 1;
+    $block_news_1 = filter_by_key($block_news_1, null, null, 'deep_link' );
     foreach ($block_news_1 as $row) {
       echo allContentGridCard($row);
     }
