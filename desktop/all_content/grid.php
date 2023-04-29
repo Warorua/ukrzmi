@@ -27,7 +27,7 @@
     }
 
 
-    $block_news = array_slice($block_news_orig, 75);
+    $block_news = array_slice($block_news_orig, 70);
     $allcount = sizeof($block_news) - 1;
     $block_news_1 = filter_by_key($block_news_1, null, null, 'deep_link' );
     foreach ($block_news_1 as $row) {
