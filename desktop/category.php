@@ -27,14 +27,14 @@ $page = 'category';
 
                 include 'category/headlines/main.php';
                 //include 'category/international_block.php';
-
+                //*
                 for ($i = 1; $i <= $wanted_blocks; $i++) {
                     $block_id = $i;
                     // $block_no = $block[$block_id];
                     $i_ = $i - 1;
                     $i__ = $i + 1;
 
-                 
+
                     if (isset($sub_cats[$i]['subcat'])) {
                         $block_id == $i;
                         $sub_cat_rule = $sub_cats[$i]['subcat'];
@@ -45,10 +45,18 @@ $page = 'category';
                         include 'category/thematic/b1.php';
                     }
                 }
+                //*/
 
+                if (isset($sub_cats[0]['subcat'])) {
+                    $block_id == 0;
+                    $sub_cat_rule = $sub_cats[0]['subcat'];
+                    include 'category/block_02.php';
+                }
+                if (isset($thematic_block[0]['name'])) {
+                    $thematic_id = 0;
+                    include 'category/thematic/b1.php';
+                }
 
-
-/*
                 if (isset($sub_cats[1]['subcat'])) {
                     $block_id == 1;
                     $sub_cat_rule = $sub_cats[1]['subcat'];
@@ -134,7 +142,7 @@ $page = 'category';
                     $thematic_id = 8;
                     include 'category/thematic/b9.php';
                 }
-*/
+                //*/
                 ?>
 
             </div>
