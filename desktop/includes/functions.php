@@ -1016,11 +1016,12 @@ function ukrzmiCard($row, $block, $block_id){
   return articleCard($row, $block, $block_id, $frameColor, $filtTit, $titleBadge, $rowtitle, $catHolder);
 }
 
-function dropdown($row, $block, $block_id){
+function dropdown($row, $block, $block_id)
+{
 
   $card = '';
   $row = array_slice($row, 0, 1);
-  foreach($row as $rr){
+  foreach ($row as $rr) {
     $card .= ukrzmiCard($row, $block, $block_id);
   }
 
@@ -1031,7 +1032,7 @@ function dropdown($row, $block, $block_id){
        <div class="row">
 
     
- ' . $card. '
+ ' . $card . '
 
  <div class="col-md-1"></div>
          <div class="col-md-5">
