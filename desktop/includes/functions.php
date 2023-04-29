@@ -1050,9 +1050,9 @@ function dropdown($row, $block, $block_id)
     'deep_link'
   );
   $row = array_slice($row, 0, 2);
-  foreach ($row as $rr) {
-    $card .= ukrzmiNavCard($row, $block, $block_id);
-  }
+  
+    $card = ukrzmiNavCard($row, $block, $block_id);
+  
 
   return '
   <div style="width:100%;z-index:500" class="dropdown-menu shadow position-absolute">
