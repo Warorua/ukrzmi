@@ -81,9 +81,19 @@
       $nav = $_SERVER['PHP_SELF'];
       $nav_link = basename($nav);
 
-
-      $topCat = pageNav($nav_link, $data, $city, $getData)[0];
-      $pageNm = pageNav($nav_link, $data, $city, $getData)[1];
+      if (isset($city)) {
+        $city = $city;
+      } else {
+        $city = '';
+      }
+      if (isset($data)) {
+        $topCat = pageNav($nav_link, $data, $city, $_GET)[0];
+        $pageNm = pageNav($nav_link, $data, $city, $_GET)[1];
+      } else {
+        $topCat = pageNav($nav_link, null, $city, $_GET)[0];
+        $pageNm = pageNav($nav_link, null, $city, $_GET)[1];
+      }
+      
 
 
 
