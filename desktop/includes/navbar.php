@@ -49,7 +49,7 @@
                     echo '
                      <li class="nav-item dropdown dropdown-mega position-static ' . $navHide . '">
                       <a class="nav-link navLink " href="category.php?cat_id=' . $block[$bb]['type'] . '" data-bs-toggle="" data-bs-auto-close="outside">' . $block[$bb]['name'] . '</a>
-                         ' . dropdown(newsFetch(), $block, $bb) . '
+                         ' . dropdown($allNews, $block, $bb) . '
                      </li>
                      ';
                   }
