@@ -19,19 +19,19 @@
     if ($panel_high == 8) {
       echo '</div></div>';
     } else {
-        $attr1 = ".lastCard".$block[$block_id]['id'];
-        $attr2 = "carNext".$block[$block_id]['id'];
-        $attr3 = "carNext".$block[$block_id]['id'];
+        $attr1 = ".lastCard".$block[$i__]['id'];
+        $attr2 = "carNext".$block[$i__]['id'];
+        $attr3 = "carNext".$block[$i__]['id'];
     echo '
     
-      <div class="col-md-3 lastCard'.$block[$block_id]['id'].'">
-        <div class="card col-sm-4 col-md-3 newsCard" style="background-color:'.$block[$block_id]['bg_color'].'">
+      <div class="col-md-3 lastCard'.$block[$i__]['id'].'">
+        <div class="card col-sm-4 col-md-3 newsCard" style="background-color:'.$block[$i__]['bg_color'].'">
           <div class="card-content">
             <div class="card-body d-flex justify-content-center h-75">
               <div class="m-auto border border-dark rounded p-2 border-2 fw-bold fs-5">
                 <tx class="text-dark text-center">Read all headlines</tx>
               </div>
-              <a class="stretched-link" href="all_content.php?page='.$pageName.'&block_id='.$block_id.'&cat_id='.$block[$block_id]['name'].'&cat_type='.$block[$block_id]['type'].'"></a>
+              <a class="stretched-link" href="all_content.php?page='.$pageName.'&block_id='.$block_id.'&cat_id='.$block[$i__]['name'].'&cat_type='.$block[$i__]['type'].'"></a>
             </div>
           </div>
         </div>
@@ -51,10 +51,10 @@
       }
 
 
-      const box'.$block[$block_id]['id'].' = document.querySelector("'.$attr1.'");
+      const box'.$block[$i__]['id'].' = document.querySelector("'.$attr1.'");
 
       setInterval(function() {
-       const messageText = isInViewport(box'.$block[$block_id]['id'].') ?
+       const messageText = isInViewport(box'.$block[$i__]['id'].') ?
       "viewed" :
       "notViewed";
 
