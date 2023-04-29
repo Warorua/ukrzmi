@@ -13,7 +13,7 @@
     $block_news_2 = array_slice($block_news, $panel_low, $panel_high);
 
     foreach ($block_news_2 as $row) {
-  echo ukrzmiCard($row, $block, $block_id);
+      echo ukrzmiCard($row, $block, $block_id);
     }
 
     if ($panel_high == 8) {

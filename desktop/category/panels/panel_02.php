@@ -35,7 +35,7 @@
     } else {
       $lastPos = ($maxPos - 3) - strlen($row['title']);
       $rowtitle = substr($row['title'], 0, strrpos($row['title'], ' ', $lastPos)) . ' 
- ...';
+    ...';
       $filtTit = str_replace('"', '', $row['title']);
     }
     if ($row['frame_color'] == "") {
@@ -51,18 +51,18 @@
 
 
     echo '
-<div class="col-md-3">    
+    <div class="col-md-3">    
       <div class="card col-sm-4 col-md-3 newsCard" style="background-color:' . $block[$block_id]['bg_color'] . '">
     <div class="card-content">
 
-<a href="article_content.php?code=' . $row['code'] . '">
-<div class="imgFrame">
+    <a href="article_content.php?code=' . $row['code'] . '">
+    <div class="imgFrame">
       <div class="imgTitle">
         <p class="blogTitle">' . $rowParent . '</p>
         <img class="cardPhoto" src="../images/' . $row['photo'] . '" height="122px" alt="' . $row['title'] . '" />
     </div>
- </div>   
-  </a>    
+    </div>   
+    </a>    
     <div class="card-body">
           <a href="article_content.php?code=' . $row['code'] . '" class="cardLink"> <h6 class="cardHead" data-toggle="tooltip" data-placement="bottom" title="' . $row['title'] . '">' . $titleBadge . '' . $rowtitle . '</h6></a>
       <div class="cardFoot clearfix">
@@ -89,16 +89,16 @@
       <p class="cardEllip"></p>
     </div>
     
-<p class="cardCategory">' . $row['category'] . '</p>
+    <p class="cardCategory">' . $row['category'] . '</p>
          </div>
       </div>
     </div>
    
     
-  </div>
-  </div>    </div>
-  ';
-  }
+   </div>
+    </div>    </div>
+   ';
+ }
 
   //for ($x = 0; $x <= 48; $x++) {}
   ?>

@@ -43,7 +43,7 @@
                                                                                                                                                                 echo $hide_control_button;
                                                                                                                                                               } ?>>Previous</button>
 
-    <button id="carNext<?php echo $block[$block_id]['id']; ?>" type="button" data-role="" class="slickk-next-<?php echo $sub_cat_rule; ?> btn btn-outline-dark btn-sm" <?php if (isset($hide_control_button)) {
+    <button id="carNext<?php echo $block[$i__]['id']; ?>" type="button" data-role="" class="slickk-next-<?php echo $sub_cat_rule; ?> btn btn-outline-dark btn-sm" <?php if (isset($hide_control_button)) {
                                                                                                                                                                           echo $hide_control_button;
                                                                                                                                                                         } ?>>Next</button>
   </div>
@@ -93,9 +93,9 @@
     }
     if (CarNo == <?php echo $slide_control; ?>) {
       //alert('this is page 0')
-      document.getElementById('carNext<?php echo $block[$block_id]['id']; ?>').style.visibility = 'hidden';
+      document.getElementById('carNext<?php echo $block[$i__]['id']; ?>').style.visibility = 'hidden';
     } else if (CarNo != <?php echo $slide_control; ?>) {
-      document.getElementById('carNext<?php echo $block[$block_id]['id']; ?>').style.visibility = '';
+      document.getElementById('carNext<?php echo $block[$i__]['id']; ?>').style.visibility = '';
     }
 
 
