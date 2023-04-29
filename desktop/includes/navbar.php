@@ -253,7 +253,7 @@ if($nav_link == 'home.php'){
                 $_GET['cat_id']
               ],
               'name',
-              'deep_link'
+              'id'
             );
 
             foreach ($sub_cats as $row) {
