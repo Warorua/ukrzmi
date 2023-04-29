@@ -11,7 +11,8 @@ $allNews = array_slice(newsFetch(), 0, 5);
 for ($bb = 1; $bb <= $drp_cnt; $bb++) {
     if (isset($block[$bb]['name'])) {
         //echo dropdown(newsFetch(), $block, $bb);
-        echo ukrzmiCard(newsFetch(), $block, $bb);
+       // echo ukrzmiCard(newsFetch(), $block, $bb);
+       print_r($allNews);
     }
 }
 
