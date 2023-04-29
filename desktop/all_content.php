@@ -1,7 +1,7 @@
 <?php
 ini_set('memory_limit', '2044M');
 include 'includes/header.php';
-
+$allNews = newsFetch();
 include 'all_content/process.php';
 
 ?>
