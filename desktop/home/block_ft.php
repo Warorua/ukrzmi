@@ -1,6 +1,3 @@
-<?php
-
-?>
 <style>
   .slickk-next-<?php echo $block[$block_id]['name']; ?> {
     width: 100%;

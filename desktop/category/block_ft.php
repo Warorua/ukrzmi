@@ -10,7 +10,7 @@
 <?php //echo $sub_cat_rule; 
 ?>
 <h2 class="newsHead"><?php echo $sub_cat_rule; ?></h2>
-<div style="background-color:<?php echo $block[1]['bg_color']; ?>" class="cardBlock row carousel-<?php echo $sub_cat_rule; ?>">
+<div style="background-color:<?php echo $block[$i__]['bg_color']; ?>" class="cardBlock row carousel-<?php echo $sub_cat_rule; ?>">
 
 
 
@@ -18,35 +18,14 @@
 
   <div class="row">
     <?php
-    $block_id = 1;
+   // $block_id = 1;
     include 'category/panels/panel_01.php';
     ?>
   </div>
 
-  <div class="row">
-    <?php
-    include 'category/panels/panel_02.php';
-    ?>
-  </div>
-
-  <div class="row">
-    <?php
-    include 'category/panels/panel_03.php';
-    ?>
-  </div>
-
-  <div class="row">
-    <?php
-    include 'category/panels/panel_04.php';
-    ?>
-  </div>
-
-  <div class="row">
-    <?php
-    include 'category/panels/panel_05.php';
-    ?>
-  </div>
-
+  <?php
+  include 'home/panels/panel_ft.php';
+  ?>
 
 
 
@@ -57,7 +36,7 @@
 
 
 </div>
-<div style="background-color:<?php echo $block[1]['bg_color']; ?>" class="row cardPanel pb-2">
+<div style="background-color:<?php echo $block[$i__]['bg_color']; ?>" class="row cardPanel pb-2">
   <div class="col-md-9"></div>
   <div class="col-md-3 d-flex justify-content-between">
     <button id="carPrev<?php echo $sub_cat_rule; ?>" type="button" data-role="" class="slickk-prev-<?php echo $sub_cat_rule; ?> btn btn-outline-dark btn-sm" <?php if (isset($hide_control_button)) {
