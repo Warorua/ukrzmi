@@ -1025,7 +1025,15 @@ function dropdown($row, $block, $block_id)
 {
 
   $card = '';
-  $row = array_slice($row, 0, 1);
+  $row = filter_by_key(
+    $row,
+    [
+      $block[$block_id]['type']
+    ],
+    'category',
+    'deep_link'
+  );
+  $row = array_slice($row, 0, 2);
   foreach ($row as $rr) {
     $card .= ukrzmiCard($row, $block, $block_id);
   }
