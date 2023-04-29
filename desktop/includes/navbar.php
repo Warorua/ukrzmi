@@ -37,7 +37,7 @@
                   $navStatus = 'visually-hidden';
                   $navHide = '';
                 }
-           
+
                 if (isset($wanted_blocks)) {
                   $drp_cnt = $wanted_blocks;
                 } else {
@@ -81,28 +81,10 @@
       $nav = $_SERVER['PHP_SELF'];
       $nav_link = basename($nav);
 
-      if (isset($data['category'])) {
-        $topCat = strtoupper($data['category']);
-      } elseif (isset($_GET['cat_id'])) {
-        $topCat = strtoupper($_GET['cat_id']);
-      } elseif ($nav_link == 'tag.php') {
-        $topCat = 'TAGS';
-      } elseif ($nav_link == 'search.php') {
-        $topCat = 'SEARCH';
-      } elseif ($nav_link == 'city.php') {
-        $topCat = 'NEWS <tx class="text-uppercase">' . $city . '</tx>';
-      } elseif ($nav_link == 'all_content.php' && isset($_GET['cat'])) {
-        $topCat = strtoupper($_GET['cat']);
-        $pageNm = $_GET['cat'];
-      } elseif ($nav_link == 'all_content.php' && isset($_GET['A0034'])) {
-        $topCat = strtoupper($_GET['cat_id']);
-        $pageNm = $_GET['cat_id'];
-      } else {
-        $topCat = 'НОВИНИ УКРАЇНИ';
-        if (isset($_GET['cat'])) {
-          $pageNm = $_GET['cat'];
-        }
-      }
+
+      $topCat = pageNav($nav_link, $data, $city, $getData)[0];
+      $pageNm = pageNav($nav_link, $data, $city, $getData)[1];
+
 
 
 
@@ -251,9 +233,19 @@ if($nav_link == 'home.php'){
           </li>
           <?php
           if (isset($_GET['cat_id'])) {
-            $stmt = $conn->prepare("SELECT *, sub_cat.name AS subcat FROM sub_cat LEFT JOIN category ON sub_cat.category=category.id WHERE category.name=N'" . $_GET['cat_id'] . "'");
+            $stmt = $conn->prepare("SELECT *, sub_cat.name AS subcat FROM sub_cat LEFT JOIN category ON sub_cat.category=category.id");
             $stmt->execute();
             $sub_cats = $stmt->fetchAll();
+
+            $sub_cats = filter_by_key(
+              $sub_cats,
+              [
+                $_GET['cat_id']
+              ],
+              'name',
+              'deep_link'
+            );
+
             foreach ($sub_cats as $row) {
               if (isset($_GET['subcat'])) {
                 if ($_GET['subcat'] == $row['subcat']) {
@@ -266,10 +258,10 @@ if($nav_link == 'home.php'){
               }
 
               echo '
-  <li class="nav-item">
-  <a class="nav-link navLink ' . $topClassSubcat . '" href="all_content.php?subcat=' . $row['subcat'] . '&cat_id=' . $_GET['cat_id'] . '">' . $row['subcat'] . '</a>
-</li>
-  ';
+                 <li class="nav-item">
+                  <a class="nav-link navLink ' . $topClassSubcat . '" href="all_content.php?subcat=' . $row['subcat'] . '&cat_id=' . $_GET['cat_id'] . '">' . $row['subcat'] . '</a>
+                 </li>
+                 ';
             }
           }
 

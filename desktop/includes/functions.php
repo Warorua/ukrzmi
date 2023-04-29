@@ -999,10 +999,11 @@ function allContentGridCard($row)
   ';
 }
 
-function get_ids($array, $key) {
+function get_ids($array, $key)
+{
   $ids = array();
-  foreach($array as $element) {
-      $ids[] = $element[$key];
+  foreach ($array as $element) {
+    $ids[] = $element[$key];
   }
   return $ids;
 }
@@ -1025,15 +1026,15 @@ function ukrzmiNavCard($row, $block, $block_id)
 function ukrzmiCard($row, $block, $block_id)
 {
 
-  
-    $catHolder = blockAux($row)['catHolder'];
-    $lastPos = blockAux($row)['lastPos'];
-    $rowtitle = blockAux($row)['rowtitle'];
-    $filtTit = blockAux($row)['filtTit'];
-    $frameColor = blockAux($row)['frameColor'];
-    $titleBadge = blockAux($row)['titleBadge'];
-    $allcards = articleCard($row, $block, $block_id, $frameColor, $filtTit, $titleBadge, $rowtitle, $catHolder);
-  
+
+  $catHolder = blockAux($row)['catHolder'];
+  $lastPos = blockAux($row)['lastPos'];
+  $rowtitle = blockAux($row)['rowtitle'];
+  $filtTit = blockAux($row)['filtTit'];
+  $frameColor = blockAux($row)['frameColor'];
+  $titleBadge = blockAux($row)['titleBadge'];
+  $allcards = articleCard($row, $block, $block_id, $frameColor, $filtTit, $titleBadge, $rowtitle, $catHolder);
+
   return $allcards;
 }
 
@@ -1050,9 +1051,9 @@ function dropdown($row, $block, $block_id)
     'deep_link'
   );
   $row = array_slice($row, 0, 2);
-  
-    $card = ukrzmiNavCard($row, $block, $block_id);
-  
+
+  $card = ukrzmiNavCard($row, $block, $block_id);
+
 
   return '
   <div style="width:100%;z-index:500" class="dropdown-menu shadow position-absolute">
@@ -1099,4 +1100,33 @@ function dropdown($row, $block, $block_id)
  </div>
 
  ';
+}
+
+function pageNav($nav_link, $data, $city, $getData)
+{
+  $pageNm = null;
+  if (isset($data['category'])) {
+    $topCat = strtoupper($data['category']);
+  } elseif (isset($getData['cat_id'])) {
+    $topCat = strtoupper($getData['cat_id']);
+  } elseif ($nav_link == 'tag.php') {
+    $topCat = 'TAGS';
+  } elseif ($nav_link == 'search.php') {
+    $topCat = 'SEARCH';
+  } elseif ($nav_link == 'city.php') {
+    $topCat = 'NEWS <tx class="text-uppercase">' . $city . '</tx>';
+  } elseif ($nav_link == 'all_content.php' && isset($getData['cat'])) {
+    $topCat = strtoupper($getData['cat']);
+    $pageNm = $getData['cat'];
+  } elseif ($nav_link == 'all_content.php' && isset($getData['A0034'])) {
+    $topCat = strtoupper($getData['cat_id']);
+    $pageNm = $getData['cat_id'];
+  } else {
+    $topCat = 'НОВИНИ УКРАЇНИ';
+    if (isset($getData['cat'])) {
+      $pageNm = $getData['cat'];
+    }
+  }
+
+  return [$topCat, $pageNm];
 }

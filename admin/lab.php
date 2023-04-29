@@ -14,13 +14,13 @@ function starts_with($word, $characters) {
     return $ids;
 }
 
-/*
+//*
 function posiDescSort($item1,$item2)
 {
     if ($item1['position'] == $item2['position']) return 0;
     return ($item1['position'] > $item2['position']) ? 1 : -1;
 }
-$stmt = $conn->prepare("SHOW COLUMNS IN news");
+$stmt = $conn->prepare("SELECT *, sub_cat.name AS subcat FROM sub_cat LEFT JOIN category ON sub_cat.category=category.id");
 $stmt->execute();
 $block_news_orig = $stmt->fetchAll();
 //usort($thematic_block,'posiDescSort'); 
