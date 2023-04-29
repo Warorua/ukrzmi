@@ -5,6 +5,15 @@ function starts_with($word, $characters) {
       $char_length = strlen($characters);
       return substr($word, 0, $char_length) === $characters;
   }
+
+  function get_ids($array, $key) {
+    $ids = array();
+    foreach($array as $element) {
+        $ids[] = $element[$key];
+    }
+    return $ids;
+}
+
 /*
 function posiDescSort($item1,$item2)
 {
@@ -13,16 +22,18 @@ function posiDescSort($item1,$item2)
 }
 $stmt = $conn->prepare("SHOW COLUMNS IN news");
 $stmt->execute();
-$thematic_block = $stmt->fetchAll();
+$block_news_orig = $stmt->fetchAll();
 //usort($thematic_block,'posiDescSort'); 
   //*/
 //*
-  $stmt = $conn->prepare("SELECT id, category, published, deep_link, pin, type, p_grapher, photo, photo_url, code FROM news 
+  $stmt = $conn->prepare("SELECT id, category, time, deep_link, pin, type, post_date, photo, photo_url, code FROM news 
   WHERE NOT p_grapher=:cat_not
  ORDER BY id DESC");
   $stmt->execute(['cat_not'=>'None']);
   
   $block_news_orig = $stmt->fetchAll();
+
+  $block_news_orig = get_ids($block_news_orig, 'id');
   
    /*
   foreach ($block_news_orig as $id => $row) {

@@ -495,7 +495,13 @@ function timeago($date)
     }
 
     $diff = round($diff);
-    return $diff . " " . $strTime[$i] . "s ago ";
+    if ($diff > 1) {
+      $final = $diff . " " . $strTime[$i] . "s ago ";
+    } else {
+      $final = "0 secs ago ";
+    }
+
+    return $final;
   }
 }
 
@@ -774,7 +780,8 @@ function voicesListCard($row)
       ';
 }
 
-function voicesGridcard($row){
+function voicesGridcard($row)
+{
   $rowtitle = $row['title'];
 
   $maxPos = 92;
@@ -877,68 +884,69 @@ function voicesGridcard($row){
  ';
 }
 
-function allContentGridCard($row){
+function allContentGridCard($row)
+{
   $rowtitle = $row['title'];
 
-      $maxPos = 500;
-      if ($row['sub_1'] != '') {
-        $catHolder = $row['sub_1'];
-      } else {
-        $catHolder = 'General';
-      }
-      if ($row['parent'] == "ua.korrespondent.net") {
-        $rowParent = "Кореспондент";
-      } elseif ($row['parent'] == "pravda.com.ua") {
-        $rowParent = "правда";
-      } elseif ($row['parent'] == "eurointegration.com.ua") {
-        $rowParent = "євроінтеграція";
-      } elseif ($row['parent'] == "unian.ua") {
-        $rowParent = "уніанської";
-      } elseif ($row['parent'] == "life.pravda.com.ua") {
-        $rowParent = "правда";
-      } elseif ($row['parent'] == "theguardian.com") {
-        $rowParent = "The guardian";
-      } elseif ($row['parent'] == "") {
-        $rowParent = "правда";
-      }
+  $maxPos = 500;
+  if ($row['sub_1'] != '') {
+    $catHolder = $row['sub_1'];
+  } else {
+    $catHolder = 'General';
+  }
+  if ($row['parent'] == "ua.korrespondent.net") {
+    $rowParent = "Кореспондент";
+  } elseif ($row['parent'] == "pravda.com.ua") {
+    $rowParent = "правда";
+  } elseif ($row['parent'] == "eurointegration.com.ua") {
+    $rowParent = "євроінтеграція";
+  } elseif ($row['parent'] == "unian.ua") {
+    $rowParent = "уніанської";
+  } elseif ($row['parent'] == "life.pravda.com.ua") {
+    $rowParent = "правда";
+  } elseif ($row['parent'] == "theguardian.com") {
+    $rowParent = "The guardian";
+  } elseif ($row['parent'] == "") {
+    $rowParent = "правда";
+  }
 
 
 
-      if (strlen($row['title']) < $maxPos) {
-        $rowtitle = $row['title'];
-        $filtTit = str_replace('"', '', $row['title']);
-      } else {
-        $lastPos = ($maxPos - 3) - strlen($row['title']);
-        $rowtitle = substr($row['title'], 0, strrpos($row['title'], ' ', $lastPos)) . '...';
-        $filtTit = str_replace('"', '', $row['title']);
-      }
-      if ($row['frame_color'] == "") {
-        $frameColor = "rgb(0, 0, 0, 0.0)";
-      } else {
-        $frameColor = $row['frame_color'];
-      }
-      if ($row['title_badge'] == "") {
-        $titleBadge = "";
-      } else {
-        $titleBadge = '<img src="../admin/' . $row['title_badge'] . '" class="titleBadge" />';
-      }
-      if ($row['type'] == 'video') {
-        $fc_icon = '<div class="fcIconVid"><i class="fa fa-play-circle" aria-hidden="true"></i></div>';
-      } else {
-        $fc_icon = '';
-      }
-      ////////////////////////////////////////////////
-      if ($row['type'] == 'video') {
-        $fc_link = 'video_content';
-      } elseif ($row['type'] == 'podcast') {
-        $fc_link = 'podcast';
-      } elseif ($row['type'] == '') {
-        $fc_link = 'article_content';
-      } else {
-        $fc_link = 'article_content';
-      }
+  if (strlen($row['title']) < $maxPos) {
+    $rowtitle = $row['title'];
+    $filtTit = str_replace('"', '', $row['title']);
+  } else {
+    $lastPos = ($maxPos - 3) - strlen($row['title']);
+    $rowtitle = substr($row['title'], 0, strrpos($row['title'], ' ', $lastPos)) . '...';
+    $filtTit = str_replace('"', '', $row['title']);
+  }
+  if ($row['frame_color'] == "") {
+    $frameColor = "rgb(0, 0, 0, 0.0)";
+  } else {
+    $frameColor = $row['frame_color'];
+  }
+  if ($row['title_badge'] == "") {
+    $titleBadge = "";
+  } else {
+    $titleBadge = '<img src="../admin/' . $row['title_badge'] . '" class="titleBadge" />';
+  }
+  if ($row['type'] == 'video') {
+    $fc_icon = '<div class="fcIconVid"><i class="fa fa-play-circle" aria-hidden="true"></i></div>';
+  } else {
+    $fc_icon = '';
+  }
+  ////////////////////////////////////////////////
+  if ($row['type'] == 'video') {
+    $fc_link = 'video_content';
+  } elseif ($row['type'] == 'podcast') {
+    $fc_link = 'podcast';
+  } elseif ($row['type'] == '') {
+    $fc_link = 'article_content';
+  } else {
+    $fc_link = 'article_content';
+  }
 
-      return '
+  return '
   <div class="col-md-3 post">    
   <div class="card col-sm-4 col-md-3 newsCard">
     <div class="card-content">
@@ -948,7 +956,7 @@ function allContentGridCard($row){
       <div class="imgTitle">
          <p class="blogTitle">' . $rowParent . '</p>
         <div class="cardFrame" style="border-color: ' . $frameColor . ';"></div>
-        <img class="cardPhoto" src="../images/' . $row['photo'] . '" height="122px" alt="' . $row['title'] . '" />
+        <img class="cardPhoto" src="' . $row['photo_url'] . '" height="122px" alt="' . $row['title'] . '" />
         ' . $fc_icon . '
     </div>
   </div>   
@@ -988,4 +996,12 @@ function allContentGridCard($row){
   </div>
   </div>    </div>
   ';
+}
+
+function get_ids($array, $key) {
+  $ids = array();
+  foreach($array as $element) {
+      $ids[] = $element[$key];
+  }
+  return $ids;
 }

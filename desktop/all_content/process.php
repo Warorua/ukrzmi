@@ -35,19 +35,28 @@ if (isset($_GET['subcat'])) {
         header('location: home.php');
     } else {
         //$block_news_orig = $_SESSION[$page];
-        if($page == 'home'){
+        if ($page == 'home') {
             $type_search = '';
-        }else{
+            $block_news_orig = filter_by_key(
+                $allNews,
+                [
+                    $_SESSION[$page]
+                ],
+                'id',
+                'deep_link'
+            );
+        } else {
             $type_search = $page;
+            $block_news_orig = filter_by_key(
+                $_SESSION[$page],
+                [
+                    $type_search
+                ],
+                'type',
+                'deep_link'
+            );
         }
-        $block_news_orig = filter_by_key(
-            $_SESSION[$page],
-            [
-                $type_search
-            ],
-            'type',
-            'deep_link'
-        );
+        
     }
 
 

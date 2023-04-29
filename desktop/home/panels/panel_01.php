@@ -26,7 +26,8 @@
       $block_news_orig = array_slice($block_allNews, 0, $card_calc);
 
       $pageName = 'home';
-      $_SESSION[$pageName] = $block_allNews;
+
+      $_SESSION[$pageName] = get_ids($block_allNews,'id');
     } else {
       $block_allNews = filter_by_key(
         $allNews,
