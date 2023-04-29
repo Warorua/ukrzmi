@@ -25,8 +25,8 @@ $page = 'home';
             <div class="col-md-9 col-lg-9 col-xl-9 cardColumn">
                 <?php
 
-                include 'home/headlines/main.php';
-                include 'home/international_block.php';
+                //include 'home/headlines/main.php';
+               // include 'home/international_block.php';
 
 
                 for ($i = 1; $i <= $wanted_blocks; $i++) {
@@ -45,7 +45,7 @@ $page = 'home';
                 }
 
 
-                include 'includes/subscribe.php';
+                //include 'includes/subscribe.php';
                 ?>
 
             </div>
