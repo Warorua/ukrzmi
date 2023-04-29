@@ -34,7 +34,13 @@ if (isset($_GET['subcat'])) {
         //  echo '<script> location.replace("home.php"); </script>';
         header('location: home.php');
     } else {
-        $block_news_orig = $_SESSION[$page];
+        //$block_news_orig = $_SESSION[$page];
+        $block_news_orig = filter_by_key(
+            $_SESSION[$page],
+            null,
+            null,
+            'deep_link'
+        );
     }
 
 

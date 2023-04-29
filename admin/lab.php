@@ -11,16 +11,16 @@ function posiDescSort($item1,$item2)
     if ($item1['position'] == $item2['position']) return 0;
     return ($item1['position'] > $item2['position']) ? 1 : -1;
 }
-$stmt = $conn->prepare("SELECT * FROM blocks WHERE NOT position=:position AND NOT mode=:mode AND page=:page");
-$stmt->execute(['position'=>404, 'mode'=>'', 'page'=>'home']);
+$stmt = $conn->prepare("SHOW COLUMNS IN news");
+$stmt->execute();
 $thematic_block = $stmt->fetchAll();
-usort($thematic_block,'posiDescSort'); 
-  */
-
-  $stmt = $conn->prepare("SELECT id, category, published, deep_link, pin, type, voice_profile, photo, photo_url, code FROM news 
-  WHERE type=:cat_not
+//usort($thematic_block,'posiDescSort'); 
+  //*/
+//*
+  $stmt = $conn->prepare("SELECT id, category, published, deep_link, pin, type, p_grapher, photo, photo_url, code FROM news 
+  WHERE NOT p_grapher=:cat_not
  ORDER BY id DESC");
-  $stmt->execute(['cat_not'=>'voice']);
+  $stmt->execute(['cat_not'=>'None']);
   
   $block_news_orig = $stmt->fetchAll();
   
@@ -40,4 +40,4 @@ usort($thematic_block,'posiDescSort');
             //$block_news_orig = filter_by_key( $block_news_orig, [ 'Lifestyle' ], 'category', 'id' );
       
           //*/
-  print_r($block_news_orig);
+  print_r( $block_news_orig);
