@@ -1010,13 +1010,13 @@ function ukrzmiCard($row, $block, $block_id)
 {
   $allcards = '';
   foreach ($row as $rr) {
-    $catHolder = blockAux($row)['catHolder'];
-    $lastPos = blockAux($row)['lastPos'];
-    $rowtitle = blockAux($row)['rowtitle'];
-    $filtTit = blockAux($row)['filtTit'];
-    $frameColor = blockAux($row)['frameColor'];
-    $titleBadge = blockAux($row)['titleBadge'];
-    $allcards .= articleCard($row, $block, $block_id, $frameColor, $filtTit, $titleBadge, $rowtitle, $catHolder);
+    $catHolder = blockAux($rr)['catHolder'];
+    $lastPos = blockAux($rr)['lastPos'];
+    $rowtitle = blockAux($rr)['rowtitle'];
+    $filtTit = blockAux($rr)['filtTit'];
+    $frameColor = blockAux($rr)['frameColor'];
+    $titleBadge = blockAux($rr)['titleBadge'];
+    $allcards .= articleCard($rr, $block, $block_id, $frameColor, $filtTit, $titleBadge, $rowtitle, $catHolder);
   }
   return $allcards;
 }
