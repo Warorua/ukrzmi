@@ -46,7 +46,7 @@ include 'includes/session.php';
 
   <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
-  <link href="../includes/main.css" rel="stylesheet" type="text/css">
+  <link href="https://ukrzmi.com/desktop/includes/main.css" rel="stylesheet" type="text/css">
   <!---news cards cdn--->
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js'></script>
