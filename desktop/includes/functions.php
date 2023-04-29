@@ -1005,3 +1005,68 @@ function get_ids($array, $key) {
   }
   return $ids;
 }
+
+function ukrzmiCard($row, $block, $block_id){
+  $catHolder = blockAux($row)['catHolder'];
+  $lastPos = blockAux($row)['lastPos'];
+  $rowtitle = blockAux($row)['rowtitle'];
+  $filtTit = blockAux($row)['filtTit'];
+  $frameColor = blockAux($row)['frameColor'];
+  $titleBadge = blockAux($row)['titleBadge'];
+  return articleCard($row, $block, $block_id, $frameColor, $filtTit, $titleBadge, $rowtitle, $catHolder);
+}
+
+function dropdown($row, $block, $block_id){
+
+  $card = '';
+  $row = array_slice($row, 0, 1);
+  foreach($row as $rr){
+    $card .= ukrzmiCard($row, $block, $block_id);
+  }
+
+  return '
+  <div style="width:100%;z-index:500" class="dropdown-menu shadow position-absolute">
+   <div class="mega-content px-4">
+     <div class="">
+       <div class="row">
+
+    
+ ' . $card. '
+
+ <div class="col-md-1"></div>
+         <div class="col-md-5">
+           
+         <ol class="list-group list-group-numbered list-group-flush">
+ <li class="list-group-item d-flex justify-content-between align-items-start">
+ <div class="ms-2 me-auto">
+   <div class="fw-bold">Subheading</div>
+   Content for list item
+  </div>
+  <span class="badge bg-primary rounded-pill">14</span>
+ </li>
+ <li class="list-group-item d-flex justify-content-between align-items-start">
+ <div class="ms-2 me-auto">
+   <div class="fw-bold">Subheading</div>
+   Content for list item
+ </div>
+ <span class="badge bg-primary rounded-pill">14</span>
+ </li>
+ <li class="list-group-item d-flex justify-content-between align-items-start">
+ <div class="ms-2 me-auto">
+   <div class="fw-bold">Subheading</div>
+   Content for list item
+ </div>
+ <span class="badge bg-primary rounded-pill">14</span>
+ </li>
+ </ol>
+  
+         </div>
+
+       </div>
+       <hr/>
+     </div>
+   </div>
+ </div>
+
+ ';
+}

@@ -12,6 +12,10 @@ $page = 'home';
     <?php include_once("analyticstracking.php") ?>
 
     <?php
+    $allNews = newsFetch();
+    $wanted_panels = 5;
+    $wanted_blocks = 100;
+
     include 'home/blocks.php';
     include 'includes/topbar.php';
     include 'includes/navbar.php';
@@ -20,9 +24,6 @@ $page = 'home';
         <div class="row homeContent">
             <div class="col-md-9 col-lg-9 col-xl-9 cardColumn">
                 <?php
-                $allNews = newsFetch();
-                $wanted_panels = 5;
-                $wanted_blocks = 100;
 
                 include 'home/headlines/main.php';
                 include 'home/international_block.php';
@@ -49,7 +50,7 @@ $page = 'home';
 
             </div>
 
-            <div class="col-md-3 sticky-top cardColumn_2">
+            <div class="col-md-3 cardColumn_2">
                 <?php
                 include 'home/ad_column.php';
                 ?>
