@@ -1,4 +1,6 @@
 <?php
+$conn = $pdo->open();
+
 function filter_by_key($array, $allowed_values, $key, $unique_key)
 {
   $unique_ages = [];
