@@ -981,7 +981,7 @@ function allContentGridCard($row)
         </ul>
       </div>
 
-    <p class="cardTime">' . timeago($row['time']) . '</p>  
+    <p class="cardTime">' . timeago($row['time']) . '[' . $row['id'] . ']</p>  
 
     <div class="ellipBox">
       <p class="cardEllip"></p>
