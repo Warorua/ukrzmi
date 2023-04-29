@@ -28,7 +28,7 @@ $page = 'category';
                 include 'category/headlines/main.php';
                 //include 'category/international_block.php';
                 //*
-                for ($i = 1; $i <= $wanted_blocks; $i++) {
+                for ($i = 0; $i <= $wanted_blocks; $i++) {
                     $block_id = $i;
                     // $block_no = $block[$block_id];
                     $i_ = $i - 1;
@@ -46,7 +46,7 @@ $page = 'category';
                     }
                 }
                 //*/
-
+/*
                 if (isset($sub_cats[0]['subcat'])) {
                     $block_id == 0;
                     $sub_cat_rule = $sub_cats[0]['subcat'];
