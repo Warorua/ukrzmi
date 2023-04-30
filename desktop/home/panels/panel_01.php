@@ -41,7 +41,7 @@
       $block_news_orig = array_slice($block_allNews, 0, $card_calc);
 
       $pageName = 'home' . '_' . $block[$block_id]['id'];
-      $_SESSION[$pageName] = $block_allNews;
+      $_SESSION[$pageName] = get_ids($block_allNews,'id');
     }
 
 
