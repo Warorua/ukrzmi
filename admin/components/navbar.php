@@ -50,6 +50,10 @@ if($nav_link == 'category_view.php'){
   $category_view = 'active';
    }
      ///////////////////////////////
+     if($nav_link == 'navigation_view.php'){
+      $navigation_view = 'active';
+       }
+         ///////////////////////////////
 if($nav_link == 'sources_view.php' || $nav_link == 'urls_view.php'){
   $sources_view = 'active';
    }
@@ -203,7 +207,15 @@ if($nav_link == 'members_view.php'){
                 Categories
               </p>
             </a>
-          </li>      
+          </li>  
+          <li class="nav-item">
+            <a href="navigation_view.php" class="nav-link <?php echo $navigation_view ?>">
+              <i class="nav-icon fa fa-sitemap"></i>
+              <p>
+                Navigation
+              </p>
+            </a>
+          </li>    
           <li class="nav-item <?php echo $news_1 ?>">
             <a href="#" class="nav-link <?php echo $news_2 ?>">
               <i class="nav-icon fas fa-tachometer-alt"></i>

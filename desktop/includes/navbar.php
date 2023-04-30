@@ -93,7 +93,7 @@
         $topCat = pageNav($nav_link, null, $city, $_GET)[0];
         $pageNm = pageNav($nav_link, null, $city, $_GET)[1];
       }
-      
+
 
 
 
@@ -280,15 +280,27 @@ if($nav_link == 'home.php'){
           <li class="nav-item">
             <a class="nav-link navLink  <?php echo $topClassHome ?>" href="<?php echo $homeNavCont ?>">Заголовки</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link navLink  <?php echo $topClassInterview ?>" href="interview.php<?php echo $subNavCont ?>">Інтерв'ю</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link navLink  <?php echo $topClassVoice ?>" href="voices.php<?php echo $subNavCont ?>">Голоси</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link navLink  <?php echo $topClassVideo ?>" href="video.php<?php echo $subNavCont ?>">Відео</a>
-          </li>
+          <?php
+          $stmt = $conn->prepare("SELECT * FROM navlinks WHERE status=:status");
+          $stmt->execute(['status' => '1']);
+          $navigation = $stmt->fetchAll();
+          foreach ($navigation as $rows) {
+            if ($rows['link'] == 'interview.php') {
+              $navigationKey = $topClassInterview;
+            } elseif ($rows['link'] == 'voices.php') {
+              $navigationKey = $topClassVoice;
+            } elseif ($rows['link'] == 'video.php') {
+              $navigationKey = $topClassVideo;
+            } else {
+              $navigationKey = '';
+            }
+            echo '
+            <li class="nav-item">
+            <a class="nav-link navLink  '.$navigationKey.'" href="'.$rows['link'].$subNavCont.'">'.$rows['name'].'</a>
+            </li>
+            ';
+          }
+          ?>
 
         </ul>
 

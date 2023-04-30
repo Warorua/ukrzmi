@@ -2,17 +2,12 @@
 include './includes/session.php';
 include 'home/blocks.php';
 
-if (isset($wanted_blocks)) {
-    $drp_cnt = $wanted_blocks;
-} else {
-    $drp_cnt = 20;
-}
-$allNews = array_slice(newsFetch(), 0, 5);
-for ($bb = 1; $bb <= $drp_cnt; $bb++) {
-    if (isset($block[$bb]['name'])) {
-        echo dropdown(newsFetch(), $block, $bb);
-       // echo ukrzmiCard(newsFetch(), $block, $bb);
-       //print_r($allNews);
-    }
-}
+
+
+  $stmt = $conn->prepare("SELECT * FROM navlinks WHERE id='27'");
+  $stmt->execute();
+  $dd = $stmt->fetchAll();
+  echo count($dd);
+
+  //print_r($dd);
 
