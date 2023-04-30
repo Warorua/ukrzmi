@@ -8,7 +8,7 @@ use \NlpTools\Tokenizers\WhitespaceTokenizer;
 
 $tok = new WhitespaceTokenizer();
 
-session_start();
+
 $row = $_POST['row'];
 $rowperpage = 4;
 $data = $_SESSION['interview_items'];
