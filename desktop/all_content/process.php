@@ -44,7 +44,12 @@ if (isset($_GET['subcat'])) {
                 'deep_link'
             );
         } else {
-            $type_search = $page;
+            if(isset($_GET['cat_id'])){
+                $type_search = $_GET['cat_id'];
+            }else{
+                $type_search = $page;
+            }
+            
             $block_news_orig = filter_by_key(
                 $_SESSION[$page],
                 [
