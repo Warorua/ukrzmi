@@ -1,6 +1,7 @@
 <?php
 include('../full_coverage/vendor/autoload.php');
-include '../includes/session.php';
+include '../includes/conn_2.php';
+session_start();
 include '../includes/functions.php';
 
 use \NlpTools\Tokenizers\WhitespaceTokenizer;
