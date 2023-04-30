@@ -1130,3 +1130,355 @@ function pageNav($nav_link, $data, $city, $getData)
 
   return [$topCat, $pageNm];
 }
+
+function interviewsCard($row, $tok)
+{
+  $rowtitle = $row['title'];
+
+  $maxPos = 500;
+  if ($row['sub_1'] != '') {
+    $catHolder = $row['sub_1'];
+  } else {
+    $catHolder = 'General';
+  }
+  if ($row['parent'] == "ua.korrespondent.net") {
+    $rowParent = "Кореспондент";
+  } elseif ($row['parent'] == "pravda.com.ua") {
+    $rowParent = "правда";
+  } elseif ($row['parent'] == "eurointegration.com.ua") {
+    $rowParent = "євроінтеграція";
+  } elseif ($row['parent'] == "unian.ua") {
+    $rowParent = "уніанської";
+  } elseif ($row['parent'] == "life.pravda.com.ua") {
+    $rowParent = "правда";
+  } elseif ($row['parent'] == "theguardian.com") {
+    $rowParent = "The guardian";
+  } elseif ($row['parent'] == "") {
+    $rowParent = "правда";
+  }
+
+
+
+  if (strlen($row['title']) < $maxPos) {
+    $rowtitle = $row['title'];
+    $filtTit = str_replace('"', '', $row['title']);
+  } else {
+    $lastPos = ($maxPos - 3) - strlen($row['title']);
+    $rowtitle = substr($row['title'], 0, strrpos($row['title'], ' ', $lastPos)) . ' 
+ ...';
+  }
+  if ($row['frame_color'] == "") {
+    $frameColor = "rgb(0, 0, 0, 0.0)";
+  } else {
+    $frameColor = $row['frame_color'];
+  }
+  if ($row['title_badge'] == "") {
+    $titleBadge = "";
+  } else {
+    $titleBadge = '<img src="../admin/' . $row['title_badge'] . '" class="titleBadge" />';
+  }
+
+  $content = strip_tags(substr($row['article'], 0, 260)) . '...';
+  $contentFull = strip_tags($row['article']);
+  $setA = $tok->tokenize($contentFull);
+  $contentTime = number_format(sizeof($setA) / 200, 0);
+
+  $authorFil = str_replace('—', "", $row['author']);
+  return '
+
+ <li style="border:none" id="post_' . $row['id'] . '" class="list-group-item my-2 post">
+ <div class="row">
+
+ <div class="col-md-3">
+ <div class="imgFrame">
+  <a href="article_content.php?code=' . $row['code'] . '">
+  <div class="imgTitle">
+   <p class="blogTitle">' . $rowParent . '</p>
+        <div class="cardFrame_3" style="border-color: ' . $frameColor . ';"></div>
+
+        <div class="intBadge">
+        <div class="bd_1">' . $row['time'] . '</div>
+        <div class="bd_2"> | 
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
+        <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5z"/>
+        <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"/>
+      </svg>
+       ' . $contentTime . 'm</div>
+        </div>
+        
+  <img class="cardPhotoList_2" src="' . $row['photo_url'] . '" height="110px" alt="' . $row['title'] . '" />
+   </div>
+   </a> 
+   </div> 
+ </div>
+
+ <div class="col-md-9">
+
+
+ <div class="row">
+
+ <div class="col-md-11">
+ <a class="text-decoration-none text-dark" href="article_content.php?code=' . $row['code'] . '"> <h5 class="fw-light fs-6"><b>' . $row['title'] . '</b></h5></a>
+ 
+ </div>
+
+ <div class="col-md-1">
+ <div style="margin-top:15px" class="dropstart">
+ <a type="button" class="" data-bs-toggle="dropdown" aria-expanded="false">
+ <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+ </a>
+ <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+ <li>
+ <a class="dropdown-item trigger right-caret">Share</a>
+ <ul class="dropdown-menu sub-menu">
+ <li><a class="dropdown-item" href="https://www.facebook.com/sharer.php?u=https://www.ukrzmi.com/desktop/article_content.php?code=' . $row['code'] . '" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i> Telegram</a></li>
+ <li><a class="dropdown-item" href="viber://forward?text=https://www.ukrzmi.com/desktop/article_content.php?code=' . $row['code'] . '" target="_blank"><i class="fab fa-viber" aria-hidden="true"></i> Viber</a></li>
+ <li><a class="dropdown-item" href="https://www.facebook.com/sharer.php?u=https://www.ukrzmi.com/desktop/article_content.php?code=' . $row['code'] . '" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+ <li><a class="dropdown-item" href="https://twitter.com/share?url=https://www.ukrzmi.com/desktop/article_content.php?code=' . $row['code'] . '" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+ <li><a class="dropdown-item" href="whatsapp://send?text=https://www.ukrzmi.com/desktop/article_content.php?code=' . $row['code'] . '" data-action="share/whatsapp/share"><i class="fab fa-whatsapp" aria-hidden="true"></i> Whatsapp</a></li>
+ <li><a class="dropdown-item" href="https://pinterest.com/pin/create/button/?url=https://www.ukrzmi.com/desktop/article_content.php?code=' . $row['code'] . '&media=https://www.ukrzmi.com/images/' . $row['photo'] . '&description=' . $row['title'] . '" target="_blank"><i class="fab fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
+ 
+ </ul>
+ </li>
+ <li><hr class="dropdown-divider"></li>
+ <li><a class="dropdown-item" href="full_coverage.php?id=' . $row['id'] . '" target="_blank"><i class="fa fa-clipboard" aria-hidden="true"></i> Full Coverage</a></li>
+ <li><a class="dropdown-item" href="#" target="_blank"><i class="fa fa-flag" aria-hidden="true"></i> Report</a></li>
+ </ul>
+ </div> 
+ </div>
+
+ <div style="margin-top:55px" class="col-md-12">
+ <div class="w-100 d-flex justify-content-start">
+   <small><span class="text-muted">By ' . $authorFil . '</span></small>
+   </div>
+ </div>
+ </div>
+     
+ </div>
+
+ </div>
+
+ </li>    
+ ';
+}
+
+function interviewGridCard($row, $block, $block_id){
+  $rowtitle = $row['title'];
+
+    $maxPos = 500;
+    if ($row['sub_1'] != '') {
+      $catHolder = $row['sub_1'];
+    } else {
+      $catHolder = 'General';
+    }
+    if ($row['parent'] == "ua.korrespondent.net") {
+      $rowParent = "Кореспондент";
+    } elseif ($row['parent'] == "pravda.com.ua") {
+      $rowParent = "правда";
+    } elseif ($row['parent'] == "eurointegration.com.ua") {
+      $rowParent = "євроінтеграція";
+    } elseif ($row['parent'] == "unian.ua") {
+      $rowParent = "уніанської";
+    } elseif ($row['parent'] == "life.pravda.com.ua") {
+      $rowParent = "правда";
+    } elseif ($row['parent'] == "theguardian.com") {
+      $rowParent = "The guardian";
+    } elseif ($row['parent'] == "") {
+      $rowParent = "правда";
+    }
+
+
+
+    if (strlen($row['title']) < $maxPos) {
+      $rowtitle = $row['title'];
+      $filtTit = str_replace('"', '', $row['title']);
+    } else {
+      $lastPos = ($maxPos - 3) - strlen($row['title']);
+      $rowtitle = substr($row['title'], 0, strrpos($row['title'], ' ', $lastPos)) . ' 
+ ...';
+    }
+    if ($row['frame_color'] == "") {
+      $frameColor = "rgb(0, 0, 0, 0.0)";
+    } else {
+      $frameColor = $row['frame_color'];
+    }
+    if ($row['title_badge'] == "") {
+      $titleBadge = "";
+    } else {
+      $titleBadge = '<img src="../admin/' . $row['title_badge'] . '" class="titleBadge" />';
+    }
+
+
+    echo '
+ <div class="col-md-3">    
+      <div class="card col-sm-4 col-md-3 newsCard" style="background-color:' . $block[$block_id]['bg_color'] . '">
+    <div class="card-content">
+
+ <a href="article_content.php?code=' . $row['code'] . '">
+ <div class="imgFrame">
+      <div class="imgTitle">
+         <p class="blogTitle">' . $rowParent . '</p>
+        <div class="cardFrame" style="border-color: ' . $frameColor . ';"></div>
+        <img class="cardPhoto" src="' . $row['photo_url'] . '" height="122px" alt="' . $row['title'] . '" />
+    </div>
+ </div>   
+  </a>    
+    <div style="height:100px; width:98%; margin-top:3px" class="bg-dark card-body">
+          <a href="article_content.php?code=' . $row['code'] . '" class="cardLink">
+           <h6 class="text-light text-wrap fw-normal" data-toggle="tooltip" data-placement="bottom" title="' . $row['title'] . '">' . $titleBadge . '' . $row['title'] . '</h6>
+           </a>
+
+    </div>
+   
+    
+  </div>
+  </div>    </div>
+  ';
+}
+
+function interviewListCard($row){
+  $rowtitle = $row['title'];  
+    
+    $maxPos = 500;
+ if($row['sub_1'] != ''){
+  $catHolder = $row['sub_1'];
+ }else{
+   $catHolder = 'General';
+ }
+    if($row['parent'] == "ua.korrespondent.net"){
+      $rowParent = "Кореспондент";
+    }
+    elseif($row['parent'] == "pravda.com.ua"){
+      $rowParent = "правда";
+    }
+    elseif($row['parent'] == "eurointegration.com.ua"){
+      $rowParent = "євроінтеграція";
+    }
+    elseif($row['parent'] == "unian.ua"){
+      $rowParent = "уніанської";
+    }
+    elseif($row['parent'] == "life.pravda.com.ua"){
+      $rowParent = "правда";
+    }
+    elseif($row['parent'] == "theguardian.com"){
+      $rowParent = "The guardian";
+    }
+    elseif($row['parent'] == ""){
+      $rowParent = "правда";
+    }
+    
+    
+    
+    if (strlen($row['title']) > $maxPos)
+    {
+        $lastPos = ($maxPos - 3) - strlen($row['title']);
+          $rowtitle = substr($row['title'], 0, strrpos($row['title'], ' ', $lastPos)) . ' 
+ ...';
+      $filtTit = str_replace('"', '', $row['title']); 
+    } 
+    if($row['frame_color'] == ""){
+      $frameColor = "rgb(0, 0, 0, 0.0)";
+    }
+    else{
+      $frameColor = $row['frame_color'];
+    }
+    if($row['title_badge'] == ""){
+      $titleBadge = "";
+    }
+    else{
+      $titleBadge = '<img src="../admin/'.$row['title_badge'].'" class="titleBadge" />';
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////
+    if($row['type'] == 'video'){
+        $fc_icon = '<div class="fcIcon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>';
+        $fc_icon_title = '<i class="fa fa-play-circle" aria-hidden="true"></i>';
+        $fc_link = 'video_content';
+    }
+    elseif($row['type'] == 'podcast'){
+        $fc_icon = '<div class="fcIcon"><i class="fa fa-podcast" aria-hidden="true"></i></div>';
+        $fc_icon_title = '<i class="fa fa-podcast" aria-hidden="true"></i>';
+        $fc_link = 'podcast';
+    }
+    elseif($row['type'] == ''){
+        $fc_icon = '';
+        $fc_icon_title = '';
+        $fc_link = 'article_content';
+    }
+    else{
+        $fc_icon = '';
+        $fc_icon_title = '';
+        $fc_link = 'article_content';
+    }
+    
+    
+          echo '
+          <li class="list-group-item my-2 post">
+          <div class="d-flex justify-content-between">
+
+          <div class="col-md-9">
+          <div class="row">
+          <div class="col-md-1">
+          <img width="35px" src="https://www.pravda.com.ua/android-chrome-192x192.png"/>
+          </div>
+          <div class="col-md-10">
+          <a href="'.$fc_link.'.php?code='.$row['code'].'" class="text-dark stretched-link text-decoration-none">
+          <h5 class="">'.$fc_icon_title.' '.$row['title'].'</h5>        
+          </a>  
+             <div class="w-100 justify-content-start">
+             <small style="margin-top:25px">
+             <span class="text-muted">By '.$row['author'].'
+              <span style="font-size:5px; margin-left:4px; margin-right:4px; padding-bottom:10px;">
+              <i style="font-size:5px; margin-left:4px; margin-right:4px;" class="fa fa-circle" aria-hidden="true"></i>
+           </span>
+              
+            '.$row['time'].'
+
+            
+            <span style="font-size:5px; margin-left:4px; margin-right:4px; padding-bottom:10px;">
+            <i style="font-size:5px; margin-left:4px; margin-right:4px;" class="fa fa-circle" aria-hidden="true"></i>
+         </span>
+          17 minutes reading
+
+
+           </span>
+           </small>
+             </div>  
+          </div>
+          <div class="col-md-1">
+          <div class="btn-group dropend shareIcon">
+          <a type="button" class="" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu">
+           <li><h6 class="dropdown-header">Share</h6></li>
+            <li><a class="dropdown-item" href="https://www.facebook.com/sharer.php?u=https://www.ukrzmi.com/desktop/'.$fc_link.'.php?code='.$row['code'].'" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+            <li><a class="dropdown-item" href="https://twitter.com/share?url=https://www.ukrzmi.com/desktop/'.$fc_link.'.php?code='.$row['code'].'" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+            <li><a class="dropdown-item" href="whatsapp://send?text=https://www.ukrzmi.com/desktop/'.$fc_link.'.php?code='.$row['code'].'" data-action="share/whatsapp/share"><i class="fab fa-whatsapp" aria-hidden="true"></i> Whatsapp</a></li>
+            <li><a class="dropdown-item" href="https://pinterest.com/pin/create/button/?url=https://www.ukrzmi.com/desktop/'.$fc_link.'.php?code='.$row['code'].'&media=https://www.ukrzmi.com/images/'.$row['photo'].'&description='.$row['title'].'" target="_blank"><i class="fab fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="full_coverage.php?id='.$row['id'].'" target="_blank"><i class="fa fa-clipboard" aria-hidden="true"></i> Full Coverage</a></li>
+            <li><a class="dropdown-item" href="#" target="_blank"><i class="fa fa-flag" aria-hidden="true"></i> Report</a></li>
+          </ul>
+        </div>
+          </div>
+          </div>
+           
+                
+          </div>
+            <div class="col-md-3">
+           <div class="imgFrame">
+            <div class="imgTitle">
+             <p class="blogTitle">'.$rowParent.'</p>
+        <div class="cardFrame_2" style="border-color: '.$frameColor.';"></div>
+            <img class="listImage" src="'.$row['photo_url'].'" height="100px" width="80%" alt="'.$row['title'].'" />
+            '.$fc_icon.'
+            </div>
+             </div> 
+          </div>
+
+
+         </div>
+    
+      </li>
+      ';
+}
