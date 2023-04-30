@@ -292,7 +292,7 @@ if($nav_link == 'home.php'){
             } elseif ($rows['link'] == 'video.php') {
               $navigationKey = $topClassVideo;
             } else {
-              $navigationKey = '';
+              $navigationKey = 'text-dark';
             }
             echo '
             <li class="nav-item">
