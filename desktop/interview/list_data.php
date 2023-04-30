@@ -16,7 +16,7 @@ $list_item = array_slice($data, $row, $rowperpage);
 $html = '';
 
 foreach ($list_item as $row) {
-  interviewsCard($row, $tok);
+  $html .= interviewsCard($row, $tok);
 }
 
 echo $html;
