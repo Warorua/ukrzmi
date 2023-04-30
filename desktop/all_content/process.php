@@ -51,11 +51,9 @@ if (isset($_GET['subcat'])) {
             }
             
             $block_news_orig = filter_by_key(
+                $allNews,
                 $_SESSION[$page],
-                [
-                    $type_search
-                ],
-                'type',
+                'id',
                 'deep_link'
             );
         }
