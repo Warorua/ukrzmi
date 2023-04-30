@@ -17,6 +17,8 @@
     } else {
       $sqlAuth = "";
     }
+  }else{
+    $sqlAuth = "";
   }
   $stmt = $conn->prepare("SELECT * FROM news 
   WHERE NOT category=:cat_not
