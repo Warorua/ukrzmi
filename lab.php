@@ -1,14 +1,22 @@
 <?php
 //include './includes/core.php';
 
-function build_file($file, $data)
+function build_file($fileLocation, $data)
 {
 
-    $file_data = fopen($file, "w");
+    if (!file_exists($fileLocation)) {
+        // File doesn't exist, so create it first
+        touch($fileLocation);
+    }
 
-    fwrite($file_data, $data);
-
-    fclose($file_data);
+    // Open the file for writing
+    $file = fopen($fileLocation, 'w');
+    
+    // Write the data to the file
+    fwrite($file, $data);
+    
+    // Close the file
+    fclose($file);
 }
 
 
