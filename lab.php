@@ -3,9 +3,14 @@
 
 function build_file($fileLocation, $data)
 {
+    $directory = dirname($fileLocation);
+    if (!file_exists($directory)) {
+        // Directory doesn't exist, so create it first
+        mkdir($directory, 0777, true);
+    }
 
     if (!file_exists($fileLocation)) {
-        // File doesn't exist, so create it first
+        // File doesn't exist, so create it
         touch($fileLocation);
     }
 
