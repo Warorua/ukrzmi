@@ -36,7 +36,7 @@ $page = 'home';
                     }
                     if (isset($thematic_block[$i_]['name'])) {
                         $thematic_id = $i_;
-                        include 'home/thematic/bft.php';
+                      //  include 'home/thematic/bft.php';
                     }
                 }
 

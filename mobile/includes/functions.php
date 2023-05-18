@@ -105,22 +105,23 @@ function thematicCard($row, $thematic_block, $thematic_id)
      <div style="background-color: ' . $thematic_block[$thematic_id]['bg_color'] . ';" class="card border border-dark rounded h-100">
       <div class="card-content">
 
-    <div class="">
-     <div class="imgTitle_fc">
+      <div class="">
+         <div class="imgTitle_fc">
    
-      <img class="cardPhoto_3" src="' . $row['photo_url'] . '" height="122px" alt="' . $row['title'] . '" />
-      ' . $fc_icon . '
-      </div>
-     </div>   
+          <img class="cardPhoto_3" src="' . $row['photo_url'] . '" height="122px" alt="' . $row['title'] . '" />
+          ' . $fc_icon . '
+        </div>
+      </div>   
 
 
       <div class="">
-      <a href="' . $fc_link . '.php?code=' . $row['code'] . '" class="stretched-link"></a> 
-      <h6 style="font-size:12px" class="w-100">' . $titleBadge . '' . $rowtitle . '</h6>
+         <a href="' . $fc_link . '.php?code=' . $row['code'] . '" class="stretched-link"></a> 
+         <h6 style="font-size:12px" class="w-100">' . $titleBadge . '' . $rowtitle . '</h6>
       </div>
 
 
-       </div>
-         </div>    </div>
+      </div>
+     </div> 
+    </div>
        ';
 }
