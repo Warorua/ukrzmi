@@ -165,7 +165,7 @@
 
   <?php
 //////////////////////////////////////////////////////////////////////////////////////////////////
-/*
+//*
 $query = '';
 if($thematic_block[$thematic_id]['type'] != ''){
     $query .= "AND category = '".$thematic_block[$thematic_id]['type']."'";
@@ -209,34 +209,30 @@ if($thematic_block[$thematic_id]['city'] != ''){
  ORDER BY id DESC LIMIT 60");
   $stmt->execute(['cat_not'=>'international', 'pin'=>0]);
   $block_news_orig = $stmt->fetchAll();
-*/
+//*/
 
 ////////////////////////////////////
-
+/*
 $block_news_orig = $allNews;
 
-//*
+
 if ($thematic_block[$thematic_id]['type'] != '') {
 
   $block_news_orig = filter_by_key($block_news_orig, [$thematic_block[$thematic_id]['type']], 'category', 'deep_link');
 }
-//*/
 
-//*
 if ($thematic_block[$thematic_id]['sub_cat'] != '') {
 
   $block_news_orig = filter_by_key($block_news_orig, [$thematic_block[$thematic_id]['sub_cat']], 'sub_1', 'deep_link');
 }
-//*/
 
-//*
 if ($thematic_block[$thematic_id]['content'] != '') {
 
   $block_news_orig = filter_by_key($block_news_orig, [$thematic_block[$thematic_id]['content']], 'type', 'deep_link');
 }
-//*/
 
-//*
+
+
 if ($thematic_block[$thematic_id]['city'] != '') {
 
   $city = $thematic_block[$thematic_id]['city'];
@@ -252,7 +248,7 @@ if ($thematic_block[$thematic_id]['city'] != '') {
     $block_news_orig = filter_by_key($block_news_orig, ['Unian.ua/dnepropetrovsk'], 'source', 'deep_link');
   }
 }
-
+//*/
 ///////////////////////////////
    
   $block_name = $thematic_block[$thematic_id]['id'];
