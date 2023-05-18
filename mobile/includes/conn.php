@@ -6,7 +6,7 @@ if ( $detect->isMobile() ) {
 	//echo '<script>alert("You are on MOBILE")</script>';	
   }
 else{
-	//header('location:../desktop/home.php');
+	header('location:../desktop/home.php');
 }
 
 
