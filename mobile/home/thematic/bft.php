@@ -215,7 +215,7 @@ if($thematic_block[$thematic_id]['city'] != ''){
 
 
 $qi = '';
-$q2 = [''];
+$q2 = '';
 
 if ($thematic_block[$thematic_id]['type'] != '') {
   $qi = 'category';
@@ -251,7 +251,7 @@ if ($thematic_block[$thematic_id]['city'] != '') {
     $q2 = ['Unian.ua/kharkiv'];
   } else {
     $qi = 'source';
-    $q2 = [''];
+    $q2 = '';
   }
 }
 
