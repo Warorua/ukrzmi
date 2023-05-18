@@ -256,6 +256,7 @@ if ($thematic_block[$thematic_id]['city'] != '') {
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
+/*
 $stmt = $conn->prepare("SELECT * FROM news WHERE NOT category='international' LIMIT 60");
 $stmt->execute();
 $block_news_orig = $stmt->fetchAll();
@@ -266,7 +267,8 @@ $block_news_orig = filter_by_key(
     'pin',
     'id'
   );
-
+*/
+$block_news_orig = newsFetch();
 
   $block_news_orig = filter_by_key(
     $block_news_orig,
