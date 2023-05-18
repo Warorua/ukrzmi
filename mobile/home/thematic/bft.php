@@ -213,7 +213,7 @@ if($thematic_block[$thematic_id]['city'] != ''){
 
 ////////////////////////////////////
 //*
-$block_news_orig = newsFetch(60);
+$block_news_orig = newsFetch();
 
 
 if ($thematic_block[$thematic_id]['type'] != '') {
