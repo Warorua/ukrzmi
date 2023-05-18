@@ -180,23 +180,21 @@
 
           <?php
           //////////////////////////////////////////////////////////////////////////////////////////////////
-          $query = '';
+
           $qi = '';
           $q2 = [''];
+
           if ($thematic_block[$thematic_id]['type'] != '') {
-            $query .= "AND category = '" . $thematic_block[$thematic_id]['type'] . "'";
             $qi = 'category';
             $q2 = [$thematic_block[$thematic_id]['type']];
           }
 
           if ($thematic_block[$thematic_id]['sub_cat'] != '') {
-            $query .= "AND sub_1 = '" . $thematic_block[$thematic_id]['sub_cat'] . "'";
             $qi = 'sub_1';
             $q2 = [$thematic_block[$thematic_id]['sub_cat']];
           }
 
           if ($thematic_block[$thematic_id]['content'] != '') {
-            $query .= "AND type = '" . $thematic_block[$thematic_id]['content'] . "'";
             $qi = 'type';
             $q2 = [$thematic_block[$thematic_id]['content']];
           }
@@ -204,46 +202,40 @@
           if ($thematic_block[$thematic_id]['city'] != '') {
             $city = $thematic_block[$thematic_id]['city'];
             if ($city == 'kyiv') {
-              $query .= "AND source = 'Unian.ua/kyiv' OR source = 'ua.korrespondent.net/city/kiev/'";
               $qi = 'source';
               $q2 = ['Unian.ua/kyiv', 'ua.korrespondent.net/city/kiev/'];
             } elseif ($city == 'lviv') {
-              $query .= "AND source = 'Unian.ua/lviv'";
               $qi = 'source';
               $q2 = ['Unian.ua/lviv'];
             } elseif ($city == 'odessa') {
-              $query .= "AND source = 'Unian.ua/odessa'";
               $qi = 'source';
               $q2 = ['Unian.ua/odessa'];
             } elseif ($city == 'kharkiv') {
-              $query .= "AND source = 'Unian.ua/kharkiv'";
               $qi = 'source';
               $q2 = ['Unian.ua/kharkiv'];
             } elseif ($city == 'dnepropetrovsk') {
-              $query .= "AND source = 'Unian.ua/kharkiv'";
               $qi = 'source';
               $q2 = ['Unian.ua/kharkiv'];
             } else {
-              $query .= "";
               $qi = 'source';
               $q2 = [''];
             }
           }
 
           /////////////////////////////////////////////////////////////////////////////////////////////////
-          $stmt = $conn->prepare("SELECT * FROM news 
-  WHERE NOT category=:cat_not
-  AND pin=:pin
-");
-          $stmt->execute(['cat_not' => 'international', 'pin' => 0]);
+          $stmt = $conn->prepare("SELECT * FROM news WHERE NOT category='international' AND pin='0'");
+          $stmt->execute();
           $block_news_orig = $stmt->fetchAll();
 
-          $block_news_orig = filter_by_key(
-            $block_news_orig,
-            $q2,
-            $q1,
-            'deep_link'
-          );
+          if (isset($q1) && isset($q2)) {
+            $block_news_orig = filter_by_key(
+              $block_news_orig,
+              $q2,
+              $q1,
+              'deep_link'
+            );
+          }
+
 
 
           $block_name = $thematic_block[$thematic_id]['id'];
