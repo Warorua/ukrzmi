@@ -223,7 +223,7 @@
           }
 
           /////////////////////////////////////////////////////////////////////////////////////////////////
-          $stmt = $conn->prepare("SELECT * FROM news WHERE NOT category='international' AND pin='0'");
+          $stmt = $conn->prepare("SELECT * FROM news WHERE NOT category='international' AND pin='0' LIMIT 60");
           $stmt->execute();
           $block_news_orig = $stmt->fetchAll();
 
