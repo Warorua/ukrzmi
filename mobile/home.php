@@ -11,6 +11,10 @@ $page = 'home';
     include 'home/blocks.php';
     include 'includes/topbar.php';
     include 'includes/navbar.php';
+    $allNews = newsFetch();
+    $wanted_panels = 5;
+    $wanted_blocks = 100;
+
     ?>
     <div class="">
         <div class="row">

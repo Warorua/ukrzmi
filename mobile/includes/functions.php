@@ -1,84 +1,98 @@
 <?php
 function filter_by_key($array, $allowed_values, $key, $unique_key)
 {
-  $unique_ages = [];
-  if (is_array($allowed_values)) {
-    $filtered_array = array_filter($array, function ($item) use ($allowed_values, &$unique_ages, $unique_key, $key) {
-      if (isset($item[$key]) && in_array($item[$key], $allowed_values) && !in_array($item[$unique_key], $unique_ages)) {
-        $unique_ages[] = $item[$unique_key];
-        return true;
-      }
-      return false;
+    $unique_ages = [];
+    if (is_array($allowed_values)) {
+        $filtered_array = array_filter($array, function ($item) use ($allowed_values, &$unique_ages, $unique_key, $key) {
+            if (isset($item[$key]) && in_array($item[$key], $allowed_values) && !in_array($item[$unique_key], $unique_ages)) {
+                $unique_ages[] = $item[$unique_key];
+                return true;
+            }
+            return false;
+        });
+    } else {
+        $filtered_array = $array;
+    }
+    usort($filtered_array, function ($a, $b) {
+        return $b['id'] - $a['id'];
     });
-  } else {
-    $filtered_array = $array;
-  }
-  usort($filtered_array, function ($a, $b) {
-    return $b['id'] - $a['id'];
-  });
-  return $filtered_array;
+    return $filtered_array;
 }
 
 
-function thematicCard($row, $thematic_block, $thematic_id){
+function newsFetch()
+{
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM news 
+ WHERE NOT category=:cat_not
+ AND type=:type
+ AND pin=:pin
+ ORDER BY id;");
+    $stmt->execute(['cat_not' => 'international', 'type' => "", 'pin' => 0]);
+    $allNews = $stmt->fetchAll();
+    return $allNews;
+}
+
+function thematicCard($row, $thematic_block, $thematic_id)
+{
     $rowtitle = $row['title'];
 
     $maxPos = 92;
     if ($row['sub_1'] != '') {
-      $catHolder = $row['sub_1'];
+        $catHolder = $row['sub_1'];
     } else {
-      $catHolder = 'Генеральний';
+        $catHolder = 'Генеральний';
     }
 
     if ($row['parent'] == "ua.korrespondent.net") {
-      $rowParent = "Кореспондент";
+        $rowParent = "Кореспондент";
     } elseif ($row['parent'] == "pravda.com.ua") {
-      $rowParent = "правда";
+        $rowParent = "правда";
     } elseif ($row['parent'] == "eurointegration.com.ua") {
-      $rowParent = "євроінтеграція";
+        $rowParent = "євроінтеграція";
     } elseif ($row['parent'] == "unian.ua") {
-      $rowParent = "уніанської";
+        $rowParent = "уніанської";
     } elseif ($row['parent'] == "life.pravda.com.ua") {
-      $rowParent = "правда";
+        $rowParent = "правда";
     } elseif ($row['parent'] == "theguardian.com") {
-      $rowParent = "The guardian";
+        $rowParent = "The guardian";
     } elseif ($row['parent'] == "") {
-      $rowParent = "правда";
+        $rowParent = "правда";
     }
 
 
 
     if (strlen($row['title']) < $maxPos) {
-      $rowtitle = $row['title'];
-      $filtTit = str_replace('"', '', $row['title']);
+        $rowtitle = $row['title'];
+        $filtTit = str_replace('"', '', $row['title']);
     } else {
-      $lastPos = ($maxPos - 3) - strlen($row['title']);
-      $rowtitle = substr($row['title'], 0, strrpos($row['title'], ' ', $lastPos)) . '...';
+        $lastPos = ($maxPos - 3) - strlen($row['title']);
+        $rowtitle = substr($row['title'], 0, strrpos($row['title'], ' ', $lastPos)) . '...';
     }
     if ($row['frame_color'] == "") {
-      $frameColor = "rgb(0, 0, 0, 0.0)";
+        $frameColor = "rgb(0, 0, 0, 0.0)";
     } else {
-      $frameColor = $row['frame_color'];
+        $frameColor = $row['frame_color'];
     }
     if ($row['title_badge'] == "") {
-      $titleBadge = "";
+        $titleBadge = "";
     } else {
-      $titleBadge = '<img src="../admin/' . $row['title_badge'] . '" class="titleBadge" />';
+        $titleBadge = '<img src="../admin/' . $row['title_badge'] . '" class="titleBadge" />';
     }
     if ($row['type'] == 'video') {
-      $fc_icon = '<div class="fcIconVid_2"><i class="fa fa-play-circle" aria-hidden="true"></i></div>';
+        $fc_icon = '<div class="fcIconVid_2"><i class="fa fa-play-circle" aria-hidden="true"></i></div>';
     } else {
-      $fc_icon = '';
+        $fc_icon = '';
     }
     ////////////////////////////////////////////////
     if ($row['type'] == 'video') {
-      $fc_link = 'video_content';
+        $fc_link = 'video_content';
     } elseif ($row['type'] == 'podcast') {
-      $fc_link = 'podcast';
+        $fc_link = 'podcast';
     } elseif ($row['type'] == '') {
-      $fc_link = 'article_content';
+        $fc_link = 'article_content';
     } else {
-      $fc_link = 'article_content';
+        $fc_link = 'article_content';
     }
 
     return '
