@@ -256,16 +256,23 @@ if ($thematic_block[$thematic_id]['city'] != '') {
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-$stmt = $conn->prepare("SELECT * FROM news WHERE NOT category='international' AND pin='0' LIMIT 60");
+$stmt = $conn->prepare("SELECT * FROM news WHERE NOT category='international' LIMIT 60");
 $stmt->execute();
 $block_news_orig = $stmt->fetchAll();
+
+$block_news_orig = filter_by_key(
+    $block_news_orig,
+    ['0'],
+    'pin',
+    'id'
+  );
 
 if (isset($q1) && isset($q2)) {
   $block_news_orig = filter_by_key(
     $block_news_orig,
     $q2,
     $q1,
-    'deep_link'
+    'id'
   );
 }
 
