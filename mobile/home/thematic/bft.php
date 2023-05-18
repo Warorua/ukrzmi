@@ -267,14 +267,14 @@ $block_news_orig = filter_by_key(
     'id'
   );
 
-if (isset($q1) && isset($q2)) {
+
   $block_news_orig = filter_by_key(
     $block_news_orig,
     $q2,
     $q1,
     'id'
   );
-}
+
 
 
 ///////////////////////////////
