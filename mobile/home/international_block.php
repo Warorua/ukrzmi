@@ -53,7 +53,7 @@ foreach($intern_block as $row){
                  <li class="carousel_int__slide">
                     <figure>
                         <div class="imgTitle">
-                            <img src="https://www.ukrzmi.com/images/'.$row['photo'].'" alt="">
+                            <img src="'.$row['photo_url'].'" alt="">
                         
                             <p class="blogTitleInt clearfix">
                           
