@@ -165,7 +165,7 @@
 
   <?php
 //////////////////////////////////////////////////////////////////////////////////////////////////
-//*
+/*
 $query = '';
 if($thematic_block[$thematic_id]['type'] != ''){
     $query .= "AND category = '".$thematic_block[$thematic_id]['type']."'";
@@ -212,8 +212,8 @@ if($thematic_block[$thematic_id]['city'] != ''){
 //*/
 
 ////////////////////////////////////
-/*
-$block_news_orig = $allNews;
+//*
+$block_news_orig = newsFetch(60);
 
 
 if ($thematic_block[$thematic_id]['type'] != '') {

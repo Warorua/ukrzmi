@@ -20,14 +20,19 @@ function filter_by_key($array, $allowed_values, $key, $unique_key)
 }
 
 
-function newsFetch()
+function newsFetch($limit = null)
 {
     global $conn;
+    if($limit != null){
+        $ad = 'LIMIT '.$limit;
+    }else{
+        $ad = '';
+    }
     $stmt = $conn->prepare("SELECT * FROM news 
  WHERE NOT category=:cat_not
  AND type=:type
  AND pin=:pin
- ORDER BY id;");
+ ORDER BY id ".$ad);
     $stmt->execute(['cat_not' => 'international', 'type' => "", 'pin' => 0]);
     $allNews = $stmt->fetchAll();
     return $allNews;
