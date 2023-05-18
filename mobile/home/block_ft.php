@@ -18,7 +18,7 @@
 
 <div class="row">
 <?php
-$block_id = 1;
+//$block_id = 1;
 include 'home/panels/panel_01.php';
 ?>
 </div>
