@@ -53,6 +53,11 @@ function download_image($image)
 	$ext = pathinfo($filee, PATHINFO_EXTENSION);
 	$img = $gen . "." . $ext;
 	$path = '../images/' . $img;
+	if($url == null || $url == ''){
+		$url = 'https://yes-ukraine.org/imglib/_newimage/Yalta-annual-meeting/2019/partneri/media-partneri/yevropeyska-pravda/european_pravda.png';
+	}else{
+		$url = $url;
+	}
 	file_put_contents($path, file_get_contents($url));
 	$filename = $img;
 	 return $filename;
